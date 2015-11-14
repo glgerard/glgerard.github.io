@@ -1,0 +1,146 @@
+\hypertarget{image_basic_ops_8h}{}\section{Edge\+Filters/image\+Basic\+Ops.h File Reference}
+\label{image_basic_ops_8h}\index{Edge\+Filters/image\+Basic\+Ops.\+h@{Edge\+Filters/image\+Basic\+Ops.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}helper\+Functions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Utilities.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Filters.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Filter\+Ops.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}{drandom}()~(((double)(random()\&0xffffff))/0xffffff)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{image_basic_ops_8h_a21b7c0153859749af20da7f95d85c56f}{absolute\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\item 
+int \hyperlink{image_basic_ops_8h_a2beed6f34722fb27a9c19e0aac0f2a9e}{threshold\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, int threshold)
+\item 
+int \hyperlink{image_basic_ops_8h_a2dce8fae864d87092dc6ccfc302e34ed}{linear\+Add\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op2, double w1, double w2, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\item 
+int \hyperlink{image_basic_ops_8h_a58a02537a83a84b74192680d299f2186}{compare\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op2)
+\item 
+int \hyperlink{image_basic_ops_8h_a61d820d9ce5852829463026be89c282f}{module\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op\+X, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op\+Y, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\item 
+int \hyperlink{image_basic_ops_8h_ad54a6261223dee6369fff0b01d754460}{phase\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op\+X, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op\+Y, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\item 
+int \hyperlink{image_basic_ops_8h_a90a19bfcce0315c936f1241c69da9024}{fapply\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter, int border\+X, int border\+Y, int($\ast$func)(\hyperlink{struct_pgm}{Pgm} $\ast$, \hyperlink{struct_pgm}{Pgm} $\ast$, double $\ast$, int, int, int))
+\item 
+int \hyperlink{image_basic_ops_8h_a3e638c9bde0f8608535611c6e17911bf}{convolution2\+D\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter)
+\item 
+int \hyperlink{image_basic_ops_8h_a915e689e67678fdcd732796fce7de23b}{convolution1\+D\+X\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter)
+\item 
+int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution1\+D\+Y\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!drandom@{drandom}}
+\index{drandom@{drandom}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{drandom}]{\setlength{\rightskip}{0pt plus 5cm}\#define drandom(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(((double)(random()\&0xffffff))/0xffffff)}\label{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}
+
+
+\subsection{Function Documentation}
+\hypertarget{image_basic_ops_8h_a21b7c0153859749af20da7f95d85c56f}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!absolute\+P\+G\+M@{absolute\+P\+G\+M}}
+\index{absolute\+P\+G\+M@{absolute\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{absolute\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int absolute\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a21b7c0153859749af20da7f95d85c56f}
+\hypertarget{image_basic_ops_8h_a58a02537a83a84b74192680d299f2186}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!compare\+P\+G\+M@{compare\+P\+G\+M}}
+\index{compare\+P\+G\+M@{compare\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{compare\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int compare\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+Op1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Op2}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a58a02537a83a84b74192680d299f2186}
+\hypertarget{image_basic_ops_8h_a915e689e67678fdcd732796fce7de23b}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!convolution1\+D\+X\+P\+G\+M@{convolution1\+D\+X\+P\+G\+M}}
+\index{convolution1\+D\+X\+P\+G\+M@{convolution1\+D\+X\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{convolution1\+D\+X\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int convolution1\+D\+X\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{{\bf Filter} $\ast$}]{filter}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a915e689e67678fdcd732796fce7de23b}
+\hypertarget{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!convolution1\+D\+Y\+P\+G\+M@{convolution1\+D\+Y\+P\+G\+M}}
+\index{convolution1\+D\+Y\+P\+G\+M@{convolution1\+D\+Y\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{convolution1\+D\+Y\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int convolution1\+D\+Y\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{{\bf Filter} $\ast$}]{filter}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}
+\hypertarget{image_basic_ops_8h_a3e638c9bde0f8608535611c6e17911bf}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!convolution2\+D\+P\+G\+M@{convolution2\+D\+P\+G\+M}}
+\index{convolution2\+D\+P\+G\+M@{convolution2\+D\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{convolution2\+D\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int convolution2\+D\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{{\bf Filter} $\ast$}]{filter}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a3e638c9bde0f8608535611c6e17911bf}
+\hypertarget{image_basic_ops_8h_a90a19bfcce0315c936f1241c69da9024}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!fapply\+P\+G\+M@{fapply\+P\+G\+M}}
+\index{fapply\+P\+G\+M@{fapply\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{fapply\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int fapply\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{{\bf Filter} $\ast$}]{filter, }
+\item[{int}]{border\+X, }
+\item[{int}]{border\+Y, }
+\item[{int($\ast$)({\bf Pgm} $\ast$, {\bf Pgm} $\ast$, double $\ast$, int, int, int)}]{func}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a90a19bfcce0315c936f1241c69da9024}
+\hypertarget{image_basic_ops_8h_a2dce8fae864d87092dc6ccfc302e34ed}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!linear\+Add\+P\+G\+M@{linear\+Add\+P\+G\+M}}
+\index{linear\+Add\+P\+G\+M@{linear\+Add\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{linear\+Add\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int linear\+Add\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+Op1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Op2, }
+\item[{double}]{w1, }
+\item[{double}]{w2, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a2dce8fae864d87092dc6ccfc302e34ed}
+\hypertarget{image_basic_ops_8h_a61d820d9ce5852829463026be89c282f}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!module\+P\+G\+M@{module\+P\+G\+M}}
+\index{module\+P\+G\+M@{module\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{module\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int module\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+Op\+X, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Op\+Y, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a61d820d9ce5852829463026be89c282f}
+\hypertarget{image_basic_ops_8h_ad54a6261223dee6369fff0b01d754460}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!phase\+P\+G\+M@{phase\+P\+G\+M}}
+\index{phase\+P\+G\+M@{phase\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{phase\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int phase\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+Op\+X, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Op\+Y, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_ad54a6261223dee6369fff0b01d754460}
+\hypertarget{image_basic_ops_8h_a2beed6f34722fb27a9c19e0aac0f2a9e}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!threshold\+P\+G\+M@{threshold\+P\+G\+M}}
+\index{threshold\+P\+G\+M@{threshold\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
+\subsubsection[{threshold\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int threshold\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{int}]{threshold}
+\end{DoxyParamCaption}
+)}\label{image_basic_ops_8h_a2beed6f34722fb27a9c19e0aac0f2a9e}

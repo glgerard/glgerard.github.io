@@ -1,0 +1,95 @@
+\hypertarget{helper_functions_8h}{}\section{Edge\+Filters/helper\+Functions.h File Reference}
+\label{helper_functions_8h}\index{Edge\+Filters/helper\+Functions.\+h@{Edge\+Filters/helper\+Functions.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{helper_functions_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+U\+E}~1
+\item 
+\#define \hyperlink{helper_functions_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+S\+E}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{helper_functions_8h_a69c18c9507ef22a89f1f437bcc75baaf}{mod} (int a, int b)
+\item 
+int \hyperlink{helper_functions_8h_af082905f7eac6d03e92015146bbc1925}{max} (int a, int b)
+\item 
+double \hyperlink{helper_functions_8h_a7572343e14a1052172c380f4003f567f}{mean} (int $\ast$array, int len)
+\item 
+double \hyperlink{helper_functions_8h_aed73e01a99ec482b47a3d34e2c5abf63}{var} (int $\ast$array, int len)
+\item 
+int $\ast$ \hyperlink{helper_functions_8h_a850eea9503ac93d8a3ad1e8d36bdbae7}{sort} (int $\ast$array, int len)
+\item 
+char $\ast$ \hyperlink{helper_functions_8h_a205c8acb2ef70f038f32e5fe361cc8d9}{trimwhitespace} (char $\ast$str)
+\item 
+int \hyperlink{helper_functions_8h_abc17ba60a4efaaac12b3bfc6ade81a11}{quadrant} (int a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{helper_functions_8h_aa93f0eb578d23995850d61f7d61c55c1}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!F\+A\+L\+S\+E@{F\+A\+L\+S\+E}}
+\index{F\+A\+L\+S\+E@{F\+A\+L\+S\+E}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{F\+A\+L\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+L\+S\+E~0}\label{helper_functions_8h_aa93f0eb578d23995850d61f7d61c55c1}
+\hypertarget{helper_functions_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!T\+R\+U\+E@{T\+R\+U\+E}}
+\index{T\+R\+U\+E@{T\+R\+U\+E}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{T\+R\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+U\+E~1}\label{helper_functions_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+\subsection{Function Documentation}
+\hypertarget{helper_functions_8h_af082905f7eac6d03e92015146bbc1925}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!max@{max}}
+\index{max@{max}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}int max (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}\label{helper_functions_8h_af082905f7eac6d03e92015146bbc1925}
+\hypertarget{helper_functions_8h_a7572343e14a1052172c380f4003f567f}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!mean@{mean}}
+\index{mean@{mean}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{mean}]{\setlength{\rightskip}{0pt plus 5cm}double mean (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{helper_functions_8h_a7572343e14a1052172c380f4003f567f}
+\hypertarget{helper_functions_8h_a69c18c9507ef22a89f1f437bcc75baaf}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!mod@{mod}}
+\index{mod@{mod}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{mod}]{\setlength{\rightskip}{0pt plus 5cm}int mod (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}\label{helper_functions_8h_a69c18c9507ef22a89f1f437bcc75baaf}
+\hypertarget{helper_functions_8h_abc17ba60a4efaaac12b3bfc6ade81a11}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!quadrant@{quadrant}}
+\index{quadrant@{quadrant}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{quadrant}]{\setlength{\rightskip}{0pt plus 5cm}int quadrant (
+\begin{DoxyParamCaption}
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)}\label{helper_functions_8h_abc17ba60a4efaaac12b3bfc6ade81a11}
+if ((-\/8 $<$= angle) \&\& (angle $<$ -\/7)) return 0; else if ((-\/7 $<$= angle) \&\& (angle $<$ -\/5)) return 1; else if ((-\/5 $<$= angle) \&\& (angle $<$ -\/3)) return 2; else if ((-\/3 $<$= angle) \&\& (angle $<$ -\/1)) return 3; else if ((-\/1 $<$= angle) \&\& (angle $<$ 1) ) return 0; else if ((1 $<$= angle) \&\& (angle $<$ 3)) return 1; else if ((3 $<$= angle) \&\& (angle $<$ 5)) return 2; else if ((5 $<$= angle) \&\& (angle $<$ 7)) return 3; else if ((angle $<$= 8)) return 0;\hypertarget{helper_functions_8h_a850eea9503ac93d8a3ad1e8d36bdbae7}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!sort@{sort}}
+\index{sort@{sort}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ sort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{helper_functions_8h_a850eea9503ac93d8a3ad1e8d36bdbae7}
+\hypertarget{helper_functions_8h_a205c8acb2ef70f038f32e5fe361cc8d9}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!trimwhitespace@{trimwhitespace}}
+\index{trimwhitespace@{trimwhitespace}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{trimwhitespace}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ trimwhitespace (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{helper_functions_8h_a205c8acb2ef70f038f32e5fe361cc8d9}
+\hypertarget{helper_functions_8h_aed73e01a99ec482b47a3d34e2c5abf63}{}\index{helper\+Functions.\+h@{helper\+Functions.\+h}!var@{var}}
+\index{var@{var}!helper\+Functions.\+h@{helper\+Functions.\+h}}
+\subsubsection[{var}]{\setlength{\rightskip}{0pt plus 5cm}double var (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{helper_functions_8h_aed73e01a99ec482b47a3d34e2c5abf63}

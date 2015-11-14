@@ -1,0 +1,82 @@
+\hypertarget{image_contours_8c}{}\section{Edge\+Filters/image\+Contours.c File Reference}
+\label{image_contours_8c}\index{Edge\+Filters/image\+Contours.\+c@{Edge\+Filters/image\+Contours.\+c}}
+{\ttfamily \#include \char`\"{}image\+Contours.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{image_contours_8c_a6dd1fef45aff957dee8db642a5828a3d}{contour2\+D\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int border\+X, int border\+Y, int ic)
+\item 
+int \hyperlink{image_contours_8c_aae72ef6d40d20a2878617da70aef5196}{contour2\+D\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\item 
+int \hyperlink{image_contours_8c_afbb79173ff0fdca88a716cb63bd18b9d}{contour\+N8\+Int\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int border\+X, int border\+Y, int ic)
+\item 
+int \hyperlink{image_contours_8c_acf88b76d9d6974b28ee1e60f169596da}{contour\+N8\+Int\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\item 
+void \hyperlink{image_contours_8c_ae6fbfadfb2b2bc626c522bbbf04f31ad}{connectivity\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+H, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+L, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, int border\+X, int border\+Y, int ic)
+\item 
+int \hyperlink{image_contours_8c_a37d865f922409d7a01b35a6c383dc5cd}{connectivity\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+H, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+L, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{image_contours_8c_ae6fbfadfb2b2bc626c522bbbf04f31ad}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!connectivity\+Kernel@{connectivity\+Kernel}}
+\index{connectivity\+Kernel@{connectivity\+Kernel}!image\+Contours.\+c@{image\+Contours.\+c}}
+\subsubsection[{connectivity\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}void connectivity\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+N\+H, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+N\+L, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{int}]{border\+X, }
+\item[{int}]{border\+Y, }
+\item[{int}]{ic}
+\end{DoxyParamCaption}
+)}\label{image_contours_8c_ae6fbfadfb2b2bc626c522bbbf04f31ad}
+\hypertarget{image_contours_8c_a37d865f922409d7a01b35a6c383dc5cd}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!connectivity\+P\+G\+M@{connectivity\+P\+G\+M}}
+\index{connectivity\+P\+G\+M@{connectivity\+P\+G\+M}!image\+Contours.\+c@{image\+Contours.\+c}}
+\subsubsection[{connectivity\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int connectivity\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+N\+H, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+N\+L, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_contours_8c_a37d865f922409d7a01b35a6c383dc5cd}
+\hypertarget{image_contours_8c_a6dd1fef45aff957dee8db642a5828a3d}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour2\+D\+Kernel@{contour2\+D\+Kernel}}
+\index{contour2\+D\+Kernel@{contour2\+D\+Kernel}!image\+Contours.\+c@{image\+Contours.\+c}}
+\subsubsection[{contour2\+D\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}int contour2\+D\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
+\item[{double $\ast$}]{kernel, }
+\item[{int}]{border\+X, }
+\item[{int}]{border\+Y, }
+\item[{int}]{ic}
+\end{DoxyParamCaption}
+)}\label{image_contours_8c_a6dd1fef45aff957dee8db642a5828a3d}
+\hypertarget{image_contours_8c_aae72ef6d40d20a2878617da70aef5196}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour2\+D\+P\+G\+M@{contour2\+D\+P\+G\+M}}
+\index{contour2\+D\+P\+G\+M@{contour2\+D\+P\+G\+M}!image\+Contours.\+c@{image\+Contours.\+c}}
+\subsubsection[{contour2\+D\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int contour2\+D\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_contours_8c_aae72ef6d40d20a2878617da70aef5196}
+\hypertarget{image_contours_8c_afbb79173ff0fdca88a716cb63bd18b9d}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour\+N8\+Int\+Kernel@{contour\+N8\+Int\+Kernel}}
+\index{contour\+N8\+Int\+Kernel@{contour\+N8\+Int\+Kernel}!image\+Contours.\+c@{image\+Contours.\+c}}
+\subsubsection[{contour\+N8\+Int\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}int contour\+N8\+Int\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
+\item[{double $\ast$}]{kernel, }
+\item[{int}]{border\+X, }
+\item[{int}]{border\+Y, }
+\item[{int}]{ic}
+\end{DoxyParamCaption}
+)}\label{image_contours_8c_afbb79173ff0fdca88a716cb63bd18b9d}
+\hypertarget{image_contours_8c_acf88b76d9d6974b28ee1e60f169596da}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour\+N8\+Int\+P\+G\+M@{contour\+N8\+Int\+P\+G\+M}}
+\index{contour\+N8\+Int\+P\+G\+M@{contour\+N8\+Int\+P\+G\+M}!image\+Contours.\+c@{image\+Contours.\+c}}
+\subsubsection[{contour\+N8\+Int\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int contour\+N8\+Int\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_contours_8c_acf88b76d9d6974b28ee1e60f169596da}

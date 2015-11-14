@@ -1,0 +1,68 @@
+\hypertarget{main_8c}{}\section{Edge\+Filters/main.c File Reference}
+\label{main_8c}\index{Edge\+Filters/main.\+c@{Edge\+Filters/main.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$libgen.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}helper\+Functions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Utilities.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Filters.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Basic\+Ops.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Filter\+Ops.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Contours.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_ad7871643c05865c80f5d8050aead2b57}{M\+A\+X\+B\+U\+F}~4096
+\item 
+\#define \hyperlink{main_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+U\+E}~1
+\item 
+\#define \hyperlink{main_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+S\+E}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_a045b3ded7797946554e9b7f61affd3c3}{remove\+Ext} (char $\ast$src)
+\item 
+int \hyperlink{main_8c_a9df71ba6c1ba41f8427a730c3c40655b}{calc\+Hist} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In)
+\item 
+int \hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main_8c_aa93f0eb578d23995850d61f7d61c55c1}{}\index{main.\+c@{main.\+c}!F\+A\+L\+S\+E@{F\+A\+L\+S\+E}}
+\index{F\+A\+L\+S\+E@{F\+A\+L\+S\+E}!main.\+c@{main.\+c}}
+\subsubsection[{F\+A\+L\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+L\+S\+E~0}\label{main_8c_aa93f0eb578d23995850d61f7d61c55c1}
+\hypertarget{main_8c_ad7871643c05865c80f5d8050aead2b57}{}\index{main.\+c@{main.\+c}!M\+A\+X\+B\+U\+F@{M\+A\+X\+B\+U\+F}}
+\index{M\+A\+X\+B\+U\+F@{M\+A\+X\+B\+U\+F}!main.\+c@{main.\+c}}
+\subsubsection[{M\+A\+X\+B\+U\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+B\+U\+F~4096}\label{main_8c_ad7871643c05865c80f5d8050aead2b57}
+\hypertarget{main_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{}\index{main.\+c@{main.\+c}!T\+R\+U\+E@{T\+R\+U\+E}}
+\index{T\+R\+U\+E@{T\+R\+U\+E}!main.\+c@{main.\+c}}
+\subsubsection[{T\+R\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+U\+E~1}\label{main_8c_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_a9df71ba6c1ba41f8427a730c3c40655b}{}\index{main.\+c@{main.\+c}!calc\+Hist@{calc\+Hist}}
+\index{calc\+Hist@{calc\+Hist}!main.\+c@{main.\+c}}
+\subsubsection[{calc\+Hist}]{\setlength{\rightskip}{0pt plus 5cm}int calc\+Hist (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In}
+\end{DoxyParamCaption}
+)}\label{main_8c_a9df71ba6c1ba41f8427a730c3c40655b}
+\hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\hypertarget{main_8c_a045b3ded7797946554e9b7f61affd3c3}{}\index{main.\+c@{main.\+c}!remove\+Ext@{remove\+Ext}}
+\index{remove\+Ext@{remove\+Ext}!main.\+c@{main.\+c}}
+\subsubsection[{remove\+Ext}]{\setlength{\rightskip}{0pt plus 5cm}int remove\+Ext (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{main_8c_a045b3ded7797946554e9b7f61affd3c3}

@@ -1,0 +1,568 @@
+\hypertarget{image_filter_ops_8c}{}\section{Edge\+Filters/image\+Filter\+Ops.c File Reference}
+\label{image_filter_ops_8c}\index{Edge\+Filters/image\+Filter\+Ops.\+c@{Edge\+Filters/image\+Filter\+Ops.\+c}}
+
+
+All the filter operations (blurs, noises, sharpening, edge detection) are implemented in this file.  
+
+
+{\ttfamily \#include \char`\"{}image\+Filter\+Ops.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{image_filter_ops_8c_aee1a04576f0b0498f72e5722fe909a7e}{add\+Uniform\+Noise\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, int range)
+\begin{DoxyCompactList}\small\item\em Add uniform noise to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_ad94c847ad5e4019813cf6743d5d2b374}{add\+Salt\+Pepper\+Noise\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, double density)
+\begin{DoxyCompactList}\small\item\em Add Salt \& Pepper noise to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a2300f33e22a01e469eed16c10e44fb43}{median\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int dim\+X, int dim\+Y, int ic)
+\begin{DoxyCompactList}\small\item\em Return the median pixel of an image subarray of dimensions (dim\+X, dim\+Y). \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_af2673374509b89efefaaa37c5e78de8b}{median\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\begin{DoxyCompactList}\small\item\em Apply a median filter to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a5ef0accf7ad247403dd688e610c5304e}{average\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\begin{DoxyCompactList}\small\item\em Apply a box filter to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a867c2a563077e5e3e0adfbecf3b3a8da}{sharpening\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\begin{DoxyCompactList}\small\item\em Sharpen an image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a7875d7d9db6e01f8ab465f7dcd6691b7}{gauss\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, double sigma, int dim)
+\begin{DoxyCompactList}\small\item\em Gaussian blur of an image {\itshape pgm\+In}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a10b94e006a809979dc924845c61da96c}{op39\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int dim\+X, int dim\+Y, int ic)
+\begin{DoxyCompactList}\small\item\em Return the result of applying the 3/9 operator to a pixel of {\itshape pgm\+In1}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_abd4353db858e4e926311b354423499da}{op39\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} an image {\itshape pgm\+In} with the 3/9 operator. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a5d513d105d7fd4187288df6e13535c3a}{nagao\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int dim\+X, int dim\+Y, int ic)
+\begin{DoxyCompactList}\small\item\em Return the result of applying the Nagao-\/\+Matsuyama filter to a pixel of {\itshape pgm\+In1}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a014df876d7ef3fbfcf1aaec221208303}{nagao\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} an image {\itshape pgm\+In} with the Nagao-\/\+Matsuyama filter. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a7a10d91c6060def50a4f18ac29d2a95f}{suppression\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Mod, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Phi, double $\ast$kernel, int dim\+X, int dim\+Y, int ic)
+\begin{DoxyCompactList}\small\item\em Return the result of applying non-\/maximum suppression to a pixel of {\itshape pgm\+In1}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_ad04b0f26d354189899f07c93bcf73862}{suppression\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Mod, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Phi, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+Mod} with non-\/maximum suppression. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a2477c4d864f929052bc1d6e2ba409806}{sobel\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, uint8\+\_\+t phase)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Sobel filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_afd53c98614ea0c6139b30f42e4e008f4}{prewitt\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, uint8\+\_\+t phase)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a90605fbb99e0582c47693ab2aeb38a2e}{dog\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, double sigma, int dim)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. \end{DoxyCompactList}\item 
+int \hyperlink{image_filter_ops_8c_a9325f854f9cbe2897e1b5855f9594cd8}{ced\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, double sigma, int dim, int threshold\+\_\+low, int threshold\+\_\+high)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. \end{DoxyCompactList}\item 
+void \hyperlink{image_filter_ops_8c_a8c4f89431797f4df090dadb7c8c0c5d3}{exec\+Image\+Ops} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, F\+I\+L\+E $\ast$fp)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with the filters listed in file {\itshape fp}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+All the filter operations (blurs, noises, sharpening, edge detection) are implemented in this file. 
+
+\begin{DoxyAuthor}{Author}
+Eleonora Maria Aiello 
+
+Gianluca Gerard 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/11/15 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Apache License Version 2.\+0, January 2004 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\hypertarget{image_filter_ops_8c_ad94c847ad5e4019813cf6743d5d2b374}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!add\+Salt\+Pepper\+Noise\+P\+G\+M@{add\+Salt\+Pepper\+Noise\+P\+G\+M}}
+\index{add\+Salt\+Pepper\+Noise\+P\+G\+M@{add\+Salt\+Pepper\+Noise\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{add\+Salt\+Pepper\+Noise\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int add\+Salt\+Pepper\+Noise\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{double}]{density}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_ad94c847ad5e4019813cf6743d5d2b374}
+
+
+Add Salt \& Pepper noise to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. 
+
+Superimpose a percentage \textquotesingle{}density\textquotesingle{} of white or black pixels onto the image. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+{\em density} & The percentage of pixels that will become black or white with equal probability. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_aee1a04576f0b0498f72e5722fe909a7e}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!add\+Uniform\+Noise\+P\+G\+M@{add\+Uniform\+Noise\+P\+G\+M}}
+\index{add\+Uniform\+Noise\+P\+G\+M@{add\+Uniform\+Noise\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{add\+Uniform\+Noise\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int add\+Uniform\+Noise\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_aee1a04576f0b0498f72e5722fe909a7e}
+
+
+Add uniform noise to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. 
+
+Add to each pixel of the image a value in the interval \mbox{[}-\/range, +range\mbox{]} with uniform density. 
+\begin{DoxyParams}{Parameters}
+{\em img\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em img\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+{\em range} & The absolute max value of the range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a5ef0accf7ad247403dd688e610c5304e}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!average\+P\+G\+M@{average\+P\+G\+M}}
+\index{average\+P\+G\+M@{average\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{average\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int average\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a5ef0accf7ad247403dd688e610c5304e}
+
+
+Apply a box filter to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. 
+
+For each pixel of {\itshape pgm\+In} compute the average of a 3x3 subarray centered at the pixel. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a9325f854f9cbe2897e1b5855f9594cd8}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!ced\+P\+G\+M@{ced\+P\+G\+M}}
+\index{ced\+P\+G\+M@{ced\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{ced\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}ced\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{{\bf Pgm} $\ast$}]{img\+Out, }
+\item[{double}]{sigma, }
+\item[{int}]{dim, }
+\item[{int}]{threshold\+\_\+low, }
+\item[{int}]{threshold\+\_\+high}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a9325f854f9cbe2897e1b5855f9594cd8}
+
+
+\hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. 
+
+Apply the vertical and horizontal Prewitt filters and returns the magnitute if {\itshape phase} is 0 or the phase if {\itshape phase} is 1. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+{\em sigma} & The external sigma of the Do\+G filter. The internal sigma is set to {\itshape sigma} / 1.\+66 . \\
+\hline
+{\em dim} & The rows and columns of the Do\+G filter. If set to 0 then it will be the smallest odd next to 6 {\itshape sigma}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a90605fbb99e0582c47693ab2aeb38a2e}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!dog\+P\+G\+M@{dog\+P\+G\+M}}
+\index{dog\+P\+G\+M@{dog\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{dog\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}dog\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{double}]{sigma, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a90605fbb99e0582c47693ab2aeb38a2e}
+
+
+\hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. 
+
+Apply the vertical and horizontal Prewitt filters and returns the magnitute if {\itshape phase} is 0 or the phase if {\itshape phase} is 1. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+{\em sigma} & The external sigma of the Do\+G filter. The internal sigma is set to {\itshape sigma} / 1.\+66 . \\
+\hline
+{\em dim} & The rows and columns of the Do\+G filter. If set to 0 then it will be the smallest odd next to 6 {\itshape sigma}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a8c4f89431797f4df090dadb7c8c0c5d3}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!exec\+Image\+Ops@{exec\+Image\+Ops}}
+\index{exec\+Image\+Ops@{exec\+Image\+Ops}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{exec\+Image\+Ops}]{\setlength{\rightskip}{0pt plus 5cm}exec\+Image\+Ops (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{F\+I\+L\+E $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a8c4f89431797f4df090dadb7c8c0c5d3}
+
+
+\hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with the filters listed in file {\itshape fp}. 
+
+The file {\itshape fp} contains a list of filters, one per line, that will be applied in sequence to the image pointed by {\itshape pgm\+In}. The output will be stored in the \hyperlink{struct_pgm}{Pgm} structure pointed by {\itshape pgm\+Out}. Certain filters have optional parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+{\em fp} & Pointer to a file with the list of filters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{List of implemented filters}
+
+\end{DoxyParagraph}
+
+\begin{DoxyItemize}
+\item threshold \mbox{[}threshold\+\_\+value (default 0)\mbox{]}
+\item uniform\+\_\+noise \mbox{[}range\+\_\+value (default 32)\mbox{]}
+\item salt\+\_\+n\+\_\+pepper \mbox{[}density (default 0.\+05)\mbox{]}
+\item normalize
+\item equalize
+\item median
+\item average
+\item internal\+\_\+contour
+\item operator\+\_\+39
+\item nagao
+\item sharpening
+\item prewitt \mbox{[}mod$\vert$phase (default mod)\mbox{]}
+\item sobel \mbox{[}mod$\vert$phase (default mod)\mbox{]}
+\item gauss \mbox{[}sigma (default 1)\mbox{]} \mbox{[}dim (default 0)\mbox{]}
+\item dog \mbox{[}sigma (default 1)\mbox{]} \mbox{[}dim (default 0)\mbox{]}
+\item ced \mbox{[}sigma (default sqrt(2))\mbox{]} \mbox{[}threshold (default 25)\mbox{]} 
+\end{DoxyItemize}\hypertarget{image_filter_ops_8c_a7875d7d9db6e01f8ab465f7dcd6691b7}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!gauss\+P\+G\+M@{gauss\+P\+G\+M}}
+\index{gauss\+P\+G\+M@{gauss\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{gauss\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int gauss\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{double}]{sigma, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a7875d7d9db6e01f8ab465f7dcd6691b7}
+
+
+Gaussian blur of an image {\itshape pgm\+In}. 
+
+Apply as a filter two 1\+D Gaussian filters with the same {\itshape sigma} and matrix linear dimension {\itshape dim}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em sigma} & The sigma of the gaussians. \\
+\hline
+{\em dim} & The dimension of the gaussian filter. If 0 it will default to the nearest odd value close to 6 sigma. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a2300f33e22a01e469eed16c10e44fb43}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!median\+Kernel@{median\+Kernel}}
+\index{median\+Kernel@{median\+Kernel}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{median\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}median\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
+\item[{double $\ast$}]{kernel, }
+\item[{int}]{dim\+X, }
+\item[{int}]{dim\+Y, }
+\item[{int}]{ic}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a2300f33e22a01e469eed16c10e44fb43}
+
+
+Return the median pixel of an image subarray of dimensions (dim\+X, dim\+Y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In1} & Pointer to the \hyperlink{struct_pgm}{Pgm} structure of the input image. \\
+\hline
+{\em pgm\+In2} & Not used. \\
+\hline
+{\em kernel} & Not used. \\
+\hline
+{\em dim\+X} & The number of columns of the image subarray. \\
+\hline
+{\em dim\+Y} & The number of rows of the image subarray. \\
+\hline
+{\em ic} & The linear index of the central subarray pixel in {\itshape pgm\+In1}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the median pixel. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_af2673374509b89efefaaa37c5e78de8b}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!median\+P\+G\+M@{median\+P\+G\+M}}
+\index{median\+P\+G\+M@{median\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{median\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int median\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_af2673374509b89efefaaa37c5e78de8b}
+
+
+Apply a median filter to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. 
+
+For each pixel of {\itshape pgm\+In} compute the median of a 3x3 subarray centered at the pixel. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a5d513d105d7fd4187288df6e13535c3a}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!nagao\+Kernel@{nagao\+Kernel}}
+\index{nagao\+Kernel@{nagao\+Kernel}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{nagao\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}nagao\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
+\item[{double $\ast$}]{kernel, }
+\item[{int}]{dim\+X, }
+\item[{int}]{dim\+Y, }
+\item[{int}]{ic}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a5d513d105d7fd4187288df6e13535c3a}
+
+
+Return the result of applying the Nagao-\/\+Matsuyama filter to a pixel of {\itshape pgm\+In1}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In1} & Pointer to the \hyperlink{struct_pgm}{Pgm} structure of the input image. \\
+\hline
+{\em pgm\+In2} & Not used. \\
+\hline
+{\em kernel} & Not used. \\
+\hline
+{\em dim\+X} & Not used. \\
+\hline
+{\em dim\+Y} & Not used. \\
+\hline
+{\em ic} & The linear index of the central subarray pixel in {\itshape pgm\+In1}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the Nagao-\/\+Matsuyama filter. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a014df876d7ef3fbfcf1aaec221208303}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!nagao\+P\+G\+M@{nagao\+P\+G\+M}}
+\index{nagao\+P\+G\+M@{nagao\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{nagao\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int nagao\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a014df876d7ef3fbfcf1aaec221208303}
+
+
+\hyperlink{struct_filter}{Filter} an image {\itshape pgm\+In} with the Nagao-\/\+Matsuyama filter. The final result is stored in {\itshape pgm\+Out}. 
+
+Apply a Nagao-\/\+Matsuyama filter to the image stored in {\itshape pgm\+In}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a10b94e006a809979dc924845c61da96c}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!op39\+Kernel@{op39\+Kernel}}
+\index{op39\+Kernel@{op39\+Kernel}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{op39\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}op39\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
+\item[{double $\ast$}]{kernel, }
+\item[{int}]{dim\+X, }
+\item[{int}]{dim\+Y, }
+\item[{int}]{ic}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a10b94e006a809979dc924845c61da96c}
+
+
+Return the result of applying the 3/9 operator to a pixel of {\itshape pgm\+In1}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In1} & Pointer to the \hyperlink{struct_pgm}{Pgm} structure of the input image. \\
+\hline
+{\em pgm\+In2} & Not used. \\
+\hline
+{\em kernel} & Not used. \\
+\hline
+{\em dim\+X} & Not used. \\
+\hline
+{\em dim\+Y} & Not used. \\
+\hline
+{\em ic} & The linear index of the central subarray pixel in {\itshape pgm\+In1}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the 3/9 operator or 0 if the integral of the subarray is 0. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_abd4353db858e4e926311b354423499da}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!op39\+P\+G\+M@{op39\+P\+G\+M}}
+\index{op39\+P\+G\+M@{op39\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{op39\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int op39\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_abd4353db858e4e926311b354423499da}
+
+
+\hyperlink{struct_filter}{Filter} an image {\itshape pgm\+In} with the 3/9 operator. The final result is stored in {\itshape pgm\+Out}. 
+
+Apply a 3/9 operator filter to the image stored in {\itshape pgm\+In}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_afd53c98614ea0c6139b30f42e4e008f4}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!prewitt\+P\+G\+M@{prewitt\+P\+G\+M}}
+\index{prewitt\+P\+G\+M@{prewitt\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{prewitt\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int prewitt\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{uint8\+\_\+t}]{phase}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_afd53c98614ea0c6139b30f42e4e008f4}
+
+
+\hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. 
+
+Apply the vertical and horizontal Prewitt filters and returns the magnitute if {\itshape phase} is 0 or the phase if {\itshape phase} is 1. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+{\em phase} & Returns the phase if set to 1. Otherwise it returns the magnitude. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a867c2a563077e5e3e0adfbecf3b3a8da}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!sharpening\+P\+G\+M@{sharpening\+P\+G\+M}}
+\index{sharpening\+P\+G\+M@{sharpening\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{sharpening\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int sharpening\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a867c2a563077e5e3e0adfbecf3b3a8da}
+
+
+Sharpen an image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. 
+
+Apply a filter (the difference between an identity and a box filter) to the image stored in {\itshape pgm\+In}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a2477c4d864f929052bc1d6e2ba409806}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!sobel\+P\+G\+M@{sobel\+P\+G\+M}}
+\index{sobel\+P\+G\+M@{sobel\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{sobel\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int sobel\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
+\item[{uint8\+\_\+t}]{phase}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a2477c4d864f929052bc1d6e2ba409806}
+
+
+\hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Sobel filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. 
+
+Apply the vertical and horizontal Sobel filters and returns the magnitute if {\itshape phase} is 0 or the phase if {\itshape phase} is 1. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+{\em phase} & Returns the phase if set to 1. Otherwise it returns the magnitude. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_a7a10d91c6060def50a4f18ac29d2a95f}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!suppression\+Kernel@{suppression\+Kernel}}
+\index{suppression\+Kernel@{suppression\+Kernel}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{suppression\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}suppression\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+Mod, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Phi, }
+\item[{double $\ast$}]{kernel, }
+\item[{int}]{dim\+X, }
+\item[{int}]{dim\+Y, }
+\item[{int}]{ic}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_a7a10d91c6060def50a4f18ac29d2a95f}
+
+
+Return the result of applying non-\/maximum suppression to a pixel of {\itshape pgm\+In1}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+Mod} & Pointer to the \hyperlink{struct_pgm}{Pgm} structure containing the modulus component. \\
+\hline
+{\em pgm\+Phi} & Pointer to the \hyperlink{struct_pgm}{Pgm} structure containing the phase component. \\
+\hline
+{\em kernel} & Not used. \\
+\hline
+{\em dim\+X} & Not used. \\
+\hline
+{\em dim\+Y} & Not used. \\
+\hline
+{\em ic} & The linear index of the central subarray pixel in {\itshape pgm\+In1}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result the result of non-\/maximum suppression. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_ad04b0f26d354189899f07c93bcf73862}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!suppression\+P\+G\+M@{suppression\+P\+G\+M}}
+\index{suppression\+P\+G\+M@{suppression\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{suppression\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int suppression\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+Mod, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Phi, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_ad04b0f26d354189899f07c93bcf73862}
+
+
+\hyperlink{struct_filter}{Filter} the image {\itshape pgm\+Mod} with non-\/maximum suppression. The final result is stored in {\itshape pgm\+Out}. 
+
+Apply a non-\/maximum suppression filter to the image stored in {\itshape pgm\+Mod}. This array typically contains the magnitude of the gradient of an image. The orientation of the gradient is stored instead in {\itshape pgm\+Phi}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+Mod} & Pointer to the P\+G\+M image structure with the magnitude component. \\
+\hline
+{\em pgm\+Phi} & Pointer to the P\+G\+M image structure with the phase component. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}

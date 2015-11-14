@@ -1,0 +1,135 @@
+\hypertarget{test_8c}{}\section{Edge\+Filters/test.c File Reference}
+\label{test_8c}\index{Edge\+Filters/test.\+c@{Edge\+Filters/test.\+c}}
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Filters.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Basic\+Ops.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}image\+Filter\+Ops.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{test_8c_ad7871643c05865c80f5d8050aead2b57}{M\+A\+X\+B\+U\+F}~4096
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{test_8c_a5b028fe229f77207ab8961d555d40f4d}{test\+Basic\+Functions} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In)
+\item 
+int \hyperlink{test_8c_ad7a43d0ce415a9f2ed0f36369656d686}{test\+Sharpening} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\item 
+int \hyperlink{test_8c_a4ec47de79f4efe5417d522e775dd120d}{test\+Sobel} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\item 
+int \hyperlink{test_8c_a9ced0a576b4cbb1cabeb3a515c2e58cd}{test\+Gauss} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\item 
+int \hyperlink{test_8c_a755d866a2af4b733b2fffd353d370bb7}{test\+Do\+G} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\item 
+int \hyperlink{test_8c_afe397d4061cb7c85a0c310102dba2ac4}{test\+Noise} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\item 
+int \hyperlink{test_8c_a9db1466a7811517b7d1c502353b01453}{test\+Denoise} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\item 
+int \hyperlink{test_8c_aed82895293cf9b4a986172afa1afb9d8}{test\+O\+P39} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\item 
+int \hyperlink{test_8c_aba508114ab410a2f6ac003099f2dc2df}{test\+Nagao} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\item 
+int \hyperlink{test_8c_a603809e03cc42b1954295c7f94555b94}{test\+All} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, char $\ast$output\+File)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{test_8c_ad7871643c05865c80f5d8050aead2b57}{}\index{test.\+c@{test.\+c}!M\+A\+X\+B\+U\+F@{M\+A\+X\+B\+U\+F}}
+\index{M\+A\+X\+B\+U\+F@{M\+A\+X\+B\+U\+F}!test.\+c@{test.\+c}}
+\subsubsection[{M\+A\+X\+B\+U\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+B\+U\+F~4096}\label{test_8c_ad7871643c05865c80f5d8050aead2b57}
+
+
+\subsection{Function Documentation}
+\hypertarget{test_8c_a603809e03cc42b1954295c7f94555b94}{}\index{test.\+c@{test.\+c}!test\+All@{test\+All}}
+\index{test\+All@{test\+All}!test.\+c@{test.\+c}}
+\subsubsection[{test\+All}]{\setlength{\rightskip}{0pt plus 5cm}int test\+All (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_a603809e03cc42b1954295c7f94555b94}
+\hypertarget{test_8c_a5b028fe229f77207ab8961d555d40f4d}{}\index{test.\+c@{test.\+c}!test\+Basic\+Functions@{test\+Basic\+Functions}}
+\index{test\+Basic\+Functions@{test\+Basic\+Functions}!test.\+c@{test.\+c}}
+\subsubsection[{test\+Basic\+Functions}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Basic\+Functions (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In}
+\end{DoxyParamCaption}
+)}\label{test_8c_a5b028fe229f77207ab8961d555d40f4d}
+\hypertarget{test_8c_a9db1466a7811517b7d1c502353b01453}{}\index{test.\+c@{test.\+c}!test\+Denoise@{test\+Denoise}}
+\index{test\+Denoise@{test\+Denoise}!test.\+c@{test.\+c}}
+\subsubsection[{test\+Denoise}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Denoise (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_a9db1466a7811517b7d1c502353b01453}
+\hypertarget{test_8c_a755d866a2af4b733b2fffd353d370bb7}{}\index{test.\+c@{test.\+c}!test\+Do\+G@{test\+Do\+G}}
+\index{test\+Do\+G@{test\+Do\+G}!test.\+c@{test.\+c}}
+\subsubsection[{test\+Do\+G}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Do\+G (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_a755d866a2af4b733b2fffd353d370bb7}
+\hypertarget{test_8c_a9ced0a576b4cbb1cabeb3a515c2e58cd}{}\index{test.\+c@{test.\+c}!test\+Gauss@{test\+Gauss}}
+\index{test\+Gauss@{test\+Gauss}!test.\+c@{test.\+c}}
+\subsubsection[{test\+Gauss}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Gauss (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_a9ced0a576b4cbb1cabeb3a515c2e58cd}
+\hypertarget{test_8c_aba508114ab410a2f6ac003099f2dc2df}{}\index{test.\+c@{test.\+c}!test\+Nagao@{test\+Nagao}}
+\index{test\+Nagao@{test\+Nagao}!test.\+c@{test.\+c}}
+\subsubsection[{test\+Nagao}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Nagao (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_aba508114ab410a2f6ac003099f2dc2df}
+\hypertarget{test_8c_afe397d4061cb7c85a0c310102dba2ac4}{}\index{test.\+c@{test.\+c}!test\+Noise@{test\+Noise}}
+\index{test\+Noise@{test\+Noise}!test.\+c@{test.\+c}}
+\subsubsection[{test\+Noise}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Noise (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_afe397d4061cb7c85a0c310102dba2ac4}
+\hypertarget{test_8c_aed82895293cf9b4a986172afa1afb9d8}{}\index{test.\+c@{test.\+c}!test\+O\+P39@{test\+O\+P39}}
+\index{test\+O\+P39@{test\+O\+P39}!test.\+c@{test.\+c}}
+\subsubsection[{test\+O\+P39}]{\setlength{\rightskip}{0pt plus 5cm}int test\+O\+P39 (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_aed82895293cf9b4a986172afa1afb9d8}
+\hypertarget{test_8c_ad7a43d0ce415a9f2ed0f36369656d686}{}\index{test.\+c@{test.\+c}!test\+Sharpening@{test\+Sharpening}}
+\index{test\+Sharpening@{test\+Sharpening}!test.\+c@{test.\+c}}
+\subsubsection[{test\+Sharpening}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Sharpening (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_ad7a43d0ce415a9f2ed0f36369656d686}
+reset\+P\+G\+M(img\+Out1); convolution2\+D\+P\+G\+M(img\+In, img\+Out1, id\+Filter); reset\+P\+G\+M(img\+Out); normalize\+P\+G\+M(img\+Out1, img\+Out); sprintf(pname,\char`\"{}\%s\+\_\+copy.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out,pname);
+
+reset\+P\+G\+M(img\+Out2); convolution2\+D\+P\+G\+M(img\+In, img\+Out2, bx\+Filter); reset\+P\+G\+M(img\+Out); normalize\+P\+G\+M(img\+Out2, img\+Out); sprintf(pname,\char`\"{}\%s\+\_\+box.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out,pname);\hypertarget{test_8c_a4ec47de79f4efe5417d522e775dd120d}{}\index{test.\+c@{test.\+c}!test\+Sobel@{test\+Sobel}}
+\index{test\+Sobel@{test\+Sobel}!test.\+c@{test.\+c}}
+\subsubsection[{test\+Sobel}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Sobel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{img\+In, }
+\item[{char $\ast$}]{output\+File}
+\end{DoxyParamCaption}
+)}\label{test_8c_a4ec47de79f4efe5417d522e775dd120d}
+reset\+P\+G\+M(img\+Out3); absolute\+P\+G\+M(img\+Out1, img\+Out3); reset\+P\+G\+M(img\+Out); threshold\+P\+G\+M(img\+Out3, img\+Out); reset\+P\+G\+M(img\+Out3); normalize\+P\+G\+M(img\+Out, img\+Out3);
+
+sprintf(pname,\char`\"{}\%s\+\_\+sobel\+H\+\_\+\+T.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out3,pname);
+
+reset\+P\+G\+M(img\+Out3); absolute\+P\+G\+M(img\+Out2, img\+Out3); reset\+P\+G\+M(img\+Out); threshold\+P\+G\+M(img\+Out3, img\+Out); reset\+P\+G\+M(img\+Out3); normalize\+P\+G\+M(img\+Out, img\+Out3);
+
+sprintf(pname,\char`\"{}\%s\+\_\+sobel\+V\+\_\+\+T.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out3,pname);
+
+add the two sobel filters reset\+P\+G\+M(img\+Out); reset\+P\+G\+M(img\+Out3); absolute\+P\+G\+M(img\+Out2, img\+Out3); reset\+P\+G\+M(img\+Out2); absolute\+P\+G\+M(img\+Out1, img\+Out2); linear\+Add\+P\+G\+M(img\+Out2, img\+Out3, 1.\+0, 1.\+0, img\+Out); reset\+P\+G\+M(img\+Out3); threshold\+P\+G\+M(img\+Out, img\+Out3); reset\+P\+G\+M(img\+Out); normalize\+P\+G\+M(img\+Out3, img\+Out);
+
+sprintf(pname,\char`\"{}\%s\+\_\+sobel\+\_\+\+T.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out,pname);
