@@ -90,25 +90,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">imageContours.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contour detection functions.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="image_contours_8h_source.html">imageContours.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6dd1fef45aff957dee8db642a5828a3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#a6dd1fef45aff957dee8db642a5828a3d">contour2DKernel</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmIn2, double *kernel, int borderX, int borderY, int ic)</td></tr>
-<tr class="separator:a6dd1fef45aff957dee8db642a5828a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae72ef6d40d20a2878617da70aef5196"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#aae72ef6d40d20a2878617da70aef5196">contour2DPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
-<tr class="separator:aae72ef6d40d20a2878617da70aef5196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbb79173ff0fdca88a716cb63bd18b9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#afbb79173ff0fdca88a716cb63bd18b9d">contourN8IntKernel</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmIn2, double *kernel, int borderX, int borderY, int ic)</td></tr>
-<tr class="separator:afbb79173ff0fdca88a716cb63bd18b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bde89ec94810983e82b7dc3de83ecb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#af6bde89ec94810983e82b7dc3de83ecb">contourUniformKernel</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmIn2, double *kernel, int spanX, int spanY, int ic)</td></tr>
+<tr class="memdesc:af6bde89ec94810983e82b7dc3de83ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value of the central pixel if it is not at the center of an 8-neighborhood uniform region. Otherwise returns 0.  <a href="#af6bde89ec94810983e82b7dc3de83ecb">More...</a><br /></td></tr>
+<tr class="separator:af6bde89ec94810983e82b7dc3de83ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa26dbb02bb812614285517a603f292"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#a2fa26dbb02bb812614285517a603f292">contourUniformPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:a2fa26dbb02bb812614285517a603f292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return in <em>pgmOut</em> the contours of image pointerd by <em>pgmIn</em> by looking for uniform regions.  <a href="#a2fa26dbb02bb812614285517a603f292">More...</a><br /></td></tr>
+<tr class="separator:a2fa26dbb02bb812614285517a603f292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc03aa3e854a14a09dccd93c183172aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#adc03aa3e854a14a09dccd93c183172aa">contourN8IntKernel</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmIn2, double *kernel, int spanX, int spanY, int ic)</td></tr>
+<tr class="memdesc:adc03aa3e854a14a09dccd93c183172aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for internal contour pixels with N8 distance. It uses inverted images (background white, foreground black).  <a href="#adc03aa3e854a14a09dccd93c183172aa">More...</a><br /></td></tr>
+<tr class="separator:adc03aa3e854a14a09dccd93c183172aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf88b76d9d6974b28ee1e60f169596da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#acf88b76d9d6974b28ee1e60f169596da">contourN8IntPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:acf88b76d9d6974b28ee1e60f169596da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return in <em>pgmOut</em> the contours of image pointerd by <em>pgmIn</em> by looking for pixels in the foreground having N8 unitary distance from the background.  <a href="#acf88b76d9d6974b28ee1e60f169596da">More...</a><br /></td></tr>
 <tr class="separator:acf88b76d9d6974b28ee1e60f169596da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6fbfadfb2b2bc626c522bbbf04f31ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#ae6fbfadfb2b2bc626c522bbbf04f31ad">connectivityKernel</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmNH, <a class="el" href="struct_pgm.html">Pgm</a> *pgmNL, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, int borderX, int borderY, int ic)</td></tr>
-<tr class="separator:ae6fbfadfb2b2bc626c522bbbf04f31ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81527e5f9e1bfe51864334fbaa00fd52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#a81527e5f9e1bfe51864334fbaa00fd52">connectivityKernel</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmNH, <a class="el" href="struct_pgm.html">Pgm</a> *pgmNL, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, int ic)</td></tr>
+<tr class="memdesc:a81527e5f9e1bfe51864334fbaa00fd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns in <em>pgmOut</em> the pixels of <em>pgmNL</em> 8-connected to the central pixel of <em>pgmNH</em>.  <a href="#a81527e5f9e1bfe51864334fbaa00fd52">More...</a><br /></td></tr>
+<tr class="separator:a81527e5f9e1bfe51864334fbaa00fd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37d865f922409d7a01b35a6c383dc5cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_contours_8c.html#a37d865f922409d7a01b35a6c383dc5cd">connectivityPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmNH, <a class="el" href="struct_pgm.html">Pgm</a> *pgmNL, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:a37d865f922409d7a01b35a6c383dc5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns in <em>pgmOut</em> the pixels of <em>pgmNL</em> 8-connected to all the non-background pixels of <em>pgmNH</em>.  <a href="#a37d865f922409d7a01b35a6c383dc5cd">More...</a><br /></td></tr>
 <tr class="separator:a37d865f922409d7a01b35a6c383dc5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ae6fbfadfb2b2bc626c522bbbf04f31ad"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contour detection functions. </p>
+<dl class="section author"><dt>Author</dt><dd>Eleonora Maria Aiello </dd>
+<dd>
+Gianluca Gerard </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>13/11/15 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Apache License Version 2.0, January 2004 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a81527e5f9e1bfe51864334fbaa00fd52"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -134,18 +150,6 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>ic</em>&#160;</td>
         </tr>
         <tr>
@@ -155,6 +159,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>It returns in <em>pgmOut</em> the pixels of <em>pgmNL</em> 8-connected to the central pixel of <em>pgmNH</em>. </p>
+<p>Find and store in <em>pgmOut</em> the pixels of <em>pgmNL</em> that are 8-connected to a non background pixel in <em>pgmNH</em>. It only searches for pixels in an 8-neighboorhood centered on the pixel in <em>pgmNH</em> linearly indexed by <em>ic</em>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmNH</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmNL</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure that stores the result. </td></tr>
+    <tr><td class="paramname">ic</td><td>Linear index in pgmNH-&gt;pixels of the central pixel. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -188,85 +203,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a6dd1fef45aff957dee8db642a5828a3d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int contour2DKernel </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
-          <td class="paramname"><em>pgmIn1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
-          <td class="paramname"><em>pgmIn2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>kernel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ic</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>It returns in <em>pgmOut</em> the pixels of <em>pgmNL</em> 8-connected to all the non-background pixels of <em>pgmNH</em>. </p>
+<p>Find and store in <em>pgmOut</em> the pixels of <em>pgmNL</em> that are 8-connected to all non background pixels in <em>pgmNH</em>. It only searches for pixels in an 8-neighboorhood centered on each pixel of <em>pgmNH</em>. To identify all 8-connected pixels the search must be repeated until no further pixels are added to the result in <em>pgmOut</em>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmNH</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmNL</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure that stores the result. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmNH, pgmNL or pgmOut are NULL. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aae72ef6d40d20a2878617da70aef5196"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int contour2DPGM </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
-          <td class="paramname"><em>pgmIn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
-          <td class="paramname"><em>pgmOut</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="afbb79173ff0fdca88a716cb63bd18b9d"></a>
+<a class="anchor" id="adc03aa3e854a14a09dccd93c183172aa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -292,13 +242,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderX</em>, </td>
+          <td class="paramname"><em>spanX</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderY</em>, </td>
+          <td class="paramname"><em>spanY</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -313,6 +263,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Check for internal contour pixels with N8 distance. It uses inverted images (background white, foreground black). </p>
+<p>Find the subset of the foreground having unitary N8 distance from the background. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn1</td><td>Pointer to the input PGM image structure. </td></tr>
+    <tr><td class="paramname">pgmIn2</td><td>Not used. </td></tr>
+    <tr><td class="paramname">kernel</td><td>Not used. </td></tr>
+    <tr><td class="paramname">spanX</td><td>Not used. </td></tr>
+    <tr><td class="paramname">spanY</td><td>Not used. </td></tr>
+    <tr><td class="paramname">ic</td><td>Linear index in pgmIn1-&gt;pixels of the central pixel. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value of the central pixel if it is a contour pixel, otherwise 0. </dd></dl>
 
 </div>
 </div>
@@ -340,12 +304,122 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Return in <em>pgmOut</em> the contours of image pointerd by <em>pgmIn</em> by looking for pixels in the foreground having N8 unitary distance from the background. </p>
+<p>Find the subset of the foreground of the image <em>pgmIn</em> having unitary N8 distance from the background. This subset is stored in <em>pgmOut</em>. Background is a value of 0 of the image, every other value is foreground. In the output image the contour is set to 0 and the background to 255, therefore the image is reverted. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output PGM image structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af6bde89ec94810983e82b7dc3de83ecb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int contourUniformKernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
+          <td class="paramname"><em>pgmIn1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
+          <td class="paramname"><em>pgmIn2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>kernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spanX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spanY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the value of the central pixel if it is not at the center of an 8-neighborhood uniform region. Otherwise returns 0. </p>
+<p>Computes the sum of the absolute values of the pixels in a 8-neighborhood of the central pixel. If the sum is equal to the area of the neighborhood multipled with the value of the central pixel we are in a uniform region, therefore the pixel cannot be a contour. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn1</td><td>Pointer to the input PGM image structure. </td></tr>
+    <tr><td class="paramname">pgmIn2</td><td>Not used. </td></tr>
+    <tr><td class="paramname">kernel</td><td>Not used. </td></tr>
+    <tr><td class="paramname">spanX</td><td>Not used. </td></tr>
+    <tr><td class="paramname">spanY</td><td>Not used. </td></tr>
+    <tr><td class="paramname">ic</td><td>Linear index in pgmIn1-&gt;pixels of the central pixel. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value of the central pixel if it is a contour pixel, otherwise 0. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2fa26dbb02bb812614285517a603f292"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int contourUniformPGM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
+          <td class="paramname"><em>pgmIn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
+          <td class="paramname"><em>pgmOut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return in <em>pgmOut</em> the contours of image pointerd by <em>pgmIn</em> by looking for uniform regions. </p>
+<p>The image in <em>pgmIn</em> is filtered such that every pixel at the center of an 8-neighborhood uniform region is set to 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output PGM image structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 20:52:11 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 15 2015 20:51:47 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">imageUtilities.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interfaces to functions for reading and writing in PGM P2 - P5 format.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
@@ -101,60 +104,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_pgm.html">Pgm</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store PGM format images.  <a href="struct_pgm.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_histogram.html">Histogram</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store images Histograms.  <a href="struct_histogram.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa5788b7e72e9e3cb772f700ebfe3522c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#aa5788b7e72e9e3cb772f700ebfe3522c">D</a>(a)</td></tr>
+<tr class="memitem:aa5788b7e72e9e3cb772f700ebfe3522c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5788b7e72e9e3cb772f700ebfe3522c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>D</b>(a)</td></tr>
 <tr class="separator:aa5788b7e72e9e3cb772f700ebfe3522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a51795452eaa8e44a260ba69cff808ab9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#a51795452eaa8e44a260ba69cff808ab9">newPGM</a> (int width, int height, int max_val)</td></tr>
+<tr class="memdesc:a51795452eaa8e44a260ba69cff808ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new empty pgm image.  <a href="#a51795452eaa8e44a260ba69cff808ab9">More...</a><br /></td></tr>
 <tr class="separator:a51795452eaa8e44a260ba69cff808ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5ab499ebb00127f36199accaad7e416"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#af5ab499ebb00127f36199accaad7e416">readPGM</a> (char *filename)</td></tr>
+<tr class="memdesc:af5ab499ebb00127f36199accaad7e416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Pixels From Different FileType.  <a href="#af5ab499ebb00127f36199accaad7e416">More...</a><br /></td></tr>
 <tr class="separator:af5ab499ebb00127f36199accaad7e416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e652856f81926db37707118c5e97fc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#a3e652856f81926db37707118c5e97fc0">writePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgm, char *filename)</td></tr>
+<tr class="memdesc:a3e652856f81926db37707118c5e97fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Pixels inside images for Different FileType.  <a href="#a3e652856f81926db37707118c5e97fc0">More...</a><br /></td></tr>
 <tr class="separator:a3e652856f81926db37707118c5e97fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a080dc9b5c30fdb08d6288770bfd5cb5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#a080dc9b5c30fdb08d6288770bfd5cb5d">resetPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgm)</td></tr>
+<tr class="memdesc:a080dc9b5c30fdb08d6288770bfd5cb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to zero all the pixels of a pgm image.  <a href="#a080dc9b5c30fdb08d6288770bfd5cb5d">More...</a><br /></td></tr>
 <tr class="separator:a080dc9b5c30fdb08d6288770bfd5cb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94fdc8061eb7647fd7467f5920ca84b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#a94fdc8061eb7647fd7467f5920ca84b6">freePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> **pgm)</td></tr>
+<tr class="memdesc:a94fdc8061eb7647fd7467f5920ca84b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure.  <a href="#a94fdc8061eb7647fd7467f5920ca84b6">More...</a><br /></td></tr>
 <tr class="separator:a94fdc8061eb7647fd7467f5920ca84b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab426bca6be2807e3357dc304dd7c49ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#ab426bca6be2807e3357dc304dd7c49ec">invertPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:ab426bca6be2807e3357dc304dd7c49ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert Pixels GrayScale value inside images.  <a href="#ab426bca6be2807e3357dc304dd7c49ec">More...</a><br /></td></tr>
 <tr class="separator:ab426bca6be2807e3357dc304dd7c49ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6315d65e39da9b96165ebcd4ca505d4f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#a6315d65e39da9b96165ebcd4ca505d4f">hflipPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmImg, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:a6315d65e39da9b96165ebcd4ca505d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip Image Horizontally.  <a href="#a6315d65e39da9b96165ebcd4ca505d4f">More...</a><br /></td></tr>
 <tr class="separator:a6315d65e39da9b96165ebcd4ca505d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c31e32687b2c60896c76a36434fa923"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#a4c31e32687b2c60896c76a36434fa923">copyPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmImg, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:a4c31e32687b2c60896c76a36434fa923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a PGM Image.  <a href="#a4c31e32687b2c60896c76a36434fa923">More...</a><br /></td></tr>
 <tr class="separator:a4c31e32687b2c60896c76a36434fa923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7148f131bc164c2677d47aa78dd5d9f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_histogram.html">Histogram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#a7148f131bc164c2677d47aa78dd5d9f3">histogramPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgm)</td></tr>
+<tr class="memdesc:a7148f131bc164c2677d47aa78dd5d9f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the <a class="el" href="struct_histogram.html" title="Structure to store images Histograms. ">Histogram</a> of an image in <em>pgm</em>.  <a href="#a7148f131bc164c2677d47aa78dd5d9f3">More...</a><br /></td></tr>
 <tr class="separator:a7148f131bc164c2677d47aa78dd5d9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa972ff453fb4a1c58c19b1c7016f211c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#aa972ff453fb4a1c58c19b1c7016f211c">freeHistogram</a> (<a class="el" href="struct_histogram.html">Histogram</a> **h)</td></tr>
+<tr class="memdesc:aa972ff453fb4a1c58c19b1c7016f211c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free an <a class="el" href="struct_histogram.html" title="Structure to store images Histograms. ">Histogram</a> structure.  <a href="#aa972ff453fb4a1c58c19b1c7016f211c">More...</a><br /></td></tr>
 <tr class="separator:aa972ff453fb4a1c58c19b1c7016f211c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacb95acbcaccea57dd38c7ec567358d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#aacb95acbcaccea57dd38c7ec567358d1">normalizePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:aacb95acbcaccea57dd38c7ec567358d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize the Image.  <a href="#aacb95acbcaccea57dd38c7ec567358d1">More...</a><br /></td></tr>
 <tr class="separator:aacb95acbcaccea57dd38c7ec567358d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad14cac2c63bce8619ea81690da2bc3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_utilities_8h.html#a0ad14cac2c63bce8619ea81690da2bc3">equalizePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:a0ad14cac2c63bce8619ea81690da2bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equalize the Image.  <a href="#a0ad14cac2c63bce8619ea81690da2bc3">More...</a><br /></td></tr>
 <tr class="separator:a0ad14cac2c63bce8619ea81690da2bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="aa5788b7e72e9e3cb772f700ebfe3522c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define D</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">a</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interfaces to functions for reading and writing in PGM P2 - P5 format. </p>
+<dl class="section author"><dt>Author</dt><dd>Piercarlo Dondi </dd>
+<dd>
+Alessandro Gaggia </dd>
+<dd>
+Gianluca Gerard </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a4c31e32687b2c60896c76a36434fa923"></a>
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +171,7 @@ Functions</h2></td></tr>
           <td class="memname">int copyPGM </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
-          <td class="paramname"><em>pgmImg</em>, </td>
+          <td class="paramname"><em>pgmIn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -178,6 +186,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Copy a PGM Image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the image. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the copied <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success. -1 if no <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure pointer is provided. </dd></dl>
 
 </div>
 </div>
@@ -205,6 +223,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Equalize the Image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the image. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the equalized image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success. -1 if either input pointers is null. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aa972ff453fb4a1c58c19b1c7016f211c"></a>
@@ -215,11 +243,19 @@ Functions</h2></td></tr>
           <td class="memname">void freeHistogram </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_histogram.html">Histogram</a> **&#160;</td>
-          <td class="paramname"><em>h</em></td><td>)</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Free an <a class="el" href="struct_histogram.html" title="Structure to store images Histograms. ">Histogram</a> structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>Pointer to the <a class="el" href="struct_histogram.html" title="Structure to store images Histograms. ">Histogram</a> structure pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -237,6 +273,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Free <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgm</td><td>Pointer to a <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a6315d65e39da9b96165ebcd4ca505d4f"></a>
@@ -247,7 +291,7 @@ Functions</h2></td></tr>
           <td class="memname">int hflipPGM </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
-          <td class="paramname"><em>pgmImg</em>, </td>
+          <td class="paramname"><em>pgmIn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -262,6 +306,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Flip Image Horizontally. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the image. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the flipped <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success. -1 if no <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure pointer is provided. </dd></dl>
 
 </div>
 </div>
@@ -278,6 +332,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Computes the <a class="el" href="struct_histogram.html" title="Structure to store images Histograms. ">Histogram</a> of an image in <em>pgm</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgm</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the <a class="el" href="struct_histogram.html" title="Structure to store images Histograms. ">Histogram</a> structure for the image. </dd></dl>
 
 </div>
 </div>
@@ -304,6 +367,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Invert Pixels GrayScale value inside images. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the image. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the inverted <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success. -1 if no <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure pointer is provided. </dd></dl>
 
 </div>
 </div>
@@ -337,6 +410,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a new empty pgm image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Image's width. </td></tr>
+    <tr><td class="paramname">height</td><td>Image's height. </td></tr>
+    <tr><td class="paramname">max_val</td><td>Maximum pixel value in the image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the new created image. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aacb95acbcaccea57dd38c7ec567358d1"></a>
@@ -363,6 +447,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Normalize the Image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the image. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the normalized image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success. -1 if either input pointers is null. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="af5ab499ebb00127f36199accaad7e416"></a>
@@ -379,6 +473,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Read Pixels From Different FileType. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of the file with the image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure containing the read image. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a080dc9b5c30fdb08d6288770bfd5cb5d"></a>
@@ -394,6 +497,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set to zero all the pixels of a pgm image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgm</td><td>Pointer to a <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -421,12 +532,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Write Pixels inside images for Different FileType. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgm</td><td>Pointer to the <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure with the image. </td></tr>
+    <tr><td class="paramname">filename</td><td>Name of the file where the image is written. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success. -1 if no <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure pointer is provided. </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 20:52:11 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 15 2015 20:51:47 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

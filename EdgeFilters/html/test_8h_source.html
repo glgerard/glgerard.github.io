@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">test.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  test.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  EdgeFilters</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -100,36 +100,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define test_h</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="image_utilities_8h.html">imageUtilities.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;imageUtilities.h&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#a5b028fe229f77207ab8961d555d40f4d">testBasicFunctions</a>(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#ad7a43d0ce415a9f2ed0f36369656d686">testSharpening</a>(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#a4ec47de79f4efe5417d522e775dd120d">testSobel</a>(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#a9ced0a576b4cbb1cabeb3a515c2e58cd">testGauss</a>(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#a755d866a2af4b733b2fffd353d370bb7">testDoG</a>(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#afe397d4061cb7c85a0c310102dba2ac4">testNoise</a>(<a class="code" href="struct_pgm.html">Pgm</a> *imgIn, <span class="keywordtype">char</span>* outputFile);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#a9db1466a7811517b7d1c502353b01453">testDenoise</a>(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#aed82895293cf9b4a986172afa1afb9d8">testOP39</a>(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#aba508114ab410a2f6ac003099f2dc2df">testNagao</a>(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_8h.html#a603809e03cc42b1954295c7f94555b94">testAll</a>(<a class="code" href="struct_pgm.html">Pgm</a> *imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> testBasicFunctions(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">int</span> testSharpening(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">int</span> testSobel(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> testGauss(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> testDoG(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> testNoise(<a class="code" href="struct_pgm.html">Pgm</a> *imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> testDenoise(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> testOP39(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> testNagao(<a class="code" href="struct_pgm.html">Pgm</a>* imgIn, <span class="keywordtype">char</span>* outputFile);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> testAll(<a class="code" href="struct_pgm.html">Pgm</a> *imgIn, <span class="keywordtype">char</span>* outputFile);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* test_h */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="struct_pgm_html"><div class="ttname"><a href="struct_pgm.html">Pgm</a></div><div class="ttdef"><b>Definition:</b> imageUtilities.h:18</div></div>
-<div class="ttc" id="test_8h_html_a9db1466a7811517b7d1c502353b01453"><div class="ttname"><a href="test_8h.html#a9db1466a7811517b7d1c502353b01453">testDenoise</a></div><div class="ttdeci">int testDenoise(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:290</div></div>
-<div class="ttc" id="test_8h_html_a755d866a2af4b733b2fffd353d370bb7"><div class="ttname"><a href="test_8h.html#a755d866a2af4b733b2fffd353d370bb7">testDoG</a></div><div class="ttdeci">int testDoG(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:232</div></div>
-<div class="ttc" id="test_8h_html_afe397d4061cb7c85a0c310102dba2ac4"><div class="ttname"><a href="test_8h.html#afe397d4061cb7c85a0c310102dba2ac4">testNoise</a></div><div class="ttdeci">int testNoise(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:264</div></div>
-<div class="ttc" id="test_8h_html_aed82895293cf9b4a986172afa1afb9d8"><div class="ttname"><a href="test_8h.html#aed82895293cf9b4a986172afa1afb9d8">testOP39</a></div><div class="ttdeci">int testOP39(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:321</div></div>
-<div class="ttc" id="test_8h_html_aba508114ab410a2f6ac003099f2dc2df"><div class="ttname"><a href="test_8h.html#aba508114ab410a2f6ac003099f2dc2df">testNagao</a></div><div class="ttdeci">int testNagao(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:343</div></div>
-<div class="ttc" id="test_8h_html_a5b028fe229f77207ab8961d555d40f4d"><div class="ttname"><a href="test_8h.html#a5b028fe229f77207ab8961d555d40f4d">testBasicFunctions</a></div><div class="ttdeci">int testBasicFunctions(Pgm *imgIn)</div><div class="ttdef"><b>Definition:</b> test.c:16</div></div>
-<div class="ttc" id="test_8h_html_a9ced0a576b4cbb1cabeb3a515c2e58cd"><div class="ttname"><a href="test_8h.html#a9ced0a576b4cbb1cabeb3a515c2e58cd">testGauss</a></div><div class="ttdeci">int testGauss(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:199</div></div>
-<div class="ttc" id="test_8h_html_a603809e03cc42b1954295c7f94555b94"><div class="ttname"><a href="test_8h.html#a603809e03cc42b1954295c7f94555b94">testAll</a></div><div class="ttdeci">int testAll(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:359</div></div>
-<div class="ttc" id="test_8h_html_a4ec47de79f4efe5417d522e775dd120d"><div class="ttname"><a href="test_8h.html#a4ec47de79f4efe5417d522e775dd120d">testSobel</a></div><div class="ttdeci">int testSobel(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:103</div></div>
-<div class="ttc" id="image_utilities_8h_html"><div class="ttname"><a href="image_utilities_8h.html">imageUtilities.h</a></div></div>
-<div class="ttc" id="test_8h_html_ad7a43d0ce415a9f2ed0f36369656d686"><div class="ttname"><a href="test_8h.html#ad7a43d0ce415a9f2ed0f36369656d686">testSharpening</a></div><div class="ttdeci">int testSharpening(Pgm *imgIn, char *outputFile)</div><div class="ttdef"><b>Definition:</b> test.c:47</div></div>
+<div class="ttc" id="struct_pgm_html"><div class="ttname"><a href="struct_pgm.html">Pgm</a></div><div class="ttdoc">Structure to store PGM format images. </div><div class="ttdef"><b>Definition:</b> imageUtilities.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 20:52:11 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 15 2015 20:16:30 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

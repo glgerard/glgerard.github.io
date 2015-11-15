@@ -90,50 +90,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">imageFilters.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Functions to create and free filters.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="image_filters_8h_source.html">imageFilters.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="image_filter_ops_8h_source.html">imageFilterOps.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aaca2859d4589d90400d71c29e07429e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#aaca2859d4589d90400d71c29e07429e5">newFilter</a> (int width, int height)</td></tr>
-<tr class="separator:aaca2859d4589d90400d71c29e07429e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185cfcf0044a7ec22778f307f1435635"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a185cfcf0044a7ec22778f307f1435635">newFilter</a> (int width, int height)</td></tr>
+<tr class="memdesc:a185cfcf0044a7ec22778f307f1435635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new image filter of size <em>width</em> x <em>height</em>.  <a href="#a185cfcf0044a7ec22778f307f1435635">More...</a><br /></td></tr>
+<tr class="separator:a185cfcf0044a7ec22778f307f1435635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0676b1dca03b04c8645b8cf4880a666"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#aa0676b1dca03b04c8645b8cf4880a666">freeFilter</a> (<a class="el" href="struct_filter.html">Filter</a> **filter)</td></tr>
+<tr class="memdesc:aa0676b1dca03b04c8645b8cf4880a666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure whose pointer is stored in <em>filter</em>.  <a href="#aa0676b1dca03b04c8645b8cf4880a666">More...</a><br /></td></tr>
 <tr class="separator:aa0676b1dca03b04c8645b8cf4880a666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af159acaa8544846f98d8bc61831bb3ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#af159acaa8544846f98d8bc61831bb3ee">printFilter</a> (<a class="el" href="struct_filter.html">Filter</a> *filter)</td></tr>
+<tr class="memdesc:af159acaa8544846f98d8bc61831bb3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the values of the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> pointed by <em>filter</em>.  <a href="#af159acaa8544846f98d8bc61831bb3ee">More...</a><br /></td></tr>
 <tr class="separator:af159acaa8544846f98d8bc61831bb3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a8f731e6c621a784f1921e2f965e351"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a6a8f731e6c621a784f1921e2f965e351">linearAddFilter</a> (<a class="el" href="struct_filter.html">Filter</a> *filterOp1, <a class="el" href="struct_filter.html">Filter</a> *filterOp2, double w1, double w2)</td></tr>
-<tr class="separator:a6a8f731e6c621a784f1921e2f965e351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab272379cd5830de4648361734bff0dde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#ab272379cd5830de4648361734bff0dde">identityFilter</a> (int width, int height)</td></tr>
-<tr class="separator:ab272379cd5830de4648361734bff0dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82d97235f47d0deacedf0c5285876482"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a82d97235f47d0deacedf0c5285876482">boxFilter</a> (int width, int height)</td></tr>
-<tr class="separator:a82d97235f47d0deacedf0c5285876482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d4aca81922a58f796338a1f2e6ebdb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a5d4aca81922a58f796338a1f2e6ebdb5">genericFilter</a> (const int *matrix, int width, int height)</td></tr>
-<tr class="separator:a5d4aca81922a58f796338a1f2e6ebdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14a509158bba4112bc4bd453d772fd4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a14a509158bba4112bc4bd453d772fd4e">prewittXFilter</a> ()</td></tr>
-<tr class="separator:a14a509158bba4112bc4bd453d772fd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c7d93bbbf1d606e3519129e00e66118"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a8c7d93bbbf1d606e3519129e00e66118">prewittYFilter</a> ()</td></tr>
-<tr class="separator:a8c7d93bbbf1d606e3519129e00e66118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92093addd766273980f634c5388205f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a92093addd766273980f634c5388205f1">sobelXFilter</a> ()</td></tr>
-<tr class="separator:a92093addd766273980f634c5388205f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaddbeb29c7e6f9c61fc9ff25abaa081"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#aeaddbeb29c7e6f9c61fc9ff25abaa081">sobelYFilter</a> ()</td></tr>
-<tr class="separator:aeaddbeb29c7e6f9c61fc9ff25abaa081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f25875b462629c96095dd30464527f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a7f25875b462629c96095dd30464527f5">gauss1DFilter</a> (double sigma, int dim, <a class="el" href="struct_filter.html">Filter</a> *filter)</td></tr>
-<tr class="separator:a7f25875b462629c96095dd30464527f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c3b3a8c374aca54f6a1462f51fb693f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a9c3b3a8c374aca54f6a1462f51fb693f">gauss1DXFilter</a> (double sigma, int width)</td></tr>
-<tr class="separator:a9c3b3a8c374aca54f6a1462f51fb693f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0329a40434d011ff4fe725287c953bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#aa0329a40434d011ff4fe725287c953bd">gauss1DYFilter</a> (double sigma, int height)</td></tr>
-<tr class="separator:aa0329a40434d011ff4fe725287c953bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aace556e9fd9d9b3dfc3f6f6f2a3db6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a8aace556e9fd9d9b3dfc3f6f6f2a3db6">gauss2DFilter</a> (double sigma, int dim)</td></tr>
-<tr class="separator:a8aace556e9fd9d9b3dfc3f6f6f2a3db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1675cb31fa3a6b5a3b199c215c47430f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a1675cb31fa3a6b5a3b199c215c47430f">DoGFilter</a> (double sigma, int dim)</td></tr>
-<tr class="separator:a1675cb31fa3a6b5a3b199c215c47430f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b28baeb9382f292da11a0cf9646dea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#ab5b28baeb9382f292da11a0cf9646dea">identityFilter</a> (int width, int height)</td></tr>
+<tr class="memdesc:ab5b28baeb9382f292da11a0cf9646dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates an identity <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>.  <a href="#ab5b28baeb9382f292da11a0cf9646dea">More...</a><br /></td></tr>
+<tr class="separator:ab5b28baeb9382f292da11a0cf9646dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5543fcb723a454a3723dc7d5f5dafe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#aae5543fcb723a454a3723dc7d5f5dafe">boxFilter</a> (int width, int height)</td></tr>
+<tr class="memdesc:aae5543fcb723a454a3723dc7d5f5dafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a box <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>.  <a href="#aae5543fcb723a454a3723dc7d5f5dafe">More...</a><br /></td></tr>
+<tr class="separator:aae5543fcb723a454a3723dc7d5f5dafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a919bf5671e90b27eb26566ed675d80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a2a919bf5671e90b27eb26566ed675d80">genericFilter</a> (const double *matrix, int width, int height)</td></tr>
+<tr class="memdesc:a2a919bf5671e90b27eb26566ed675d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a generic filter copying the values in matrix.  <a href="#a2a919bf5671e90b27eb26566ed675d80">More...</a><br /></td></tr>
+<tr class="separator:a2a919bf5671e90b27eb26566ed675d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0282af06f7a196d9eb42b7d79e243170"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a0282af06f7a196d9eb42b7d79e243170">prewittXFilter</a> ()</td></tr>
+<tr class="memdesc:a0282af06f7a196d9eb42b7d79e243170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the vertical Prewitt filter.  <a href="#a0282af06f7a196d9eb42b7d79e243170">More...</a><br /></td></tr>
+<tr class="separator:a0282af06f7a196d9eb42b7d79e243170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59d58747a42df282b36b4042d4ccf188"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a59d58747a42df282b36b4042d4ccf188">prewittYFilter</a> ()</td></tr>
+<tr class="memdesc:a59d58747a42df282b36b4042d4ccf188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the horizontal Prewitt filter.  <a href="#a59d58747a42df282b36b4042d4ccf188">More...</a><br /></td></tr>
+<tr class="separator:a59d58747a42df282b36b4042d4ccf188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b2e037b4bad18a7254d74572ac66b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a25b2e037b4bad18a7254d74572ac66b9">sobelXFilter</a> ()</td></tr>
+<tr class="memdesc:a25b2e037b4bad18a7254d74572ac66b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the vertical Sobel filter.  <a href="#a25b2e037b4bad18a7254d74572ac66b9">More...</a><br /></td></tr>
+<tr class="separator:a25b2e037b4bad18a7254d74572ac66b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99122da33fc4156d38b7899ecf3ad9c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a99122da33fc4156d38b7899ecf3ad9c3">sobelYFilter</a> ()</td></tr>
+<tr class="memdesc:a99122da33fc4156d38b7899ecf3ad9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the horizontal Sobel filter.  <a href="#a99122da33fc4156d38b7899ecf3ad9c3">More...</a><br /></td></tr>
+<tr class="separator:a99122da33fc4156d38b7899ecf3ad9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe34cec3c7023df295421640b50a3b59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#abe34cec3c7023df295421640b50a3b59">gauss1DFilter</a> (double sigma, int dim, <a class="el" href="struct_filter.html">Filter</a> *filter)</td></tr>
+<tr class="memdesc:abe34cec3c7023df295421640b50a3b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 1 dimensional Gauss filter with sigma <em>sigma</em> and linear dimension <em>dim</em>.  <a href="#abe34cec3c7023df295421640b50a3b59">More...</a><br /></td></tr>
+<tr class="separator:abe34cec3c7023df295421640b50a3b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe70896dd789efbb23a71675376d56c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#a0fe70896dd789efbb23a71675376d56c">gauss1DXFilter</a> (double sigma, int width)</td></tr>
+<tr class="memdesc:a0fe70896dd789efbb23a71675376d56c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 1 dimensional Gauss filter with 1 row and <em>width</em> columns.  <a href="#a0fe70896dd789efbb23a71675376d56c">More...</a><br /></td></tr>
+<tr class="separator:a0fe70896dd789efbb23a71675376d56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc16768a499208ec1121d1aec832e390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#abc16768a499208ec1121d1aec832e390">gauss1DYFilter</a> (double sigma, int height)</td></tr>
+<tr class="memdesc:abc16768a499208ec1121d1aec832e390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 1 dimensional Gauss filter with 1 column and <em>height</em> rows.  <a href="#abc16768a499208ec1121d1aec832e390">More...</a><br /></td></tr>
+<tr class="separator:abc16768a499208ec1121d1aec832e390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9de2ac6d71be50dc68ebcee531ed249"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#ac9de2ac6d71be50dc68ebcee531ed249">gauss2DFilter</a> (double sigma, int dim)</td></tr>
+<tr class="memdesc:ac9de2ac6d71be50dc68ebcee531ed249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 2-dimensional Gauss filter with <em>dim</em> columns and <em>dim</em> rows.  <a href="#ac9de2ac6d71be50dc68ebcee531ed249">More...</a><br /></td></tr>
+<tr class="separator:ac9de2ac6d71be50dc68ebcee531ed249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cf8d2130b77ccc70bb90a916a9e0f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filters_8c.html#af7cf8d2130b77ccc70bb90a916a9e0f8">DoGFilter</a> (double sigma, int dim)</td></tr>
+<tr class="memdesc:af7cf8d2130b77ccc70bb90a916a9e0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a DoG filter with <em>dim</em> columns and <em>dim</em> rows.  <a href="#af7cf8d2130b77ccc70bb90a916a9e0f8">More...</a><br /></td></tr>
+<tr class="separator:af7cf8d2130b77ccc70bb90a916a9e0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a82d97235f47d0deacedf0c5285876482"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Functions to create and free filters. </p>
+<dl class="section author"><dt>Author</dt><dd>Eleonora Maria Aiello </dd>
+<dd>
+Gianluca Gerard </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/10/15 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Apache License Version 2.0, January 2004 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aae5543fcb723a454a3723dc7d5f5dafe"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* boxFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * boxFilter </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>width</em>, </td>
@@ -152,14 +176,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>It creates a box <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>. </p>
+<p>The box filter has all values set to the inverse of (<em>width</em> * <em>height</em>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s width. </td></tr>
+    <tr><td class="paramname">height</td><td><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s height. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the newly created <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure or NULL if the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> could not be created. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a1675cb31fa3a6b5a3b199c215c47430f"></a>
+<a class="anchor" id="af7cf8d2130b77ccc70bb90a916a9e0f8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* DoGFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * DoGFilter </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>sigma</em>, </td>
@@ -178,6 +213,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a DoG filter with <em>dim</em> columns and <em>dim</em> rows. </p>
+<p>This filter is the result of the difference of two equal Gaussian filters with equal size and different sigmas. The external gaussian has sigma set by <em>sigma</em>. The internal gaussian has a smaller sigma equal to <em>sigma</em> / 1.66 .</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sigma</td><td>The sigma of the external Gaussian. </td></tr>
+    <tr><td class="paramname">dim</td><td>The number of rows and columns of the filter. If it is set to 0 then the dimension is the smallest odd number next to 6 <em>sigma</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the DoG filter. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aa0676b1dca03b04c8645b8cf4880a666"></a>
@@ -194,14 +240,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Free a <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure whose pointer is stored in <em>filter</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>The pointer to a filter's pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="a7f25875b462629c96095dd30464527f5"></a>
+<a class="anchor" id="abe34cec3c7023df295421640b50a3b59"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* gauss1DFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * gauss1DFilter </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>sigma</em>, </td>
@@ -226,14 +280,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a 1 dimensional Gauss filter with sigma <em>sigma</em> and linear dimension <em>dim</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sigma</td><td>The sigma of the Gaussian. </td></tr>
+    <tr><td class="paramname">dim</td><td>The linear dimension of the filter. </td></tr>
+    <tr><td class="paramname">filter</td><td>Pointer to the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure where the filters values are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the Gauss filter. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a9c3b3a8c374aca54f6a1462f51fb693f"></a>
+<a class="anchor" id="a0fe70896dd789efbb23a71675376d56c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* gauss1DXFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * gauss1DXFilter </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>sigma</em>, </td>
@@ -252,14 +317,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a 1 dimensional Gauss filter with 1 row and <em>width</em> columns. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sigma</td><td>The sigma of the Gaussian. </td></tr>
+    <tr><td class="paramname">width</td><td>The columns of the filter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the Gauss filter. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="aa0329a40434d011ff4fe725287c953bd"></a>
+<a class="anchor" id="abc16768a499208ec1121d1aec832e390"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* gauss1DYFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * gauss1DYFilter </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>sigma</em>, </td>
@@ -278,14 +353,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a 1 dimensional Gauss filter with 1 column and <em>height</em> rows. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sigma</td><td>The sigma of the Gaussian. </td></tr>
+    <tr><td class="paramname">height</td><td>The rows of the filter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the Gauss filter. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a8aace556e9fd9d9b3dfc3f6f6f2a3db6"></a>
+<a class="anchor" id="ac9de2ac6d71be50dc68ebcee531ed249"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* gauss2DFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * gauss2DFilter </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>sigma</em>, </td>
@@ -304,16 +389,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a 2-dimensional Gauss filter with <em>dim</em> columns and <em>dim</em> rows. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sigma</td><td>The sigma of the Gaussian. </td></tr>
+    <tr><td class="paramname">dim</td><td>The number of rows and columns of the filter. If it is set to 0 then the dimension is the smallest odd number next to 6 <em>sigma</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the Gauss filter. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a5d4aca81922a58f796338a1f2e6ebdb5"></a>
+<a class="anchor" id="a2a919bf5671e90b27eb26566ed675d80"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* genericFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * genericFilter </td>
           <td>(</td>
-          <td class="paramtype">const int *&#160;</td>
+          <td class="paramtype">const double *&#160;</td>
           <td class="paramname"><em>matrix</em>, </td>
         </tr>
         <tr>
@@ -336,14 +431,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a generic filter copying the values in matrix. </p>
+<p>The box filter has all values set to the inverse of (<em>width</em> * <em>height</em>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Pointer to the array of values that will be copied in the filter's matrix. </td></tr>
+    <tr><td class="paramname">width</td><td><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s width. </td></tr>
+    <tr><td class="paramname">height</td><td><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s height. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the newly created <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure or NULL if the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> could not be created. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="ab272379cd5830de4648361734bff0dde"></a>
+<a class="anchor" id="ab5b28baeb9382f292da11a0cf9646dea"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* identityFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * identityFilter </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>width</em>, </td>
@@ -362,52 +469,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a6a8f731e6c621a784f1921e2f965e351"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* linearAddFilter </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td>
-          <td class="paramname"><em>filterOp1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td>
-          <td class="paramname"><em>filterOp2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>w1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>w2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>It creates an identity <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>. </p>
+<p>The identify filter has all values at 0 except for the one at the center of the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s array which is set to 1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s width. </td></tr>
+    <tr><td class="paramname">height</td><td><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s height. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the newly created <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure or NULL if the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> could not be created. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><em>width</em> and <em>height</em> must both be odd values. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aaca2859d4589d90400d71c29e07429e5"></a>
+<a class="anchor" id="a185cfcf0044a7ec22778f307f1435635"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* newFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * newFilter </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>width</em>, </td>
@@ -426,14 +506,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a new image filter of size <em>width</em> x <em>height</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s width. </td></tr>
+    <tr><td class="paramname">height</td><td><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>'s height. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the newly created <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure or NULL if either one of the two dimensions is less than 1. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a14a509158bba4112bc4bd453d772fd4e"></a>
+<a class="anchor" id="a0282af06f7a196d9eb42b7d79e243170"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* prewittXFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * prewittXFilter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -441,20 +531,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates the vertical Prewitt filter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the vertical Prewitt filter. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a8c7d93bbbf1d606e3519129e00e66118"></a>
+<a class="anchor" id="a59d58747a42df282b36b4042d4ccf188"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* prewittYFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * prewittYFilter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates the horizontal Prewitt filter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the horizontal Prewitt filter. </dd></dl>
 
 </div>
 </div>
@@ -472,14 +568,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Print the values of the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> pointed by <em>filter</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>The pointer to the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="a92093addd766273980f634c5388205f1"></a>
+<a class="anchor" id="a25b2e037b4bad18a7254d74572ac66b9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* sobelXFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * sobelXFilter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -487,27 +591,33 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates the vertical Sobel filter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the vertical Sobel filter. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="aeaddbeb29c7e6f9c61fc9ff25abaa081"></a>
+<a class="anchor" id="a99122da33fc4156d38b7899ecf3ad9c3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* sobelYFilter </td>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a> * sobelYFilter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates the horizontal Sobel filter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the horizontal Sobel filter. </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 20:52:11 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 15 2015 20:51:47 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

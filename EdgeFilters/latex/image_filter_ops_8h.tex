@@ -1,5 +1,10 @@
 \hypertarget{image_filter_ops_8h}{}\section{Edge\+Filters/image\+Filter\+Ops.h File Reference}
 \label{image_filter_ops_8h}\index{Edge\+Filters/image\+Filter\+Ops.\+h@{Edge\+Filters/image\+Filter\+Ops.\+h}}
+
+
+Interfaces to the filter operations (blurs, noises, sharpening, edge detection).  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}helper\+Functions.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}image\+Utilities.\+h\char`\"{}}\\*
@@ -9,13 +14,17 @@
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{image_filter_ops_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+U\+E}~1
+\hypertarget{image_filter_ops_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{}\#define {\bfseries T\+R\+U\+E}~1\label{image_filter_ops_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
 \item 
-\#define \hyperlink{image_filter_ops_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+S\+E}~0
+\hypertarget{image_filter_ops_8h_aa93f0eb578d23995850d61f7d61c55c1}{}\#define {\bfseries F\+A\+L\+S\+E}~0\label{image_filter_ops_8h_aa93f0eb578d23995850d61f7d61c55c1}
+
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filter_ops_8h_a6a8f731e6c621a784f1921e2f965e351}{linear\+Add\+Filter} (\hyperlink{struct_filter}{Filter} $\ast$filter\+Op1, \hyperlink{struct_filter}{Filter} $\ast$filter\+Op2, double w1, double w2)
+\begin{DoxyCompactList}\small\item\em Linear weighted sum of two Filters. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8h_aee1a04576f0b0498f72e5722fe909a7e}{add\+Uniform\+Noise\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, int range)
 \begin{DoxyCompactList}\small\item\em Add uniform noise to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8h_acd44caaa593ab9345a2bc03cf94a5d60}{add\+Salt\+Pepper\+Noise\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, double prob)
@@ -46,13 +55,20 @@ void \hyperlink{image_filter_ops_8h_a9b7b4a2b448380073796985501658d8b}{exec\+Ima
 \begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with the filters listed in file {\itshape fp}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Macro Definition Documentation}
-\hypertarget{image_filter_ops_8h_aa93f0eb578d23995850d61f7d61c55c1}{}\index{image\+Filter\+Ops.\+h@{image\+Filter\+Ops.\+h}!F\+A\+L\+S\+E@{F\+A\+L\+S\+E}}
-\index{F\+A\+L\+S\+E@{F\+A\+L\+S\+E}!image\+Filter\+Ops.\+h@{image\+Filter\+Ops.\+h}}
-\subsubsection[{F\+A\+L\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+L\+S\+E~0}\label{image_filter_ops_8h_aa93f0eb578d23995850d61f7d61c55c1}
-\hypertarget{image_filter_ops_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{}\index{image\+Filter\+Ops.\+h@{image\+Filter\+Ops.\+h}!T\+R\+U\+E@{T\+R\+U\+E}}
-\index{T\+R\+U\+E@{T\+R\+U\+E}!image\+Filter\+Ops.\+h@{image\+Filter\+Ops.\+h}}
-\subsubsection[{T\+R\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+U\+E~1}\label{image_filter_ops_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+\subsection{Detailed Description}
+Interfaces to the filter operations (blurs, noises, sharpening, edge detection). 
+
+\begin{DoxyAuthor}{Author}
+Eleonora Maria Aiello 
+
+Gianluca Gerard 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/11/15 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Apache License Version 2.\+0, January 2004 
+\end{DoxyCopyright}
 
 
 \subsection{Function Documentation}
@@ -96,9 +112,9 @@ Add uniform noise to the image {\itshape pgm\+In}. The final result is stored in
 
 Add to each pixel of the image a value in the interval \mbox{[}-\/range, +range\mbox{]} with uniform density. 
 \begin{DoxyParams}{Parameters}
-{\em img\+In} & Pointer to the input P\+G\+M image structure. \\
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
 \hline
-{\em img\+Out} & Pointer to the output P\+G\+M image structure. \\
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
 \hline
 {\em range} & The absolute max value of the range. \\
 \hline
@@ -153,6 +169,10 @@ Apply the vertical and horizontal Prewitt filters and returns the magnitute if {
 {\em sigma} & The external sigma of the Do\+G filter. The internal sigma is set to {\itshape sigma} / 1.\+66 . \\
 \hline
 {\em dim} & The rows and columns of the Do\+G filter. If set to 0 then it will be the smallest odd next to 6 {\itshape sigma}. \\
+\hline
+{\em threshold\+\_\+low} & Lower threshold used by the Canny algorithm. \\
+\hline
+{\em threshold\+\_\+high} & Hihger threshold used by the Canny algorithm. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -258,6 +278,34 @@ Apply as a filter two 1\+D Gaussian filters with the same {\itshape sigma} and m
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8h_a6a8f731e6c621a784f1921e2f965e351}{}\index{image\+Filter\+Ops.\+h@{image\+Filter\+Ops.\+h}!linear\+Add\+Filter@{linear\+Add\+Filter}}
+\index{linear\+Add\+Filter@{linear\+Add\+Filter}!image\+Filter\+Ops.\+h@{image\+Filter\+Ops.\+h}}
+\subsubsection[{linear\+Add\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ linear\+Add\+Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Filter} $\ast$}]{filter\+Op1, }
+\item[{{\bf Filter} $\ast$}]{filter\+Op2, }
+\item[{double}]{w1, }
+\item[{double}]{w2}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8h_a6a8f731e6c621a784f1921e2f965e351}
+
+
+Linear weighted sum of two Filters. 
+
+It adds linearly the two filters arrays. Each array is first multiplied by a weight. The two filters must have the same dimensions. 
+\begin{DoxyParams}{Parameters}
+{\em filter\+Op1} & The pointer to the first \hyperlink{struct_filter}{Filter}. \\
+\hline
+{\em filter\+Op2} & The pointer to the second \hyperlink{struct_filter}{Filter}. \\
+\hline
+{\em w1} & Weigth for the first \hyperlink{struct_filter}{Filter}. \\
+\hline
+{\em w2} & Weight for the second \hyperlink{struct_filter}{Filter}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the new \hyperlink{struct_filter}{Filter} structure that contains the sum result. 
 \end{DoxyReturn}
 \hypertarget{image_filter_ops_8h_af2673374509b89efefaaa37c5e78de8b}{}\index{image\+Filter\+Ops.\+h@{image\+Filter\+Ops.\+h}!median\+P\+G\+M@{median\+P\+G\+M}}
 \index{median\+P\+G\+M@{median\+P\+G\+M}!image\+Filter\+Ops.\+h@{image\+Filter\+Ops.\+h}}

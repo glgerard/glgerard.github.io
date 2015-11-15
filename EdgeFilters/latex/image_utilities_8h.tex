@@ -1,5 +1,10 @@
 \hypertarget{image_utilities_8h}{}\section{Edge\+Filters/image\+Utilities.h File Reference}
 \label{image_utilities_8h}\index{Edge\+Filters/image\+Utilities.\+h@{Edge\+Filters/image\+Utilities.\+h}}
+
+
+Interfaces to functions for reading and writing in P\+G\+M P2 -\/ P5 format.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
@@ -7,51 +12,54 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{struct_pgm}{Pgm}
-\item 
+\begin{DoxyCompactList}\small\item\em Structure to store P\+G\+M format images. \end{DoxyCompactList}\item 
 struct \hyperlink{struct_histogram}{Histogram}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Structure to store images Histograms. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{image_utilities_8h_aa5788b7e72e9e3cb772f700ebfe3522c}{D}(a)
+\hypertarget{image_utilities_8h_aa5788b7e72e9e3cb772f700ebfe3522c}{}\#define {\bfseries D}(a)\label{image_utilities_8h_aa5788b7e72e9e3cb772f700ebfe3522c}
+
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{struct_pgm}{Pgm} $\ast$ \hyperlink{image_utilities_8h_a51795452eaa8e44a260ba69cff808ab9}{new\+P\+G\+M} (int width, int height, int max\+\_\+val)
-\item 
+\begin{DoxyCompactList}\small\item\em Create a new empty pgm image. \end{DoxyCompactList}\item 
 \hyperlink{struct_pgm}{Pgm} $\ast$ \hyperlink{image_utilities_8h_af5ab499ebb00127f36199accaad7e416}{read\+P\+G\+M} (char $\ast$filename)
-\item 
+\begin{DoxyCompactList}\small\item\em Read Pixels From Different File\+Type. \end{DoxyCompactList}\item 
 int \hyperlink{image_utilities_8h_a3e652856f81926db37707118c5e97fc0}{write\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm, char $\ast$filename)
-\item 
+\begin{DoxyCompactList}\small\item\em Write Pixels inside images for Different File\+Type. \end{DoxyCompactList}\item 
 void \hyperlink{image_utilities_8h_a080dc9b5c30fdb08d6288770bfd5cb5d}{reset\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm)
-\item 
+\begin{DoxyCompactList}\small\item\em Set to zero all the pixels of a pgm image. \end{DoxyCompactList}\item 
 void \hyperlink{image_utilities_8h_a94fdc8061eb7647fd7467f5920ca84b6}{free\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$$\ast$pgm)
-\item 
+\begin{DoxyCompactList}\small\item\em Free \hyperlink{struct_pgm}{Pgm} structure. \end{DoxyCompactList}\item 
 int \hyperlink{image_utilities_8h_ab426bca6be2807e3357dc304dd7c49ec}{invert\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+\begin{DoxyCompactList}\small\item\em Invert Pixels Gray\+Scale value inside images. \end{DoxyCompactList}\item 
 int \hyperlink{image_utilities_8h_a6315d65e39da9b96165ebcd4ca505d4f}{hflip\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Img, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+\begin{DoxyCompactList}\small\item\em Flip Image Horizontally. \end{DoxyCompactList}\item 
 int \hyperlink{image_utilities_8h_a4c31e32687b2c60896c76a36434fa923}{copy\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Img, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy a P\+G\+M Image. \end{DoxyCompactList}\item 
 \hyperlink{struct_histogram}{Histogram} $\ast$ \hyperlink{image_utilities_8h_a7148f131bc164c2677d47aa78dd5d9f3}{histogram\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm)
-\item 
+\begin{DoxyCompactList}\small\item\em Computes the \hyperlink{struct_histogram}{Histogram} of an image in {\itshape pgm}. \end{DoxyCompactList}\item 
 void \hyperlink{image_utilities_8h_aa972ff453fb4a1c58c19b1c7016f211c}{free\+Histogram} (\hyperlink{struct_histogram}{Histogram} $\ast$$\ast$h)
-\item 
+\begin{DoxyCompactList}\small\item\em Free an \hyperlink{struct_histogram}{Histogram} structure. \end{DoxyCompactList}\item 
 int \hyperlink{image_utilities_8h_aacb95acbcaccea57dd38c7ec567358d1}{normalize\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+\begin{DoxyCompactList}\small\item\em Normalize the Image. \end{DoxyCompactList}\item 
 int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Equalize the Image. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Macro Definition Documentation}
-\hypertarget{image_utilities_8h_aa5788b7e72e9e3cb772f700ebfe3522c}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!D@{D}}
-\index{D@{D}!image\+Utilities.\+h@{image\+Utilities.\+h}}
-\subsubsection[{D}]{\setlength{\rightskip}{0pt plus 5cm}\#define D(
-\begin{DoxyParamCaption}
-\item[{}]{a}
-\end{DoxyParamCaption}
-)}\label{image_utilities_8h_aa5788b7e72e9e3cb772f700ebfe3522c}
+\subsection{Detailed Description}
+Interfaces to functions for reading and writing in P\+G\+M P2 -\/ P5 format. 
+
+\begin{DoxyAuthor}{Author}
+Piercarlo Dondi 
+
+Alessandro Gaggia 
+
+Gianluca Gerard 
+\end{DoxyAuthor}
 
 
 \subsection{Function Documentation}
@@ -59,10 +67,24 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \index{copy\+P\+G\+M@{copy\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{copy\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int copy\+P\+G\+M (
 \begin{DoxyParamCaption}
-\item[{{\bf Pgm} $\ast$}]{pgm\+Img, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_a4c31e32687b2c60896c76a36434fa923}
+
+
+Copy a P\+G\+M Image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} structure with the image. \\
+\hline
+{\em pgm\+Out} & Pointer to the copied \hyperlink{struct_pgm}{Pgm} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. -\/1 if no \hyperlink{struct_pgm}{Pgm} structure pointer is provided. 
+\end{DoxyReturn}
 \hypertarget{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!equalize\+P\+G\+M@{equalize\+P\+G\+M}}
 \index{equalize\+P\+G\+M@{equalize\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{equalize\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int equalize\+P\+G\+M (
@@ -71,13 +93,36 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}
+
+
+Equalize the Image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} structure with the image. \\
+\hline
+{\em pgm\+Out} & Pointer to the \hyperlink{struct_pgm}{Pgm} structure with the equalized image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. -\/1 if either input pointers is null. 
+\end{DoxyReturn}
 \hypertarget{image_utilities_8h_aa972ff453fb4a1c58c19b1c7016f211c}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!free\+Histogram@{free\+Histogram}}
 \index{free\+Histogram@{free\+Histogram}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{free\+Histogram}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Histogram (
 \begin{DoxyParamCaption}
-\item[{{\bf Histogram} $\ast$$\ast$}]{h}
+\item[{{\bf Histogram} $\ast$$\ast$}]{handle}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_aa972ff453fb4a1c58c19b1c7016f211c}
+
+
+Free an \hyperlink{struct_histogram}{Histogram} structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Pointer to the \hyperlink{struct_histogram}{Histogram} structure pointer. \\
+\hline
+\end{DoxyParams}
 \hypertarget{image_utilities_8h_a94fdc8061eb7647fd7467f5920ca84b6}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!free\+P\+G\+M@{free\+P\+G\+M}}
 \index{free\+P\+G\+M@{free\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{free\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}void free\+P\+G\+M (
@@ -85,14 +130,37 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{{\bf Pgm} $\ast$$\ast$}]{pgm}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_a94fdc8061eb7647fd7467f5920ca84b6}
+
+
+Free \hyperlink{struct_pgm}{Pgm} structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm} & Pointer to a \hyperlink{struct_pgm}{Pgm} structure pointer. \\
+\hline
+\end{DoxyParams}
 \hypertarget{image_utilities_8h_a6315d65e39da9b96165ebcd4ca505d4f}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!hflip\+P\+G\+M@{hflip\+P\+G\+M}}
 \index{hflip\+P\+G\+M@{hflip\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{hflip\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int hflip\+P\+G\+M (
 \begin{DoxyParamCaption}
-\item[{{\bf Pgm} $\ast$}]{pgm\+Img, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_a6315d65e39da9b96165ebcd4ca505d4f}
+
+
+Flip Image Horizontally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} structure with the image. \\
+\hline
+{\em pgm\+Out} & Pointer to the flipped \hyperlink{struct_pgm}{Pgm} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. -\/1 if no \hyperlink{struct_pgm}{Pgm} structure pointer is provided. 
+\end{DoxyReturn}
 \hypertarget{image_utilities_8h_a7148f131bc164c2677d47aa78dd5d9f3}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!histogram\+P\+G\+M@{histogram\+P\+G\+M}}
 \index{histogram\+P\+G\+M@{histogram\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{histogram\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Histogram}$\ast$ histogram\+P\+G\+M (
@@ -100,6 +168,18 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{{\bf Pgm} $\ast$}]{pgm}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_a7148f131bc164c2677d47aa78dd5d9f3}
+
+
+Computes the \hyperlink{struct_histogram}{Histogram} of an image in {\itshape pgm}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm} & Pointer to the input \hyperlink{struct_pgm}{Pgm} structure with the image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \hyperlink{struct_histogram}{Histogram} structure for the image. 
+\end{DoxyReturn}
 \hypertarget{image_utilities_8h_ab426bca6be2807e3357dc304dd7c49ec}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!invert\+P\+G\+M@{invert\+P\+G\+M}}
 \index{invert\+P\+G\+M@{invert\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{invert\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int invert\+P\+G\+M (
@@ -108,6 +188,20 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_ab426bca6be2807e3357dc304dd7c49ec}
+
+
+Invert Pixels Gray\+Scale value inside images. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} structure with the image. \\
+\hline
+{\em pgm\+Out} & Pointer to the inverted \hyperlink{struct_pgm}{Pgm} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. -\/1 if no \hyperlink{struct_pgm}{Pgm} structure pointer is provided. 
+\end{DoxyReturn}
 \hypertarget{image_utilities_8h_a51795452eaa8e44a260ba69cff808ab9}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!new\+P\+G\+M@{new\+P\+G\+M}}
 \index{new\+P\+G\+M@{new\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{new\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pgm}$\ast$ new\+P\+G\+M (
@@ -117,6 +211,22 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{int}]{max\+\_\+val}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_a51795452eaa8e44a260ba69cff808ab9}
+
+
+Create a new empty pgm image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Image\textquotesingle{}s width. \\
+\hline
+{\em height} & Image\textquotesingle{}s height. \\
+\hline
+{\em max\+\_\+val} & Maximum pixel value in the image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the new created image. 
+\end{DoxyReturn}
 \hypertarget{image_utilities_8h_aacb95acbcaccea57dd38c7ec567358d1}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!normalize\+P\+G\+M@{normalize\+P\+G\+M}}
 \index{normalize\+P\+G\+M@{normalize\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{normalize\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int normalize\+P\+G\+M (
@@ -125,6 +235,20 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_aacb95acbcaccea57dd38c7ec567358d1}
+
+
+Normalize the Image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} structure with the image. \\
+\hline
+{\em pgm\+Out} & Pointer to the \hyperlink{struct_pgm}{Pgm} structure with the normalized image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. -\/1 if either input pointers is null. 
+\end{DoxyReturn}
 \hypertarget{image_utilities_8h_af5ab499ebb00127f36199accaad7e416}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!read\+P\+G\+M@{read\+P\+G\+M}}
 \index{read\+P\+G\+M@{read\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{read\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pgm}$\ast$ read\+P\+G\+M (
@@ -132,6 +256,18 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{char $\ast$}]{filename}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_af5ab499ebb00127f36199accaad7e416}
+
+
+Read Pixels From Different File\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file with the image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \hyperlink{struct_pgm}{Pgm} structure containing the read image. 
+\end{DoxyReturn}
 \hypertarget{image_utilities_8h_a080dc9b5c30fdb08d6288770bfd5cb5d}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!reset\+P\+G\+M@{reset\+P\+G\+M}}
 \index{reset\+P\+G\+M@{reset\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{reset\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}void reset\+P\+G\+M (
@@ -139,6 +275,15 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{{\bf Pgm} $\ast$}]{pgm}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_a080dc9b5c30fdb08d6288770bfd5cb5d}
+
+
+Set to zero all the pixels of a pgm image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm} & Pointer to a \hyperlink{struct_pgm}{Pgm} structure. \\
+\hline
+\end{DoxyParams}
 \hypertarget{image_utilities_8h_a3e652856f81926db37707118c5e97fc0}{}\index{image\+Utilities.\+h@{image\+Utilities.\+h}!write\+P\+G\+M@{write\+P\+G\+M}}
 \index{write\+P\+G\+M@{write\+P\+G\+M}!image\+Utilities.\+h@{image\+Utilities.\+h}}
 \subsubsection[{write\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int write\+P\+G\+M (
@@ -147,3 +292,17 @@ int \hyperlink{image_utilities_8h_a0ad14cac2c63bce8619ea81690da2bc3}{equalize\+P
 \item[{char $\ast$}]{filename}
 \end{DoxyParamCaption}
 )}\label{image_utilities_8h_a3e652856f81926db37707118c5e97fc0}
+
+
+Write Pixels inside images for Different File\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm} & Pointer to the \hyperlink{struct_pgm}{Pgm} structure with the image. \\
+\hline
+{\em filename} & Name of the file where the image is written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. -\/1 if no \hyperlink{struct_pgm}{Pgm} structure pointer is provided. 
+\end{DoxyReturn}

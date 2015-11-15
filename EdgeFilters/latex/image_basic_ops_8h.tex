@@ -1,5 +1,10 @@
 \hypertarget{image_basic_ops_8h}{}\section{Edge\+Filters/image\+Basic\+Ops.h File Reference}
 \label{image_basic_ops_8h}\index{Edge\+Filters/image\+Basic\+Ops.\+h@{Edge\+Filters/image\+Basic\+Ops.\+h}}
+
+
+Interfaces to image processing functions (absolute, linear add, threshold and fapply).  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
@@ -12,41 +17,48 @@
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}{drandom}()~(((double)(random()\&0xffffff))/0xffffff)
-\end{DoxyCompactItemize}
+\hypertarget{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}{}\#define \hyperlink{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}{drandom}()~(((double)(random()\&0xffffff))/0xffffff)\label{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}
+
+\begin{DoxyCompactList}\small\item\em Return a random value in the the interval \mbox{[}0.\+0, 1.\+0\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{image_basic_ops_8h_a21b7c0153859749af20da7f95d85c56f}{absolute\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+\begin{DoxyCompactList}\small\item\em Convert each pixel of the image {\itshape pgm\+In} to its absolute value. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
 int \hyperlink{image_basic_ops_8h_a2beed6f34722fb27a9c19e0aac0f2a9e}{threshold\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, int threshold)
-\item 
+\begin{DoxyCompactList}\small\item\em Binarize an image {\itshape pgm\+In} based on the {\itshape threshold} value. The result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
 int \hyperlink{image_basic_ops_8h_a2dce8fae864d87092dc6ccfc302e34ed}{linear\+Add\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op2, double w1, double w2, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+\begin{DoxyCompactList}\small\item\em Linear weighted sum of two images. \end{DoxyCompactList}\item 
 int \hyperlink{image_basic_ops_8h_a58a02537a83a84b74192680d299f2186}{compare\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op2)
-\item 
+\begin{DoxyCompactList}\small\item\em Compare two images {\itshape pgm\+Op1} and {\itshape pgm\+Op2}. \end{DoxyCompactList}\item 
 int \hyperlink{image_basic_ops_8h_a61d820d9ce5852829463026be89c282f}{module\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op\+X, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op\+Y, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+\begin{DoxyCompactList}\small\item\em Store in {\itshape pgm\+Out} the \char`\"{}module\char`\"{} of the two images in {\itshape pgm\+Op\+X} and {\itshape pgm\+Op\+Y} as if each image\textquotesingle{}s pixel would be the x and y coordinate of a point in the cartesian plane. \end{DoxyCompactList}\item 
 int \hyperlink{image_basic_ops_8h_ad54a6261223dee6369fff0b01d754460}{phase\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op\+X, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Op\+Y, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
-int \hyperlink{image_basic_ops_8h_a90a19bfcce0315c936f1241c69da9024}{fapply\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter, int border\+X, int border\+Y, int($\ast$func)(\hyperlink{struct_pgm}{Pgm} $\ast$, \hyperlink{struct_pgm}{Pgm} $\ast$, double $\ast$, int, int, int))
-\item 
+\begin{DoxyCompactList}\small\item\em Store in {\itshape pgm\+Out} the \char`\"{}phase\char`\"{} of the two images in {\itshape pgm\+Op\+X} and {\itshape pgm\+Op\+Y} as if each image\textquotesingle{}s pixel would be the x and y coordinate of a point in polar coordinates. \end{DoxyCompactList}\item 
+int \hyperlink{image_basic_ops_8h_ac08b7e4689b8c517da2a964eb57b1b6d}{fapply\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter, int dim\+X, int dim\+Y, int($\ast$func)(\hyperlink{struct_pgm}{Pgm} $\ast$, \hyperlink{struct_pgm}{Pgm} $\ast$, double $\ast$, int, int, int))
+\begin{DoxyCompactList}\small\item\em S\+Scan an image and apply a function {\itshape func} to each pixel. \end{DoxyCompactList}\item 
 int \hyperlink{image_basic_ops_8h_a3e638c9bde0f8608535611c6e17911bf}{convolution2\+D\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter)
-\item 
+\begin{DoxyCompactList}\small\item\em Apply to the image {\itshape pgm\+In} a 2\+D convolution with the \hyperlink{struct_filter}{Filter} {\itshape filter}. Store in {\itshape pgm\+Out} the result. \end{DoxyCompactList}\item 
 int \hyperlink{image_basic_ops_8h_a915e689e67678fdcd732796fce7de23b}{convolution1\+D\+X\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter)
-\item 
+\begin{DoxyCompactList}\small\item\em Apply to the image {\itshape pgm\+In} a one-\/dimensional convolution with the \hyperlink{struct_filter}{Filter} {\itshape filter} along the image columns. \end{DoxyCompactList}\item 
 int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution1\+D\+Y\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, \hyperlink{struct_filter}{Filter} $\ast$filter)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Apply to the image {\itshape pgm\+In} a one-\/dimensional convolution with the \hyperlink{struct_filter}{Filter} {\itshape filter} along the image rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Macro Definition Documentation}
-\hypertarget{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!drandom@{drandom}}
-\index{drandom@{drandom}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
-\subsubsection[{drandom}]{\setlength{\rightskip}{0pt plus 5cm}\#define drandom(
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)~(((double)(random()\&0xffffff))/0xffffff)}\label{image_basic_ops_8h_a634cdf50170ea44f1e1082f6da850c8b}
+\subsection{Detailed Description}
+Interfaces to image processing functions (absolute, linear add, threshold and fapply). 
+
+\begin{DoxyAuthor}{Author}
+Eleonora Maria Aiello 
+
+Gianluca Gerard 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+25/10/15 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Apache License Version 2.\+0, January 2004 
+\end{DoxyCopyright}
 
 
 \subsection{Function Documentation}
@@ -58,6 +70,20 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_a21b7c0153859749af20da7f95d85c56f}
+
+
+Convert each pixel of the image {\itshape pgm\+In} to its absolute value. The final result is stored in {\itshape pgm\+Out}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
 \hypertarget{image_basic_ops_8h_a58a02537a83a84b74192680d299f2186}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!compare\+P\+G\+M@{compare\+P\+G\+M}}
 \index{compare\+P\+G\+M@{compare\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{compare\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int compare\+P\+G\+M (
@@ -66,6 +92,20 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Pgm} $\ast$}]{pgm\+Op2}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_a58a02537a83a84b74192680d299f2186}
+
+
+Compare two images {\itshape pgm\+Op1} and {\itshape pgm\+Op2}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+Op1} & Pointer to the first \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Op2} & Pointer to the second \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the images are equal, 1 otherwise. 
+\end{DoxyReturn}
 \hypertarget{image_basic_ops_8h_a915e689e67678fdcd732796fce7de23b}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!convolution1\+D\+X\+P\+G\+M@{convolution1\+D\+X\+P\+G\+M}}
 \index{convolution1\+D\+X\+P\+G\+M@{convolution1\+D\+X\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{convolution1\+D\+X\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int convolution1\+D\+X\+P\+G\+M (
@@ -75,6 +115,22 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Filter} $\ast$}]{filter}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_a915e689e67678fdcd732796fce7de23b}
+
+
+Apply to the image {\itshape pgm\+In} a one-\/dimensional convolution with the \hyperlink{struct_filter}{Filter} {\itshape filter} along the image columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em filter} & Pointer to the \hyperlink{struct_filter}{Filter} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
 \hypertarget{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!convolution1\+D\+Y\+P\+G\+M@{convolution1\+D\+Y\+P\+G\+M}}
 \index{convolution1\+D\+Y\+P\+G\+M@{convolution1\+D\+Y\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{convolution1\+D\+Y\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int convolution1\+D\+Y\+P\+G\+M (
@@ -84,6 +140,22 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Filter} $\ast$}]{filter}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}
+
+
+Apply to the image {\itshape pgm\+In} a one-\/dimensional convolution with the \hyperlink{struct_filter}{Filter} {\itshape filter} along the image rows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em filter} & Pointer to the \hyperlink{struct_filter}{Filter} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
 \hypertarget{image_basic_ops_8h_a3e638c9bde0f8608535611c6e17911bf}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!convolution2\+D\+P\+G\+M@{convolution2\+D\+P\+G\+M}}
 \index{convolution2\+D\+P\+G\+M@{convolution2\+D\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{convolution2\+D\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int convolution2\+D\+P\+G\+M (
@@ -93,7 +165,23 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Filter} $\ast$}]{filter}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_a3e638c9bde0f8608535611c6e17911bf}
-\hypertarget{image_basic_ops_8h_a90a19bfcce0315c936f1241c69da9024}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!fapply\+P\+G\+M@{fapply\+P\+G\+M}}
+
+
+Apply to the image {\itshape pgm\+In} a 2\+D convolution with the \hyperlink{struct_filter}{Filter} {\itshape filter}. Store in {\itshape pgm\+Out} the result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em filter} & Pointer to the \hyperlink{struct_filter}{Filter} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_basic_ops_8h_ac08b7e4689b8c517da2a964eb57b1b6d}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!fapply\+P\+G\+M@{fapply\+P\+G\+M}}
 \index{fapply\+P\+G\+M@{fapply\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{fapply\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int fapply\+P\+G\+M (
 \begin{DoxyParamCaption}
@@ -101,12 +189,44 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
 \item[{{\bf Filter} $\ast$}]{filter, }
-\item[{int}]{border\+X, }
-\item[{int}]{border\+Y, }
+\item[{int}]{dim\+X, }
+\item[{int}]{dim\+Y, }
 \item[{int($\ast$)({\bf Pgm} $\ast$, {\bf Pgm} $\ast$, double $\ast$, int, int, int)}]{func}
 \end{DoxyParamCaption}
-)}\label{image_basic_ops_8h_a90a19bfcce0315c936f1241c69da9024}
-\hypertarget{image_basic_ops_8h_a2dce8fae864d87092dc6ccfc302e34ed}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!linear\+Add\+P\+G\+M@{linear\+Add\+P\+G\+M}}
+)}\label{image_basic_ops_8h_ac08b7e4689b8c517da2a964eb57b1b6d}
+
+
+S\+Scan an image and apply a function {\itshape func} to each pixel. 
+
+It scans the image {\itshape pgm\+In1} and to each pixel in the image applies the function {\itshape func}. The function {\itshape func} receives 6 parameters\+:
+\begin{DoxyItemize}
+\item {\itshape pgm\+In1} 
+\item {\itshape pgm\+In2} 
+\item {\itshape filter-\/$>$kernel} (if != N\+U\+L\+L)
+\item dim\+X/2
+\item dim\+Y/2
+\item a linear index in the {\itshape pgm\+In1-\/$>$pixels} array Each pixel in {\itshape pgm\+Out} is replaced with the return value of {\itshape func} for the corresponding pixel in {\itshape pgm\+In1}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In1} & Pointer to the first \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+In2} & Pointer to a second \hyperlink{struct_pgm}{Pgm} image structure that can optionally be accessed by {\itshape func}. \\
+\hline
+{\em pgm\+Out} & Pointer to the output \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em filter} & Pointer to an optional \hyperlink{struct_filter}{Filter} structure. \\
+\hline
+{\em dim\+X} & The dimension along X of the subarray of {\itshape pgm\+In1} checked by {\itshape func}. \\
+\hline
+{\em dim\+Y} & The dimension along Y of the subarray of {\itshape pgm\+In1} checked by {\itshape func}. \\
+\hline
+{\em func} & The function used to compute the value of the output pixel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\hypertarget{image_basic_ops_8h_a2dce8fae864d87092dc6ccfc302e34ed}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!linear\+Add\+P\+G\+M@{linear\+Add\+P\+G\+M}}
 \index{linear\+Add\+P\+G\+M@{linear\+Add\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{linear\+Add\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int linear\+Add\+P\+G\+M (
 \begin{DoxyParamCaption}
@@ -117,6 +237,26 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_a2dce8fae864d87092dc6ccfc302e34ed}
+
+
+Linear weighted sum of two images. 
+
+It adds linearly the two images arrays. Each array is first multiplied by a weight. The two images must have the same dimensions. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+Op1} & The pointer to the first image. \\
+\hline
+{\em pgm\+Op2} & The pointer to the second image. \\
+\hline
+{\em w1} & Weigth for the first image. \\
+\hline
+{\em w2} & Weight for the second image. \\
+\hline
+{\em pgm\+Out} & The pointer to the image that stores the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+Op1, pgm\+Op2 or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
 \hypertarget{image_basic_ops_8h_a61d820d9ce5852829463026be89c282f}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!module\+P\+G\+M@{module\+P\+G\+M}}
 \index{module\+P\+G\+M@{module\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{module\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int module\+P\+G\+M (
@@ -126,6 +266,22 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_a61d820d9ce5852829463026be89c282f}
+
+
+Store in {\itshape pgm\+Out} the \char`\"{}module\char`\"{} of the two images in {\itshape pgm\+Op\+X} and {\itshape pgm\+Op\+Y} as if each image\textquotesingle{}s pixel would be the x and y coordinate of a point in the cartesian plane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+Op\+X} & Pointer to the first \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Op\+Y} & Pointer to the second \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
 \hypertarget{image_basic_ops_8h_ad54a6261223dee6369fff0b01d754460}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!phase\+P\+G\+M@{phase\+P\+G\+M}}
 \index{phase\+P\+G\+M@{phase\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{phase\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int phase\+P\+G\+M (
@@ -135,6 +291,22 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_ad54a6261223dee6369fff0b01d754460}
+
+
+Store in {\itshape pgm\+Out} the \char`\"{}phase\char`\"{} of the two images in {\itshape pgm\+Op\+X} and {\itshape pgm\+Op\+Y} as if each image\textquotesingle{}s pixel would be the x and y coordinate of a point in polar coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pgm\+Op\+X} & Pointer to the first \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Op\+Y} & Pointer to the second \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
 \hypertarget{image_basic_ops_8h_a2beed6f34722fb27a9c19e0aac0f2a9e}{}\index{image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}!threshold\+P\+G\+M@{threshold\+P\+G\+M}}
 \index{threshold\+P\+G\+M@{threshold\+P\+G\+M}!image\+Basic\+Ops.\+h@{image\+Basic\+Ops.\+h}}
 \subsubsection[{threshold\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int threshold\+P\+G\+M (
@@ -144,3 +316,19 @@ int \hyperlink{image_basic_ops_8h_a1c6fd3a6b3d2f4fd9b93802b9823aeea}{convolution
 \item[{int}]{threshold}
 \end{DoxyParamCaption}
 )}\label{image_basic_ops_8h_a2beed6f34722fb27a9c19e0aac0f2a9e}
+
+
+Binarize an image {\itshape pgm\+In} based on the {\itshape threshold} value. The result is stored in {\itshape pgm\+Out}. 
+
+Each pixel\textquotesingle{}s value greater or equal than the {\itshape threshold} is converted to the value 255. All other pixels are set to 0. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em threshold} & The threshold value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}

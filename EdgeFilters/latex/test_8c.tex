@@ -112,9 +112,7 @@ int \hyperlink{test_8c_a603809e03cc42b1954295c7f94555b94}{test\+All} (\hyperlink
 \item[{char $\ast$}]{output\+File}
 \end{DoxyParamCaption}
 )}\label{test_8c_ad7a43d0ce415a9f2ed0f36369656d686}
-reset\+P\+G\+M(img\+Out1); convolution2\+D\+P\+G\+M(img\+In, img\+Out1, id\+Filter); reset\+P\+G\+M(img\+Out); normalize\+P\+G\+M(img\+Out1, img\+Out); sprintf(pname,\char`\"{}\%s\+\_\+copy.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out,pname);
-
-reset\+P\+G\+M(img\+Out2); convolution2\+D\+P\+G\+M(img\+In, img\+Out2, bx\+Filter); reset\+P\+G\+M(img\+Out); normalize\+P\+G\+M(img\+Out2, img\+Out); sprintf(pname,\char`\"{}\%s\+\_\+box.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out,pname);\hypertarget{test_8c_a4ec47de79f4efe5417d522e775dd120d}{}\index{test.\+c@{test.\+c}!test\+Sobel@{test\+Sobel}}
+\hypertarget{test_8c_a4ec47de79f4efe5417d522e775dd120d}{}\index{test.\+c@{test.\+c}!test\+Sobel@{test\+Sobel}}
 \index{test\+Sobel@{test\+Sobel}!test.\+c@{test.\+c}}
 \subsubsection[{test\+Sobel}]{\setlength{\rightskip}{0pt plus 5cm}int test\+Sobel (
 \begin{DoxyParamCaption}
@@ -122,14 +120,3 @@ reset\+P\+G\+M(img\+Out2); convolution2\+D\+P\+G\+M(img\+In, img\+Out2, bx\+Filt
 \item[{char $\ast$}]{output\+File}
 \end{DoxyParamCaption}
 )}\label{test_8c_a4ec47de79f4efe5417d522e775dd120d}
-reset\+P\+G\+M(img\+Out3); absolute\+P\+G\+M(img\+Out1, img\+Out3); reset\+P\+G\+M(img\+Out); threshold\+P\+G\+M(img\+Out3, img\+Out); reset\+P\+G\+M(img\+Out3); normalize\+P\+G\+M(img\+Out, img\+Out3);
-
-sprintf(pname,\char`\"{}\%s\+\_\+sobel\+H\+\_\+\+T.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out3,pname);
-
-reset\+P\+G\+M(img\+Out3); absolute\+P\+G\+M(img\+Out2, img\+Out3); reset\+P\+G\+M(img\+Out); threshold\+P\+G\+M(img\+Out3, img\+Out); reset\+P\+G\+M(img\+Out3); normalize\+P\+G\+M(img\+Out, img\+Out3);
-
-sprintf(pname,\char`\"{}\%s\+\_\+sobel\+V\+\_\+\+T.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out3,pname);
-
-add the two sobel filters reset\+P\+G\+M(img\+Out); reset\+P\+G\+M(img\+Out3); absolute\+P\+G\+M(img\+Out2, img\+Out3); reset\+P\+G\+M(img\+Out2); absolute\+P\+G\+M(img\+Out1, img\+Out2); linear\+Add\+P\+G\+M(img\+Out2, img\+Out3, 1.\+0, 1.\+0, img\+Out); reset\+P\+G\+M(img\+Out3); threshold\+P\+G\+M(img\+Out, img\+Out3); reset\+P\+G\+M(img\+Out); normalize\+P\+G\+M(img\+Out3, img\+Out);
-
-sprintf(pname,\char`\"{}\%s\+\_\+sobel\+\_\+\+T.\+pgm\char`\"{}, output\+File); write\+P\+G\+M(img\+Out,pname);

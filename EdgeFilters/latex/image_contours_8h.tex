@@ -1,5 +1,10 @@
 \hypertarget{image_contours_8h}{}\section{Edge\+Filters/image\+Contours.h File Reference}
 \label{image_contours_8h}\index{Edge\+Filters/image\+Contours.\+h@{Edge\+Filters/image\+Contours.\+h}}
+
+
+Interfaces to the contour detection functions.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$sys/time.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}helper\+Functions.\+h\char`\"{}}\\*
@@ -9,12 +14,28 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{image_contours_8h_aae72ef6d40d20a2878617da70aef5196}{contour2\+D\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+int \hyperlink{image_contours_8h_a2fa26dbb02bb812614285517a603f292}{contour\+Uniform\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\begin{DoxyCompactList}\small\item\em Return in {\itshape pgm\+Out} the contours of image pointerd by {\itshape pgm\+In} by looking for uniform regions. \end{DoxyCompactList}\item 
 int \hyperlink{image_contours_8h_acf88b76d9d6974b28ee1e60f169596da}{contour\+N8\+Int\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
+\begin{DoxyCompactList}\small\item\em Return in {\itshape pgm\+Out} the contours of image pointerd by {\itshape pgm\+In} by looking for pixels in the foreground having N8 unitary distance from the background. \end{DoxyCompactList}\item 
 int \hyperlink{image_contours_8h_a37d865f922409d7a01b35a6c383dc5cd}{connectivity\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+H, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+L, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em It returns in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} 8-\/connected to all the non-\/background pixels of {\itshape pgm\+N\+H}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interfaces to the contour detection functions. 
+
+\begin{DoxyAuthor}{Author}
+Eleonora Maria Aiello 
+
+Gianluca Gerard 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/11/15 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Apache License Version 2.\+0, January 2004 
+\end{DoxyCopyright}
 
 
 \subsection{Function Documentation}
@@ -27,14 +48,22 @@ int \hyperlink{image_contours_8h_a37d865f922409d7a01b35a6c383dc5cd}{connectivity
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_contours_8h_a37d865f922409d7a01b35a6c383dc5cd}
-\hypertarget{image_contours_8h_aae72ef6d40d20a2878617da70aef5196}{}\index{image\+Contours.\+h@{image\+Contours.\+h}!contour2\+D\+P\+G\+M@{contour2\+D\+P\+G\+M}}
-\index{contour2\+D\+P\+G\+M@{contour2\+D\+P\+G\+M}!image\+Contours.\+h@{image\+Contours.\+h}}
-\subsubsection[{contour2\+D\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int contour2\+D\+P\+G\+M (
-\begin{DoxyParamCaption}
-\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
-\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
-\end{DoxyParamCaption}
-)}\label{image_contours_8h_aae72ef6d40d20a2878617da70aef5196}
+
+
+It returns in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} 8-\/connected to all the non-\/background pixels of {\itshape pgm\+N\+H}. 
+
+Find and store in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} that are 8-\/connected to all non background pixels in {\itshape pgm\+N\+H}. It only searches for pixels in an 8-\/neighboorhood centered on each pixel of {\itshape pgm\+N\+H}. To identify all 8-\/connected pixels the search must be repeated until no further pixels are added to the result in {\itshape pgm\+Out}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+N\+H} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+N\+L} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the \hyperlink{struct_pgm}{Pgm} image structure that stores the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+N\+H, pgm\+N\+L or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
 \hypertarget{image_contours_8h_acf88b76d9d6974b28ee1e60f169596da}{}\index{image\+Contours.\+h@{image\+Contours.\+h}!contour\+N8\+Int\+P\+G\+M@{contour\+N8\+Int\+P\+G\+M}}
 \index{contour\+N8\+Int\+P\+G\+M@{contour\+N8\+Int\+P\+G\+M}!image\+Contours.\+h@{image\+Contours.\+h}}
 \subsubsection[{contour\+N8\+Int\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int contour\+N8\+Int\+P\+G\+M (
@@ -43,3 +72,39 @@ int \hyperlink{image_contours_8h_a37d865f922409d7a01b35a6c383dc5cd}{connectivity
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_contours_8h_acf88b76d9d6974b28ee1e60f169596da}
+
+
+Return in {\itshape pgm\+Out} the contours of image pointerd by {\itshape pgm\+In} by looking for pixels in the foreground having N8 unitary distance from the background. 
+
+Find the subset of the foreground of the image {\itshape pgm\+In} having unitary N8 distance from the background. This subset is stored in {\itshape pgm\+Out}. Background is a value of 0 of the image, every other value is foreground. In the output image the contour is set to 0 and the background to 255, therefore the image is reverted. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_contours_8h_a2fa26dbb02bb812614285517a603f292}{}\index{image\+Contours.\+h@{image\+Contours.\+h}!contour\+Uniform\+P\+G\+M@{contour\+Uniform\+P\+G\+M}}
+\index{contour\+Uniform\+P\+G\+M@{contour\+Uniform\+P\+G\+M}!image\+Contours.\+h@{image\+Contours.\+h}}
+\subsubsection[{contour\+Uniform\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int contour\+Uniform\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_contours_8h_a2fa26dbb02bb812614285517a603f292}
+
+
+Return in {\itshape pgm\+Out} the contours of image pointerd by {\itshape pgm\+In} by looking for uniform regions. 
+
+The image in {\itshape pgm\+In} is filtered such that every pixel at the center of an 8-\/neighborhood uniform region is set to 0. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}

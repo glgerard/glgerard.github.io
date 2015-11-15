@@ -1,36 +1,70 @@
 \hypertarget{image_contours_8c}{}\section{Edge\+Filters/image\+Contours.c File Reference}
 \label{image_contours_8c}\index{Edge\+Filters/image\+Contours.\+c@{Edge\+Filters/image\+Contours.\+c}}
+
+
+Contour detection functions.  
+
+
 {\ttfamily \#include \char`\"{}image\+Contours.\+h\char`\"{}}\\*
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{image_contours_8c_a6dd1fef45aff957dee8db642a5828a3d}{contour2\+D\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int border\+X, int border\+Y, int ic)
-\item 
-int \hyperlink{image_contours_8c_aae72ef6d40d20a2878617da70aef5196}{contour2\+D\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
-int \hyperlink{image_contours_8c_afbb79173ff0fdca88a716cb63bd18b9d}{contour\+N8\+Int\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int border\+X, int border\+Y, int ic)
-\item 
+int \hyperlink{image_contours_8c_af6bde89ec94810983e82b7dc3de83ecb}{contour\+Uniform\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int span\+X, int span\+Y, int ic)
+\begin{DoxyCompactList}\small\item\em Return the value of the central pixel if it is not at the center of an 8-\/neighborhood uniform region. Otherwise returns 0. \end{DoxyCompactList}\item 
+int \hyperlink{image_contours_8c_a2fa26dbb02bb812614285517a603f292}{contour\+Uniform\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
+\begin{DoxyCompactList}\small\item\em Return in {\itshape pgm\+Out} the contours of image pointerd by {\itshape pgm\+In} by looking for uniform regions. \end{DoxyCompactList}\item 
+int \hyperlink{image_contours_8c_adc03aa3e854a14a09dccd93c183172aa}{contour\+N8\+Int\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int span\+X, int span\+Y, int ic)
+\begin{DoxyCompactList}\small\item\em Check for internal contour pixels with N8 distance. It uses inverted images (background white, foreground black). \end{DoxyCompactList}\item 
 int \hyperlink{image_contours_8c_acf88b76d9d6974b28ee1e60f169596da}{contour\+N8\+Int\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\item 
-void \hyperlink{image_contours_8c_ae6fbfadfb2b2bc626c522bbbf04f31ad}{connectivity\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+H, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+L, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, int border\+X, int border\+Y, int ic)
-\item 
+\begin{DoxyCompactList}\small\item\em Return in {\itshape pgm\+Out} the contours of image pointerd by {\itshape pgm\+In} by looking for pixels in the foreground having N8 unitary distance from the background. \end{DoxyCompactList}\item 
+void \hyperlink{image_contours_8c_a81527e5f9e1bfe51864334fbaa00fd52}{connectivity\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+H, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+L, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, int ic)
+\begin{DoxyCompactList}\small\item\em It returns in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} 8-\/connected to the central pixel of {\itshape pgm\+N\+H}. \end{DoxyCompactList}\item 
 int \hyperlink{image_contours_8c_a37d865f922409d7a01b35a6c383dc5cd}{connectivity\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+H, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+N\+L, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em It returns in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} 8-\/connected to all the non-\/background pixels of {\itshape pgm\+N\+H}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contour detection functions. 
+
+\begin{DoxyAuthor}{Author}
+Eleonora Maria Aiello 
+
+Gianluca Gerard 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/11/15 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Apache License Version 2.\+0, January 2004 
+\end{DoxyCopyright}
 
 
 \subsection{Function Documentation}
-\hypertarget{image_contours_8c_ae6fbfadfb2b2bc626c522bbbf04f31ad}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!connectivity\+Kernel@{connectivity\+Kernel}}
+\hypertarget{image_contours_8c_a81527e5f9e1bfe51864334fbaa00fd52}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!connectivity\+Kernel@{connectivity\+Kernel}}
 \index{connectivity\+Kernel@{connectivity\+Kernel}!image\+Contours.\+c@{image\+Contours.\+c}}
 \subsubsection[{connectivity\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}void connectivity\+Kernel (
 \begin{DoxyParamCaption}
 \item[{{\bf Pgm} $\ast$}]{pgm\+N\+H, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+N\+L, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
-\item[{int}]{border\+X, }
-\item[{int}]{border\+Y, }
 \item[{int}]{ic}
 \end{DoxyParamCaption}
-)}\label{image_contours_8c_ae6fbfadfb2b2bc626c522bbbf04f31ad}
+)}\label{image_contours_8c_a81527e5f9e1bfe51864334fbaa00fd52}
+
+
+It returns in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} 8-\/connected to the central pixel of {\itshape pgm\+N\+H}. 
+
+Find and store in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} that are 8-\/connected to a non background pixel in {\itshape pgm\+N\+H}. It only searches for pixels in an 8-\/neighboorhood centered on the pixel in {\itshape pgm\+N\+H} linearly indexed by {\itshape ic}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+N\+H} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+N\+L} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the \hyperlink{struct_pgm}{Pgm} image structure that stores the result. \\
+\hline
+{\em ic} & Linear index in pgm\+N\+H-\/$>$pixels of the central pixel. \\
+\hline
+\end{DoxyParams}
 \hypertarget{image_contours_8c_a37d865f922409d7a01b35a6c383dc5cd}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!connectivity\+P\+G\+M@{connectivity\+P\+G\+M}}
 \index{connectivity\+P\+G\+M@{connectivity\+P\+G\+M}!image\+Contours.\+c@{image\+Contours.\+c}}
 \subsubsection[{connectivity\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int connectivity\+P\+G\+M (
@@ -40,38 +74,56 @@ int \hyperlink{image_contours_8c_a37d865f922409d7a01b35a6c383dc5cd}{connectivity
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_contours_8c_a37d865f922409d7a01b35a6c383dc5cd}
-\hypertarget{image_contours_8c_a6dd1fef45aff957dee8db642a5828a3d}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour2\+D\+Kernel@{contour2\+D\+Kernel}}
-\index{contour2\+D\+Kernel@{contour2\+D\+Kernel}!image\+Contours.\+c@{image\+Contours.\+c}}
-\subsubsection[{contour2\+D\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}int contour2\+D\+Kernel (
-\begin{DoxyParamCaption}
-\item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
-\item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
-\item[{double $\ast$}]{kernel, }
-\item[{int}]{border\+X, }
-\item[{int}]{border\+Y, }
-\item[{int}]{ic}
-\end{DoxyParamCaption}
-)}\label{image_contours_8c_a6dd1fef45aff957dee8db642a5828a3d}
-\hypertarget{image_contours_8c_aae72ef6d40d20a2878617da70aef5196}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour2\+D\+P\+G\+M@{contour2\+D\+P\+G\+M}}
-\index{contour2\+D\+P\+G\+M@{contour2\+D\+P\+G\+M}!image\+Contours.\+c@{image\+Contours.\+c}}
-\subsubsection[{contour2\+D\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int contour2\+D\+P\+G\+M (
-\begin{DoxyParamCaption}
-\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
-\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
-\end{DoxyParamCaption}
-)}\label{image_contours_8c_aae72ef6d40d20a2878617da70aef5196}
-\hypertarget{image_contours_8c_afbb79173ff0fdca88a716cb63bd18b9d}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour\+N8\+Int\+Kernel@{contour\+N8\+Int\+Kernel}}
+
+
+It returns in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} 8-\/connected to all the non-\/background pixels of {\itshape pgm\+N\+H}. 
+
+Find and store in {\itshape pgm\+Out} the pixels of {\itshape pgm\+N\+L} that are 8-\/connected to all non background pixels in {\itshape pgm\+N\+H}. It only searches for pixels in an 8-\/neighboorhood centered on each pixel of {\itshape pgm\+N\+H}. To identify all 8-\/connected pixels the search must be repeated until no further pixels are added to the result in {\itshape pgm\+Out}. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+N\+H} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+N\+L} & Pointer to the input \hyperlink{struct_pgm}{Pgm} image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the \hyperlink{struct_pgm}{Pgm} image structure that stores the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+N\+H, pgm\+N\+L or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_contours_8c_adc03aa3e854a14a09dccd93c183172aa}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour\+N8\+Int\+Kernel@{contour\+N8\+Int\+Kernel}}
 \index{contour\+N8\+Int\+Kernel@{contour\+N8\+Int\+Kernel}!image\+Contours.\+c@{image\+Contours.\+c}}
 \subsubsection[{contour\+N8\+Int\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}int contour\+N8\+Int\+Kernel (
 \begin{DoxyParamCaption}
 \item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
 \item[{double $\ast$}]{kernel, }
-\item[{int}]{border\+X, }
-\item[{int}]{border\+Y, }
+\item[{int}]{span\+X, }
+\item[{int}]{span\+Y, }
 \item[{int}]{ic}
 \end{DoxyParamCaption}
-)}\label{image_contours_8c_afbb79173ff0fdca88a716cb63bd18b9d}
+)}\label{image_contours_8c_adc03aa3e854a14a09dccd93c183172aa}
+
+
+Check for internal contour pixels with N8 distance. It uses inverted images (background white, foreground black). 
+
+Find the subset of the foreground having unitary N8 distance from the background. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In1} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+In2} & Not used. \\
+\hline
+{\em kernel} & Not used. \\
+\hline
+{\em span\+X} & Not used. \\
+\hline
+{\em span\+Y} & Not used. \\
+\hline
+{\em ic} & Linear index in pgm\+In1-\/$>$pixels of the central pixel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the central pixel if it is a contour pixel, otherwise 0. 
+\end{DoxyReturn}
 \hypertarget{image_contours_8c_acf88b76d9d6974b28ee1e60f169596da}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour\+N8\+Int\+P\+G\+M@{contour\+N8\+Int\+P\+G\+M}}
 \index{contour\+N8\+Int\+P\+G\+M@{contour\+N8\+Int\+P\+G\+M}!image\+Contours.\+c@{image\+Contours.\+c}}
 \subsubsection[{contour\+N8\+Int\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int contour\+N8\+Int\+P\+G\+M (
@@ -80,3 +132,73 @@ int \hyperlink{image_contours_8c_a37d865f922409d7a01b35a6c383dc5cd}{connectivity
 \item[{{\bf Pgm} $\ast$}]{pgm\+Out}
 \end{DoxyParamCaption}
 )}\label{image_contours_8c_acf88b76d9d6974b28ee1e60f169596da}
+
+
+Return in {\itshape pgm\+Out} the contours of image pointerd by {\itshape pgm\+In} by looking for pixels in the foreground having N8 unitary distance from the background. 
+
+Find the subset of the foreground of the image {\itshape pgm\+In} having unitary N8 distance from the background. This subset is stored in {\itshape pgm\+Out}. Background is a value of 0 of the image, every other value is foreground. In the output image the contour is set to 0 and the background to 255, therefore the image is reverted. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}
+\hypertarget{image_contours_8c_af6bde89ec94810983e82b7dc3de83ecb}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour\+Uniform\+Kernel@{contour\+Uniform\+Kernel}}
+\index{contour\+Uniform\+Kernel@{contour\+Uniform\+Kernel}!image\+Contours.\+c@{image\+Contours.\+c}}
+\subsubsection[{contour\+Uniform\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}int contour\+Uniform\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
+\item[{double $\ast$}]{kernel, }
+\item[{int}]{span\+X, }
+\item[{int}]{span\+Y, }
+\item[{int}]{ic}
+\end{DoxyParamCaption}
+)}\label{image_contours_8c_af6bde89ec94810983e82b7dc3de83ecb}
+
+
+Return the value of the central pixel if it is not at the center of an 8-\/neighborhood uniform region. Otherwise returns 0. 
+
+Computes the sum of the absolute values of the pixels in a 8-\/neighborhood of the central pixel. If the sum is equal to the area of the neighborhood multipled with the value of the central pixel we are in a uniform region, therefore the pixel cannot be a contour. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In1} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+In2} & Not used. \\
+\hline
+{\em kernel} & Not used. \\
+\hline
+{\em span\+X} & Not used. \\
+\hline
+{\em span\+Y} & Not used. \\
+\hline
+{\em ic} & Linear index in pgm\+In1-\/$>$pixels of the central pixel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the central pixel if it is a contour pixel, otherwise 0. 
+\end{DoxyReturn}
+\hypertarget{image_contours_8c_a2fa26dbb02bb812614285517a603f292}{}\index{image\+Contours.\+c@{image\+Contours.\+c}!contour\+Uniform\+P\+G\+M@{contour\+Uniform\+P\+G\+M}}
+\index{contour\+Uniform\+P\+G\+M@{contour\+Uniform\+P\+G\+M}!image\+Contours.\+c@{image\+Contours.\+c}}
+\subsubsection[{contour\+Uniform\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}int contour\+Uniform\+P\+G\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out}
+\end{DoxyParamCaption}
+)}\label{image_contours_8c_a2fa26dbb02bb812614285517a603f292}
+
+
+Return in {\itshape pgm\+Out} the contours of image pointerd by {\itshape pgm\+In} by looking for uniform regions. 
+
+The image in {\itshape pgm\+In} is filtered such that every pixel at the center of an 8-\/neighborhood uniform region is set to 0. 
+\begin{DoxyParams}{Parameters}
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
+\hline
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
+\end{DoxyReturn}

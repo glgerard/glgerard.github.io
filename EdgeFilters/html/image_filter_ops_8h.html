@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">imageFilterOps.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interfaces to the filter operations (blurs, noises, sharpening, edge detection).  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="helper_functions_8h_source.html">helperFunctions.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="image_utilities_8h_source.html">imageUtilities.h</a>&quot;</code><br />
@@ -102,13 +105,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8cecfc5c5c054d2875c03e77b7be15d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRUE</b>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa93f0eb578d23995850d61f7d61c55c1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FALSE</b>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:aa93f0eb578d23995850d61f7d61c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a6a8f731e6c621a784f1921e2f965e351"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#a6a8f731e6c621a784f1921e2f965e351">linearAddFilter</a> (<a class="el" href="struct_filter.html">Filter</a> *filterOp1, <a class="el" href="struct_filter.html">Filter</a> *filterOp2, double w1, double w2)</td></tr>
+<tr class="memdesc:a6a8f731e6c621a784f1921e2f965e351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear weighted sum of two Filters.  <a href="#a6a8f731e6c621a784f1921e2f965e351">More...</a><br /></td></tr>
+<tr class="separator:a6a8f731e6c621a784f1921e2f965e351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee1a04576f0b0498f72e5722fe909a7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#aee1a04576f0b0498f72e5722fe909a7e">addUniformNoisePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, int range)</td></tr>
 <tr class="memdesc:aee1a04576f0b0498f72e5722fe909a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add uniform noise to the image <em>pgmIn</em>. The final result is stored in <em>pgmOut</em>.  <a href="#aee1a04576f0b0498f72e5722fe909a7e">More...</a><br /></td></tr>
 <tr class="separator:aee1a04576f0b0498f72e5722fe909a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,56 +136,38 @@ Functions</h2></td></tr>
 <tr class="memdesc:abd840e369194914a5d73cc24c7b77463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gaussian blur of an image <em>pgmIn</em>.  <a href="#abd840e369194914a5d73cc24c7b77463">More...</a><br /></td></tr>
 <tr class="separator:abd840e369194914a5d73cc24c7b77463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd4353db858e4e926311b354423499da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#abd4353db858e4e926311b354423499da">op39PGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
-<tr class="memdesc:abd4353db858e4e926311b354423499da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html">Filter</a> an image <em>pgmIn</em> with the 3/9 operator. The final result is stored in <em>pgmOut</em>.  <a href="#abd4353db858e4e926311b354423499da">More...</a><br /></td></tr>
+<tr class="memdesc:abd4353db858e4e926311b354423499da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> an image <em>pgmIn</em> with the 3/9 operator. The final result is stored in <em>pgmOut</em>.  <a href="#abd4353db858e4e926311b354423499da">More...</a><br /></td></tr>
 <tr class="separator:abd4353db858e4e926311b354423499da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a014df876d7ef3fbfcf1aaec221208303"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#a014df876d7ef3fbfcf1aaec221208303">nagaoPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
-<tr class="memdesc:a014df876d7ef3fbfcf1aaec221208303"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html">Filter</a> an image <em>pgmIn</em> with the Nagao-Matsuyama filter. The final result is stored in <em>pgmOut</em>.  <a href="#a014df876d7ef3fbfcf1aaec221208303">More...</a><br /></td></tr>
+<tr class="memdesc:a014df876d7ef3fbfcf1aaec221208303"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> an image <em>pgmIn</em> with the Nagao-Matsuyama filter. The final result is stored in <em>pgmOut</em>.  <a href="#a014df876d7ef3fbfcf1aaec221208303">More...</a><br /></td></tr>
 <tr class="separator:a014df876d7ef3fbfcf1aaec221208303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad04b0f26d354189899f07c93bcf73862"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#ad04b0f26d354189899f07c93bcf73862">suppressionPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmMod, <a class="el" href="struct_pgm.html">Pgm</a> *pgmPhi, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
-<tr class="memdesc:ad04b0f26d354189899f07c93bcf73862"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmMod</em> with non-maximum suppression. The final result is stored in <em>pgmOut</em>.  <a href="#ad04b0f26d354189899f07c93bcf73862">More...</a><br /></td></tr>
+<tr class="memdesc:ad04b0f26d354189899f07c93bcf73862"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmMod</em> with non-maximum suppression. The final result is stored in <em>pgmOut</em>.  <a href="#ad04b0f26d354189899f07c93bcf73862">More...</a><br /></td></tr>
 <tr class="separator:ad04b0f26d354189899f07c93bcf73862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab11618c6224661e24d7774fdd864da6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#ab11618c6224661e24d7774fdd864da6f">sobelPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *imgIn, <a class="el" href="struct_pgm.html">Pgm</a> *imgOut, uint8_t phase)</td></tr>
-<tr class="memdesc:ab11618c6224661e24d7774fdd864da6f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with two Sobel filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#ab11618c6224661e24d7774fdd864da6f">More...</a><br /></td></tr>
+<tr class="memdesc:ab11618c6224661e24d7774fdd864da6f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Sobel filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#ab11618c6224661e24d7774fdd864da6f">More...</a><br /></td></tr>
 <tr class="separator:ab11618c6224661e24d7774fdd864da6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd53c98614ea0c6139b30f42e4e008f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#afd53c98614ea0c6139b30f42e4e008f4">prewittPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, uint8_t phase)</td></tr>
-<tr class="memdesc:afd53c98614ea0c6139b30f42e4e008f4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#afd53c98614ea0c6139b30f42e4e008f4">More...</a><br /></td></tr>
+<tr class="memdesc:afd53c98614ea0c6139b30f42e4e008f4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#afd53c98614ea0c6139b30f42e4e008f4">More...</a><br /></td></tr>
 <tr class="separator:afd53c98614ea0c6139b30f42e4e008f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e66fc57eb98725c87a6022b4fa3e362"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#a7e66fc57eb98725c87a6022b4fa3e362">dogPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *imgIn, <a class="el" href="struct_pgm.html">Pgm</a> *imgOut, double sigma, int dim)</td></tr>
-<tr class="memdesc:a7e66fc57eb98725c87a6022b4fa3e362"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#a7e66fc57eb98725c87a6022b4fa3e362">More...</a><br /></td></tr>
+<tr class="memdesc:a7e66fc57eb98725c87a6022b4fa3e362"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#a7e66fc57eb98725c87a6022b4fa3e362">More...</a><br /></td></tr>
 <tr class="separator:a7e66fc57eb98725c87a6022b4fa3e362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0fbb97555f4482b3a93c81e3e7d5e6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#ad0fbb97555f4482b3a93c81e3e7d5e6c">cedPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *imgIn, <a class="el" href="struct_pgm.html">Pgm</a> *imgOut, double sigma, int dim, int threshold, int thresholdRatio)</td></tr>
-<tr class="memdesc:ad0fbb97555f4482b3a93c81e3e7d5e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#ad0fbb97555f4482b3a93c81e3e7d5e6c">More...</a><br /></td></tr>
+<tr class="memdesc:ad0fbb97555f4482b3a93c81e3e7d5e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#ad0fbb97555f4482b3a93c81e3e7d5e6c">More...</a><br /></td></tr>
 <tr class="separator:ad0fbb97555f4482b3a93c81e3e7d5e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b7b4a2b448380073796985501658d8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8h.html#a9b7b4a2b448380073796985501658d8b">execImageOps</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, FILE *fp)</td></tr>
-<tr class="memdesc:a9b7b4a2b448380073796985501658d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with the filters listed in file <em>fp</em>.  <a href="#a9b7b4a2b448380073796985501658d8b">More...</a><br /></td></tr>
+<tr class="memdesc:a9b7b4a2b448380073796985501658d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with the filters listed in file <em>fp</em>.  <a href="#a9b7b4a2b448380073796985501658d8b">More...</a><br /></td></tr>
 <tr class="separator:a9b7b4a2b448380073796985501658d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="aa93f0eb578d23995850d61f7d61c55c1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FALSE&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa8cecfc5c5c054d2875c03e77b7be15d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TRUE&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interfaces to the filter operations (blurs, noises, sharpening, edge detection). </p>
+<dl class="section author"><dt>Author</dt><dd>Eleonora Maria Aiello </dd>
+<dd>
+Gianluca Gerard </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>07/11/15 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Apache License Version 2.0, January 2004 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="acd44caaa593ab9345a2bc03cf94a5d60"></a>
 <div class="memitem">
 <div class="memproto">
@@ -254,8 +244,8 @@ Functions</h2></td></tr>
 <p>Add uniform noise to the image <em>pgmIn</em>. The final result is stored in <em>pgmOut</em>. </p>
 <p>Add to each pixel of the image a value in the interval [-range, +range] with uniform density. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">imgIn</td><td>Pointer to the input PGM image structure. </td></tr>
-    <tr><td class="paramname">imgOut</td><td>Pointer to the output PGM image structure. </td></tr>
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output PGM image structure. </td></tr>
     <tr><td class="paramname">range</td><td>The absolute max value of the range. </td></tr>
   </table>
   </dd>
@@ -348,13 +338,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
 <p>Apply the vertical and horizontal Prewitt filters and returns the magnitute if <em>phase</em> is 0 or the phase if <em>phase</em> is 1. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
     <tr><td class="paramname">pgmOut</td><td>Pointer to the output PGM image structure. </td></tr>
     <tr><td class="paramname">sigma</td><td>The external sigma of the DoG filter. The internal sigma is set to <em>sigma</em> / 1.66 . </td></tr>
     <tr><td class="paramname">dim</td><td>The rows and columns of the DoG filter. If set to 0 then it will be the smallest odd next to 6 <em>sigma</em>. </td></tr>
+    <tr><td class="paramname">threshold_low</td><td>Lower threshold used by the Canny algorithm. </td></tr>
+    <tr><td class="paramname">threshold_high</td><td>Hihger threshold used by the Canny algorithm. </td></tr>
   </table>
   </dd>
 </dl>
@@ -398,7 +390,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
 <p>Apply the vertical and horizontal Prewitt filters and returns the magnitute if <em>phase</em> is 0 or the phase if <em>phase</em> is 1. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
@@ -442,8 +434,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with the filters listed in file <em>fp</em>. </p>
-<p>The file <em>fp</em> contains a list of filters, one per line, that will be applied in sequence to the image pointed by <em>pgmIn</em>. The output will be stored in the <a class="el" href="struct_pgm.html">Pgm</a> structure pointed by <em>pgmOut</em>. Certain filters have optional parameters.</p>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with the filters listed in file <em>fp</em>. </p>
+<p>The file <em>fp</em> contains a list of filters, one per line, that will be applied in sequence to the image pointed by <em>pgmIn</em>. The output will be stored in the <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> structure pointed by <em>pgmOut</em>. Certain filters have optional parameters.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
@@ -513,14 +505,64 @@ Functions</h2></td></tr>
 <p>Gaussian blur of an image <em>pgmIn</em>. </p>
 <p>Apply as a filter two 1D Gaussian filters with the same <em>sigma</em> and matrix linear dimension <em>dim</em>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html">Pgm</a> image structure. </td></tr>
-    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
     <tr><td class="paramname">sigma</td><td>The sigma of the gaussians. </td></tr>
     <tr><td class="paramname">dim</td><td>The dimension of the gaussian filter. If 0 it will default to the nearest odd value close to 6 sigma. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a8f731e6c621a784f1921e2f965e351"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_filter.html">Filter</a>* linearAddFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td>
+          <td class="paramname"><em>filterOp1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_filter.html">Filter</a> *&#160;</td>
+          <td class="paramname"><em>filterOp2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>w1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>w2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Linear weighted sum of two Filters. </p>
+<p>It adds linearly the two filters arrays. Each array is first multiplied by a weight. The two filters must have the same dimensions. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filterOp1</td><td>The pointer to the first <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>. </td></tr>
+    <tr><td class="paramname">filterOp2</td><td>The pointer to the second <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>. </td></tr>
+    <tr><td class="paramname">w1</td><td>Weigth for the first <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>. </td></tr>
+    <tr><td class="paramname">w2</td><td>Weight for the second <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the new <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure that contains the sum result. </dd></dl>
 
 </div>
 </div>
@@ -584,7 +626,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html">Filter</a> an image <em>pgmIn</em> with the Nagao-Matsuyama filter. The final result is stored in <em>pgmOut</em>. </p>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> an image <em>pgmIn</em> with the Nagao-Matsuyama filter. The final result is stored in <em>pgmOut</em>. </p>
 <p>Apply a Nagao-Matsuyama filter to the image stored in <em>pgmIn</em>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
@@ -620,7 +662,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html">Filter</a> an image <em>pgmIn</em> with the 3/9 operator. The final result is stored in <em>pgmOut</em>. </p>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> an image <em>pgmIn</em> with the 3/9 operator. The final result is stored in <em>pgmOut</em>. </p>
 <p>Apply a 3/9 operator filter to the image stored in <em>pgmIn</em>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
@@ -662,7 +704,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
 <p>Apply the vertical and horizontal Prewitt filters and returns the magnitute if <em>phase</em> is 0 or the phase if <em>phase</em> is 1. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
@@ -741,7 +783,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmIn</em> with two Sobel filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Sobel filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
 <p>Apply the vertical and horizontal Sobel filters and returns the magnitute if <em>phase</em> is 0 or the phase if <em>phase</em> is 1. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
@@ -784,7 +826,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html">Filter</a> the image <em>pgmMod</em> with non-maximum suppression. The final result is stored in <em>pgmOut</em>. </p>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmMod</em> with non-maximum suppression. The final result is stored in <em>pgmOut</em>. </p>
 <p>Apply a non-maximum suppression filter to the image stored in <em>pgmMod</em>. This array typically contains the magnitude of the gradient of an image. The orientation of the gradient is stored instead in <em>pgmPhi</em>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmMod</td><td>Pointer to the PGM image structure with the magnitude component. </td></tr>
@@ -800,7 +842,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 20:52:11 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 15 2015 20:51:47 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

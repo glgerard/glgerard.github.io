@@ -9,11 +9,13 @@ All the filter operations (blurs, noises, sharpening, edge detection) are implem
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filter_ops_8c_ac4318fdae6e79ac60efb360e20a1c952}{linear\+Add\+Filter} (\hyperlink{struct_filter}{Filter} $\ast$filter\+Op1, \hyperlink{struct_filter}{Filter} $\ast$filter\+Op2, double w1, double w2)
+\begin{DoxyCompactList}\small\item\em Linear weighted sum of two Filters. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8c_aee1a04576f0b0498f72e5722fe909a7e}{add\+Uniform\+Noise\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, int range)
 \begin{DoxyCompactList}\small\item\em Add uniform noise to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8c_ad94c847ad5e4019813cf6743d5d2b374}{add\+Salt\+Pepper\+Noise\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, double density)
 \begin{DoxyCompactList}\small\item\em Add Salt \& Pepper noise to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
-int \hyperlink{image_filter_ops_8c_a2300f33e22a01e469eed16c10e44fb43}{median\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int dim\+X, int dim\+Y, int ic)
+int \hyperlink{image_filter_ops_8c_ab38cfa8f237cf642d42451410c1be89b}{median\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int span\+X, int span\+Y, int ic)
 \begin{DoxyCompactList}\small\item\em Return the median pixel of an image subarray of dimensions (dim\+X, dim\+Y). \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8c_af2673374509b89efefaaa37c5e78de8b}{median\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
 \begin{DoxyCompactList}\small\item\em Apply a median filter to the image {\itshape pgm\+In}. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
@@ -27,11 +29,11 @@ int \hyperlink{image_filter_ops_8c_a10b94e006a809979dc924845c61da96c}{op39\+Kern
 \begin{DoxyCompactList}\small\item\em Return the result of applying the 3/9 operator to a pixel of {\itshape pgm\+In1}. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8c_abd4353db858e4e926311b354423499da}{op39\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
 \begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} an image {\itshape pgm\+In} with the 3/9 operator. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
-int \hyperlink{image_filter_ops_8c_a5d513d105d7fd4187288df6e13535c3a}{nagao\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int dim\+X, int dim\+Y, int ic)
+int \hyperlink{image_filter_ops_8c_af62f2514e9a736b9e44fb1f1bf4d1b8e}{nagao\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In1, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In2, double $\ast$kernel, int span\+X, int span\+Y, int ic)
 \begin{DoxyCompactList}\small\item\em Return the result of applying the Nagao-\/\+Matsuyama filter to a pixel of {\itshape pgm\+In1}. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8c_a014df876d7ef3fbfcf1aaec221208303}{nagao\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
 \begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} an image {\itshape pgm\+In} with the Nagao-\/\+Matsuyama filter. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
-int \hyperlink{image_filter_ops_8c_a7a10d91c6060def50a4f18ac29d2a95f}{suppression\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Mod, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Phi, double $\ast$kernel, int dim\+X, int dim\+Y, int ic)
+int \hyperlink{image_filter_ops_8c_a425ea96fc00eec92297910846daaae13}{suppression\+Kernel} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Mod, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Phi, double $\ast$kernel, int span\+X, int span\+Y, int ic)
 \begin{DoxyCompactList}\small\item\em Return the result of applying non-\/maximum suppression to a pixel of {\itshape pgm\+In1}. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8c_ad04b0f26d354189899f07c93bcf73862}{suppression\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Mod, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Phi, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out)
 \begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+Mod} with non-\/maximum suppression. The final result is stored in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
@@ -104,9 +106,9 @@ Add uniform noise to the image {\itshape pgm\+In}. The final result is stored in
 
 Add to each pixel of the image a value in the interval \mbox{[}-\/range, +range\mbox{]} with uniform density. 
 \begin{DoxyParams}{Parameters}
-{\em img\+In} & Pointer to the input P\+G\+M image structure. \\
+{\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
 \hline
-{\em img\+Out} & Pointer to the output P\+G\+M image structure. \\
+{\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
 \hline
 {\em range} & The absolute max value of the range. \\
 \hline
@@ -140,8 +142,8 @@ For each pixel of {\itshape pgm\+In} compute the average of a 3x3 subarray cente
 \index{ced\+P\+G\+M@{ced\+P\+G\+M}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
 \subsubsection[{ced\+P\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}ced\+P\+G\+M (
 \begin{DoxyParamCaption}
-\item[{{\bf Pgm} $\ast$}]{img\+In, }
-\item[{{\bf Pgm} $\ast$}]{img\+Out, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+In, }
+\item[{{\bf Pgm} $\ast$}]{pgm\+Out, }
 \item[{double}]{sigma, }
 \item[{int}]{dim, }
 \item[{int}]{threshold\+\_\+low, }
@@ -161,6 +163,10 @@ Apply the vertical and horizontal Prewitt filters and returns the magnitute if {
 {\em sigma} & The external sigma of the Do\+G filter. The internal sigma is set to {\itshape sigma} / 1.\+66 . \\
 \hline
 {\em dim} & The rows and columns of the Do\+G filter. If set to 0 then it will be the smallest odd next to 6 {\itshape sigma}. \\
+\hline
+{\em threshold\+\_\+low} & Lower threshold used by the Canny algorithm. \\
+\hline
+{\em threshold\+\_\+high} & Hihger threshold used by the Canny algorithm. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -267,18 +273,46 @@ Apply as a filter two 1\+D Gaussian filters with the same {\itshape sigma} and m
 \begin{DoxyReturn}{Returns}
 0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
 \end{DoxyReturn}
-\hypertarget{image_filter_ops_8c_a2300f33e22a01e469eed16c10e44fb43}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!median\+Kernel@{median\+Kernel}}
+\hypertarget{image_filter_ops_8c_ac4318fdae6e79ac60efb360e20a1c952}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!linear\+Add\+Filter@{linear\+Add\+Filter}}
+\index{linear\+Add\+Filter@{linear\+Add\+Filter}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
+\subsubsection[{linear\+Add\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter} $\ast$ linear\+Add\+Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Filter} $\ast$}]{filter\+Op1, }
+\item[{{\bf Filter} $\ast$}]{filter\+Op2, }
+\item[{double}]{w1, }
+\item[{double}]{w2}
+\end{DoxyParamCaption}
+)}\label{image_filter_ops_8c_ac4318fdae6e79ac60efb360e20a1c952}
+
+
+Linear weighted sum of two Filters. 
+
+It adds linearly the two filters arrays. Each array is first multiplied by a weight. The two filters must have the same dimensions. 
+\begin{DoxyParams}{Parameters}
+{\em filter\+Op1} & The pointer to the first \hyperlink{struct_filter}{Filter}. \\
+\hline
+{\em filter\+Op2} & The pointer to the second \hyperlink{struct_filter}{Filter}. \\
+\hline
+{\em w1} & Weigth for the first \hyperlink{struct_filter}{Filter}. \\
+\hline
+{\em w2} & Weight for the second \hyperlink{struct_filter}{Filter}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the new \hyperlink{struct_filter}{Filter} structure that contains the sum result. 
+\end{DoxyReturn}
+\hypertarget{image_filter_ops_8c_ab38cfa8f237cf642d42451410c1be89b}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!median\+Kernel@{median\+Kernel}}
 \index{median\+Kernel@{median\+Kernel}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
 \subsubsection[{median\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}median\+Kernel (
 \begin{DoxyParamCaption}
 \item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
 \item[{double $\ast$}]{kernel, }
-\item[{int}]{dim\+X, }
-\item[{int}]{dim\+Y, }
+\item[{int}]{span\+X, }
+\item[{int}]{span\+Y, }
 \item[{int}]{ic}
 \end{DoxyParamCaption}
-)}\label{image_filter_ops_8c_a2300f33e22a01e469eed16c10e44fb43}
+)}\label{image_filter_ops_8c_ab38cfa8f237cf642d42451410c1be89b}
 
 
 Return the median pixel of an image subarray of dimensions (dim\+X, dim\+Y). 
@@ -291,9 +325,9 @@ Return the median pixel of an image subarray of dimensions (dim\+X, dim\+Y).
 \hline
 {\em kernel} & Not used. \\
 \hline
-{\em dim\+X} & The number of columns of the image subarray. \\
+{\em span\+X} & The number of columns to the left and right of the central column of the image subarray. \\
 \hline
-{\em dim\+Y} & The number of rows of the image subarray. \\
+{\em span\+Y} & The number of rows to the top and to the bottom of the central row of the image subarray. \\
 \hline
 {\em ic} & The linear index of the central subarray pixel in {\itshape pgm\+In1}. \\
 \hline
@@ -323,18 +357,18 @@ For each pixel of {\itshape pgm\+In} compute the median of a 3x3 subarray center
 \begin{DoxyReturn}{Returns}
 0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
 \end{DoxyReturn}
-\hypertarget{image_filter_ops_8c_a5d513d105d7fd4187288df6e13535c3a}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!nagao\+Kernel@{nagao\+Kernel}}
+\hypertarget{image_filter_ops_8c_af62f2514e9a736b9e44fb1f1bf4d1b8e}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!nagao\+Kernel@{nagao\+Kernel}}
 \index{nagao\+Kernel@{nagao\+Kernel}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
 \subsubsection[{nagao\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}nagao\+Kernel (
 \begin{DoxyParamCaption}
 \item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
 \item[{double $\ast$}]{kernel, }
-\item[{int}]{dim\+X, }
-\item[{int}]{dim\+Y, }
+\item[{int}]{span\+X, }
+\item[{int}]{span\+Y, }
 \item[{int}]{ic}
 \end{DoxyParamCaption}
-)}\label{image_filter_ops_8c_a5d513d105d7fd4187288df6e13535c3a}
+)}\label{image_filter_ops_8c_af62f2514e9a736b9e44fb1f1bf4d1b8e}
 
 
 Return the result of applying the Nagao-\/\+Matsuyama filter to a pixel of {\itshape pgm\+In1}. 
@@ -347,9 +381,9 @@ Return the result of applying the Nagao-\/\+Matsuyama filter to a pixel of {\its
 \hline
 {\em kernel} & Not used. \\
 \hline
-{\em dim\+X} & Not used. \\
+{\em span\+X} & Not used. \\
 \hline
-{\em dim\+Y} & Not used. \\
+{\em span\+Y} & Not used. \\
 \hline
 {\em ic} & The linear index of the central subarray pixel in {\itshape pgm\+In1}. \\
 \hline
@@ -386,8 +420,8 @@ Apply a Nagao-\/\+Matsuyama filter to the image stored in {\itshape pgm\+In}.
 \item[{{\bf Pgm} $\ast$}]{pgm\+In1, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+In2, }
 \item[{double $\ast$}]{kernel, }
-\item[{int}]{dim\+X, }
-\item[{int}]{dim\+Y, }
+\item[{int}]{span\+X, }
+\item[{int}]{span\+Y, }
 \item[{int}]{ic}
 \end{DoxyParamCaption}
 )}\label{image_filter_ops_8c_a10b94e006a809979dc924845c61da96c}
@@ -403,9 +437,9 @@ Return the result of applying the 3/9 operator to a pixel of {\itshape pgm\+In1}
 \hline
 {\em kernel} & Not used. \\
 \hline
-{\em dim\+X} & Not used. \\
+{\em span\+X} & Not used. \\
 \hline
-{\em dim\+Y} & Not used. \\
+{\em span\+Y} & Not used. \\
 \hline
 {\em ic} & The linear index of the central subarray pixel in {\itshape pgm\+In1}. \\
 \hline
@@ -507,18 +541,18 @@ Apply the vertical and horizontal Sobel filters and returns the magnitute if {\i
 \begin{DoxyReturn}{Returns}
 0 on success, -\/1 if either pgm\+In or pgm\+Out are N\+U\+L\+L. 
 \end{DoxyReturn}
-\hypertarget{image_filter_ops_8c_a7a10d91c6060def50a4f18ac29d2a95f}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!suppression\+Kernel@{suppression\+Kernel}}
+\hypertarget{image_filter_ops_8c_a425ea96fc00eec92297910846daaae13}{}\index{image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}!suppression\+Kernel@{suppression\+Kernel}}
 \index{suppression\+Kernel@{suppression\+Kernel}!image\+Filter\+Ops.\+c@{image\+Filter\+Ops.\+c}}
 \subsubsection[{suppression\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}suppression\+Kernel (
 \begin{DoxyParamCaption}
 \item[{{\bf Pgm} $\ast$}]{pgm\+Mod, }
 \item[{{\bf Pgm} $\ast$}]{pgm\+Phi, }
 \item[{double $\ast$}]{kernel, }
-\item[{int}]{dim\+X, }
-\item[{int}]{dim\+Y, }
+\item[{int}]{span\+X, }
+\item[{int}]{span\+Y, }
 \item[{int}]{ic}
 \end{DoxyParamCaption}
-)}\label{image_filter_ops_8c_a7a10d91c6060def50a4f18ac29d2a95f}
+)}\label{image_filter_ops_8c_a425ea96fc00eec92297910846daaae13}
 
 
 Return the result of applying non-\/maximum suppression to a pixel of {\itshape pgm\+In1}. 
@@ -531,9 +565,9 @@ Return the result of applying non-\/maximum suppression to a pixel of {\itshape 
 \hline
 {\em kernel} & Not used. \\
 \hline
-{\em dim\+X} & Not used. \\
+{\em span\+X} & Not used. \\
 \hline
-{\em dim\+Y} & Not used. \\
+{\em span\+Y} & Not used. \\
 \hline
 {\em ic} & The linear index of the central subarray pixel in {\itshape pgm\+In1}. \\
 \hline

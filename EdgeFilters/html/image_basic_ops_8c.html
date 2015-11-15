@@ -90,34 +90,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">imageBasicOps.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Basic image processing functions (absolute, linear add, threshold and fapply).  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="image_basic_ops_8h_source.html">imageBasicOps.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a21b7c0153859749af20da7f95d85c56f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a21b7c0153859749af20da7f95d85c56f">absolutePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:a21b7c0153859749af20da7f95d85c56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert each pixel of the image <em>pgmIn</em> to its absolute value. The final result is stored in <em>pgmOut</em>.  <a href="#a21b7c0153859749af20da7f95d85c56f">More...</a><br /></td></tr>
 <tr class="separator:a21b7c0153859749af20da7f95d85c56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2beed6f34722fb27a9c19e0aac0f2a9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a2beed6f34722fb27a9c19e0aac0f2a9e">thresholdPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, int threshold)</td></tr>
+<tr class="memdesc:a2beed6f34722fb27a9c19e0aac0f2a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binarize an image <em>pgmIn</em> based on the <em>threshold</em> value. The result is stored in <em>pgmOut</em>.  <a href="#a2beed6f34722fb27a9c19e0aac0f2a9e">More...</a><br /></td></tr>
 <tr class="separator:a2beed6f34722fb27a9c19e0aac0f2a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dce8fae864d87092dc6ccfc302e34ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a2dce8fae864d87092dc6ccfc302e34ed">linearAddPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmOp1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOp2, double w1, double w2, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:a2dce8fae864d87092dc6ccfc302e34ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear weighted sum of two images.  <a href="#a2dce8fae864d87092dc6ccfc302e34ed">More...</a><br /></td></tr>
 <tr class="separator:a2dce8fae864d87092dc6ccfc302e34ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a02537a83a84b74192680d299f2186"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a58a02537a83a84b74192680d299f2186">comparePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmOp1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOp2)</td></tr>
+<tr class="memdesc:a58a02537a83a84b74192680d299f2186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two images <em>pgmOp1</em> and <em>pgmOp2</em>.  <a href="#a58a02537a83a84b74192680d299f2186">More...</a><br /></td></tr>
 <tr class="separator:a58a02537a83a84b74192680d299f2186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d820d9ce5852829463026be89c282f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a61d820d9ce5852829463026be89c282f">modulePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmOpX, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOpY, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:a61d820d9ce5852829463026be89c282f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store in <em>pgmOut</em> the "module" of the two images in <em>pgmOpX</em> and <em>pgmOpY</em> as if each image's pixel would be the x and y coordinate of a point in the cartesian plane.  <a href="#a61d820d9ce5852829463026be89c282f">More...</a><br /></td></tr>
 <tr class="separator:a61d820d9ce5852829463026be89c282f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad54a6261223dee6369fff0b01d754460"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#ad54a6261223dee6369fff0b01d754460">phasePGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmOpX, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOpY, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut)</td></tr>
+<tr class="memdesc:ad54a6261223dee6369fff0b01d754460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store in <em>pgmOut</em> the "phase" of the two images in <em>pgmOpX</em> and <em>pgmOpY</em> as if each image's pixel would be the x and y coordinate of a point in polar coordinates.  <a href="#ad54a6261223dee6369fff0b01d754460">More...</a><br /></td></tr>
 <tr class="separator:ad54a6261223dee6369fff0b01d754460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90a19bfcce0315c936f1241c69da9024"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a90a19bfcce0315c936f1241c69da9024">fapplyPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmIn2, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, <a class="el" href="struct_filter.html">Filter</a> *filter, int borderX, int borderY, int(*func)(<a class="el" href="struct_pgm.html">Pgm</a> *, <a class="el" href="struct_pgm.html">Pgm</a> *, double *, int, int, int))</td></tr>
-<tr class="separator:a90a19bfcce0315c936f1241c69da9024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0317bf52944cc18f9c1c9a3411acc46e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a0317bf52944cc18f9c1c9a3411acc46e">convolution2DKernel</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmIn2, double *kernel, int borderX, int borderY, int ic)</td></tr>
-<tr class="separator:a0317bf52944cc18f9c1c9a3411acc46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1092574e87e10de662f30eafce4a139"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#aa1092574e87e10de662f30eafce4a139">fapplyPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmIn2, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, <a class="el" href="struct_filter.html">Filter</a> *filter, int dimX, int dimY, int(*func)(<a class="el" href="struct_pgm.html">Pgm</a> *, <a class="el" href="struct_pgm.html">Pgm</a> *, double *, int, int, int))</td></tr>
+<tr class="memdesc:aa1092574e87e10de662f30eafce4a139"><td class="mdescLeft">&#160;</td><td class="mdescRight">SScan an image and apply a function <em>func</em> to each pixel.  <a href="#aa1092574e87e10de662f30eafce4a139">More...</a><br /></td></tr>
+<tr class="separator:aa1092574e87e10de662f30eafce4a139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0029cedd347d5f0f5898690ffb6713d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a0029cedd347d5f0f5898690ffb6713d7">convolution2DKernel</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn1, <a class="el" href="struct_pgm.html">Pgm</a> *pgmIn2, double *kernel, int spanX, int spanY, int ic)</td></tr>
+<tr class="memdesc:a0029cedd347d5f0f5898690ffb6713d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve an image <em>pgmIn</em> with a matrix stored in <em>kernel</em>. The result is stored in <em>pgmOut</em>.  <a href="#a0029cedd347d5f0f5898690ffb6713d7">More...</a><br /></td></tr>
+<tr class="separator:a0029cedd347d5f0f5898690ffb6713d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e638c9bde0f8608535611c6e17911bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a3e638c9bde0f8608535611c6e17911bf">convolution2DPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, <a class="el" href="struct_filter.html">Filter</a> *filter)</td></tr>
+<tr class="memdesc:a3e638c9bde0f8608535611c6e17911bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply to the image <em>pgmIn</em> a 2D convolution with the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> <em>filter</em>. Store in <em>pgmOut</em> the result.  <a href="#a3e638c9bde0f8608535611c6e17911bf">More...</a><br /></td></tr>
 <tr class="separator:a3e638c9bde0f8608535611c6e17911bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a915e689e67678fdcd732796fce7de23b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a915e689e67678fdcd732796fce7de23b">convolution1DXPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, <a class="el" href="struct_filter.html">Filter</a> *filter)</td></tr>
+<tr class="memdesc:a915e689e67678fdcd732796fce7de23b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply to the image <em>pgmIn</em> a one-dimensional convolution with the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> <em>filter</em> along the image columns.  <a href="#a915e689e67678fdcd732796fce7de23b">More...</a><br /></td></tr>
 <tr class="separator:a915e689e67678fdcd732796fce7de23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c6fd3a6b3d2f4fd9b93802b9823aeea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_basic_ops_8c.html#a1c6fd3a6b3d2f4fd9b93802b9823aeea">convolution1DYPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, <a class="el" href="struct_filter.html">Filter</a> *filter)</td></tr>
+<tr class="memdesc:a1c6fd3a6b3d2f4fd9b93802b9823aeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply to the image <em>pgmIn</em> a one-dimensional convolution with the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> <em>filter</em> along the image rows.  <a href="#a1c6fd3a6b3d2f4fd9b93802b9823aeea">More...</a><br /></td></tr>
 <tr class="separator:a1c6fd3a6b3d2f4fd9b93802b9823aeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Basic image processing functions (absolute, linear add, threshold and fapply). </p>
+<dl class="section author"><dt>Author</dt><dd>Eleonora Maria Aiello </dd>
+<dd>
+Gianluca Gerard </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>25/10/15 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Apache License Version 2.0, January 2004 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a21b7c0153859749af20da7f95d85c56f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -141,6 +162,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Convert each pixel of the image <em>pgmIn</em> to its absolute value. The final result is stored in <em>pgmOut</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output PGM image structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
 
 </div>
 </div>
@@ -167,6 +198,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compare two images <em>pgmOp1</em> and <em>pgmOp2</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmOp1</td><td>Pointer to the first <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOp2</td><td>Pointer to the second <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the images are equal, 1 otherwise. </dd></dl>
 
 </div>
 </div>
@@ -200,6 +241,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Apply to the image <em>pgmIn</em> a one-dimensional convolution with the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> <em>filter</em> along the image columns. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">filter</td><td>Pointer to the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a1c6fd3a6b3d2f4fd9b93802b9823aeea"></a>
@@ -232,9 +284,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Apply to the image <em>pgmIn</em> a one-dimensional convolution with the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> <em>filter</em> along the image rows. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">filter</td><td>Pointer to the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a0317bf52944cc18f9c1c9a3411acc46e"></a>
+<a class="anchor" id="a0029cedd347d5f0f5898690ffb6713d7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -260,13 +323,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderX</em>, </td>
+          <td class="paramname"><em>spanX</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderY</em>, </td>
+          <td class="paramname"><em>spanY</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -281,6 +344,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Convolve an image <em>pgmIn</em> with a matrix stored in <em>kernel</em>. The result is stored in <em>pgmOut</em>. </p>
+<p>It returns the value of the convolution of the matrix in <em>kernel</em> with the equally sized subregion of the image <em>pgmIn1</em> centered at the linarly indexed pixel <em>ic</em>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn1</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmIn2</td><td>Not used. </td></tr>
+    <tr><td class="paramname">kernel</td><td>Pointer to convolution matrix. </td></tr>
+    <tr><td class="paramname">spanX</td><td>The number of columns to the left and right of the central column of the image subarray. </td></tr>
+    <tr><td class="paramname">spanY</td><td>The number of rows to the top and to the bottom of the central row of the image subarray. </td></tr>
+    <tr><td class="paramname">ic</td><td>The linear index of the central subarray pixel in <em>pgmIn1</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the convolution. </dd></dl>
 
 </div>
 </div>
@@ -314,14 +391,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Apply to the image <em>pgmIn</em> a 2D convolution with the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> <em>filter</em>. Store in <em>pgmOut</em> the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">filter</td><td>Pointer to the <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a90a19bfcce0315c936f1241c69da9024"></a>
+<a class="anchor" id="aa1092574e87e10de662f30eafce4a139"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int fapplyPGM </td>
+          <td class="memname">int int fapplyPGM </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_pgm.html">Pgm</a> *&#160;</td>
           <td class="paramname"><em>pgmIn1</em>, </td>
@@ -348,13 +436,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderX</em>, </td>
+          <td class="paramname"><em>dimX</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>borderY</em>, </td>
+          <td class="paramname"><em>dimY</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -369,6 +457,29 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>SScan an image and apply a function <em>func</em> to each pixel. </p>
+<p>It scans the image <em>pgmIn1</em> and to each pixel in the image applies the function <em>func</em>. The function <em>func</em> receives 6 parameters:</p><ul>
+<li><em>pgmIn1</em> </li>
+<li><em>pgmIn2</em> </li>
+<li><em>filter-&gt;kernel</em> (if != NULL)</li>
+<li>dimX/2</li>
+<li>dimY/2</li>
+<li>a linear index in the <em>pgmIn1-&gt;pixels</em> array Each pixel in <em>pgmOut</em> is replaced with the return value of <em>func</em> for the corresponding pixel in <em>pgmIn1</em>. <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn1</td><td>Pointer to the first <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmIn2</td><td>Pointer to a second <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure that can optionally be accessed by <em>func</em>. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">filter</td><td>Pointer to an optional <a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> structure. </td></tr>
+    <tr><td class="paramname">dimX</td><td>The dimension along X of the subarray of <em>pgmIn1</em> checked by <em>func</em>. </td></tr>
+    <tr><td class="paramname">dimY</td><td>The dimension along Y of the subarray of <em>pgmIn1</em> checked by <em>func</em>. </td></tr>
+    <tr><td class="paramname">func</td><td>The function used to compute the value of the output pixel. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+</li>
+</ul>
 
 </div>
 </div>
@@ -414,6 +525,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Linear weighted sum of two images. </p>
+<p>It adds linearly the two images arrays. Each array is first multiplied by a weight. The two images must have the same dimensions. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmOp1</td><td>The pointer to the first image. </td></tr>
+    <tr><td class="paramname">pgmOp2</td><td>The pointer to the second image. </td></tr>
+    <tr><td class="paramname">w1</td><td>Weigth for the first image. </td></tr>
+    <tr><td class="paramname">w2</td><td>Weight for the second image. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>The pointer to the image that stores the result. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmOp1, pgmOp2 or pgmOut are NULL. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a61d820d9ce5852829463026be89c282f"></a>
@@ -445,6 +569,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Store in <em>pgmOut</em> the "module" of the two images in <em>pgmOpX</em> and <em>pgmOpY</em> as if each image's pixel would be the x and y coordinate of a point in the cartesian plane. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmOpX</td><td>Pointer to the first <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOpY</td><td>Pointer to the second <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
 
 </div>
 </div>
@@ -478,6 +613,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Store in <em>pgmOut</em> the "phase" of the two images in <em>pgmOpX</em> and <em>pgmOpY</em> as if each image's pixel would be the x and y coordinate of a point in polar coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmOpX</td><td>Pointer to the first <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOpY</td><td>Pointer to the second <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a2beed6f34722fb27a9c19e0aac0f2a9e"></a>
@@ -510,12 +656,23 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Binarize an image <em>pgmIn</em> based on the <em>threshold</em> value. The result is stored in <em>pgmOut</em>. </p>
+<p>Each pixel's value greater or equal than the <em>threshold</em> is converted to the value 255. All other pixels are set to 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pgmIn</td><td>Pointer to the input <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">pgmOut</td><td>Pointer to the output <a class="el" href="struct_pgm.html" title="Structure to store PGM format images. ">Pgm</a> image structure. </td></tr>
+    <tr><td class="paramname">threshold</td><td>The threshold value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if either pgmIn or pgmOut are NULL. </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 20:52:11 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 15 2015 20:51:47 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

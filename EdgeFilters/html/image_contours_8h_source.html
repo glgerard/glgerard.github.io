@@ -88,14 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">imageContours.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="image_contours_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  imageContours.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  EdgeFilters</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Gianluca Gerard on 13/11/15.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2015 Gianluca Gerard. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<a href="image_contours_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef imageContours_h</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define imageContours_h</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
@@ -106,23 +99,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="image_filters_8h.html">imageFilters.h</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="image_basic_ops_8h.html">imageBasicOps.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> <a class="code" href="image_contours_8h.html#aae72ef6d40d20a2878617da70aef5196">contour2DPGM</a>(<a class="code" href="struct_pgm.html">Pgm</a>* pgmIn, <a class="code" href="struct_pgm.html">Pgm</a>* pgmOut);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> <a class="code" href="image_contours_8h.html#a2fa26dbb02bb812614285517a603f292">contourUniformPGM</a>(<a class="code" href="struct_pgm.html">Pgm</a>* pgmIn, <a class="code" href="struct_pgm.html">Pgm</a>* pgmOut);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> <a class="code" href="image_contours_8h.html#acf88b76d9d6974b28ee1e60f169596da">contourN8IntPGM</a>(<a class="code" href="struct_pgm.html">Pgm</a>* pgmIn, <a class="code" href="struct_pgm.html">Pgm</a>* pgmOut);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> <a class="code" href="image_contours_8h.html#a37d865f922409d7a01b35a6c383dc5cd">connectivityPGM</a>(<a class="code" href="struct_pgm.html">Pgm</a> *pgmNH, <a class="code" href="struct_pgm.html">Pgm</a> *pgmNL, <a class="code" href="struct_pgm.html">Pgm</a> *pgmOut);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* imageContours_h */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="struct_pgm_html"><div class="ttname"><a href="struct_pgm.html">Pgm</a></div><div class="ttdef"><b>Definition:</b> imageUtilities.h:18</div></div>
-<div class="ttc" id="image_contours_8h_html_aae72ef6d40d20a2878617da70aef5196"><div class="ttname"><a href="image_contours_8h.html#aae72ef6d40d20a2878617da70aef5196">contour2DPGM</a></div><div class="ttdeci">int contour2DPGM(Pgm *pgmIn, Pgm *pgmOut)</div><div class="ttdef"><b>Definition:</b> imageContours.c:42</div></div>
-<div class="ttc" id="image_contours_8h_html_acf88b76d9d6974b28ee1e60f169596da"><div class="ttname"><a href="image_contours_8h.html#acf88b76d9d6974b28ee1e60f169596da">contourN8IntPGM</a></div><div class="ttdeci">int contourN8IntPGM(Pgm *pgmIn, Pgm *pgmOut)</div><div class="ttdef"><b>Definition:</b> imageContours.c:87</div></div>
-<div class="ttc" id="image_contours_8h_html_a37d865f922409d7a01b35a6c383dc5cd"><div class="ttname"><a href="image_contours_8h.html#a37d865f922409d7a01b35a6c383dc5cd">connectivityPGM</a></div><div class="ttdeci">int connectivityPGM(Pgm *pgmNH, Pgm *pgmNL, Pgm *pgmOut)</div><div class="ttdef"><b>Definition:</b> imageContours.c:114</div></div>
-<div class="ttc" id="image_filters_8h_html"><div class="ttname"><a href="image_filters_8h.html">imageFilters.h</a></div></div>
-<div class="ttc" id="helper_functions_8h_html"><div class="ttname"><a href="helper_functions_8h.html">helperFunctions.h</a></div></div>
-<div class="ttc" id="image_basic_ops_8h_html"><div class="ttname"><a href="image_basic_ops_8h.html">imageBasicOps.h</a></div></div>
-<div class="ttc" id="image_utilities_8h_html"><div class="ttname"><a href="image_utilities_8h.html">imageUtilities.h</a></div></div>
+<div class="ttc" id="struct_pgm_html"><div class="ttname"><a href="struct_pgm.html">Pgm</a></div><div class="ttdoc">Structure to store PGM format images. </div><div class="ttdef"><b>Definition:</b> imageUtilities.h:28</div></div>
+<div class="ttc" id="image_contours_8h_html_acf88b76d9d6974b28ee1e60f169596da"><div class="ttname"><a href="image_contours_8h.html#acf88b76d9d6974b28ee1e60f169596da">contourN8IntPGM</a></div><div class="ttdeci">int contourN8IntPGM(Pgm *pgmIn, Pgm *pgmOut)</div><div class="ttdoc">Return in pgmOut the contours of image pointerd by pgmIn by looking for pixels in the foreground havi...</div><div class="ttdef"><b>Definition:</b> imageContours.c:115</div></div>
+<div class="ttc" id="image_contours_8h_html_a37d865f922409d7a01b35a6c383dc5cd"><div class="ttname"><a href="image_contours_8h.html#a37d865f922409d7a01b35a6c383dc5cd">connectivityPGM</a></div><div class="ttdeci">int connectivityPGM(Pgm *pgmNH, Pgm *pgmNL, Pgm *pgmOut)</div><div class="ttdoc">It returns in pgmOut the pixels of pgmNL 8-connected to all the non-background pixels of pgmNH...</div><div class="ttdef"><b>Definition:</b> imageContours.c:161</div></div>
+<div class="ttc" id="image_filters_8h_html"><div class="ttname"><a href="image_filters_8h.html">imageFilters.h</a></div><div class="ttdoc">Interfaces for functions to create and free filters. </div></div>
+<div class="ttc" id="image_contours_8h_html_a2fa26dbb02bb812614285517a603f292"><div class="ttname"><a href="image_contours_8h.html#a2fa26dbb02bb812614285517a603f292">contourUniformPGM</a></div><div class="ttdeci">int contourUniformPGM(Pgm *pgmIn, Pgm *pgmOut)</div><div class="ttdoc">Return in pgmOut the contours of image pointerd by pgmIn by looking for uniform regions. </div><div class="ttdef"><b>Definition:</b> imageContours.c:63</div></div>
+<div class="ttc" id="helper_functions_8h_html"><div class="ttname"><a href="helper_functions_8h.html">helperFunctions.h</a></div><div class="ttdoc">Interfaces to basic math, sort and line processing functions. </div></div>
+<div class="ttc" id="image_basic_ops_8h_html"><div class="ttname"><a href="image_basic_ops_8h.html">imageBasicOps.h</a></div><div class="ttdoc">Interfaces to image processing functions (absolute, linear add, threshold and fapply). </div></div>
+<div class="ttc" id="image_utilities_8h_html"><div class="ttname"><a href="image_utilities_8h.html">imageUtilities.h</a></div><div class="ttdoc">Interfaces to functions for reading and writing in PGM P2 - P5 format. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 20:52:11 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 15 2015 20:51:47 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,5 +1,10 @@
 \hypertarget{image_filters_8h}{}\section{Edge\+Filters/image\+Filters.h File Reference}
 \label{image_filters_8h}\index{Edge\+Filters/image\+Filters.\+h@{Edge\+Filters/image\+Filters.\+h}}
+
+
+Interfaces for functions to create and free filters.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
 {\ttfamily \#include $<$math.\+h$>$}\\*
@@ -8,43 +13,57 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{struct_filter}{Filter}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The structure used for image filters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{image_filters_8h_a1a890d6fb0600cac58e2d2e9d9006a3d}{smallest\+Odd}(x)~x\%2 == 1? x\+: x-\/1
-\begin{DoxyCompactList}\small\item\em Find the smallest\+Odd next to {\itshape x}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Find the smallest\+Odd next to {\itshape x} . \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_aaca2859d4589d90400d71c29e07429e5}{new\+Filter} (int width, int height)
-\item 
+\begin{DoxyCompactList}\small\item\em Create a new image filter of size {\itshape width} x {\itshape height}. \end{DoxyCompactList}\item 
 void \hyperlink{image_filters_8h_aa0676b1dca03b04c8645b8cf4880a666}{free\+Filter} (\hyperlink{struct_filter}{Filter} $\ast$$\ast$filter)
-\item 
+\begin{DoxyCompactList}\small\item\em Free a \hyperlink{struct_filter}{Filter} structure whose pointer is stored in {\itshape filter}. \end{DoxyCompactList}\item 
 void \hyperlink{image_filters_8h_af159acaa8544846f98d8bc61831bb3ee}{print\+Filter} (\hyperlink{struct_filter}{Filter} $\ast$filter)
-\item 
-\hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_a6a8f731e6c621a784f1921e2f965e351}{linear\+Add\+Filter} (\hyperlink{struct_filter}{Filter} $\ast$filter\+Op1, \hyperlink{struct_filter}{Filter} $\ast$filter\+Op2, double w1, double w2)
-\item 
+\begin{DoxyCompactList}\small\item\em Print the values of the \hyperlink{struct_filter}{Filter} pointed by {\itshape filter}. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_ab272379cd5830de4648361734bff0dde}{identity\+Filter} (int width, int height)
-\item 
+\begin{DoxyCompactList}\small\item\em It creates an identity \hyperlink{struct_filter}{Filter}. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_a82d97235f47d0deacedf0c5285876482}{box\+Filter} (int width, int height)
-\item 
+\begin{DoxyCompactList}\small\item\em It creates a box \hyperlink{struct_filter}{Filter}. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_a14a509158bba4112bc4bd453d772fd4e}{prewitt\+X\+Filter} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates the vertical Prewitt filter. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_a8c7d93bbbf1d606e3519129e00e66118}{prewitt\+Y\+Filter} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates the horizontal Prewitt filter. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_a92093addd766273980f634c5388205f1}{sobel\+X\+Filter} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates the vertical Sobel filter. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_aeaddbeb29c7e6f9c61fc9ff25abaa081}{sobel\+Y\+Filter} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates the horizontal Sobel filter. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_a9c3b3a8c374aca54f6a1462f51fb693f}{gauss1\+D\+X\+Filter} (double sigma, int width)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a 1 dimensional Gauss filter with 1 row and {\itshape width} columns. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_aa0329a40434d011ff4fe725287c953bd}{gauss1\+D\+Y\+Filter} (double sigma, int height)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a 1 dimensional Gauss filter with 1 column and {\itshape height} rows. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_a8aace556e9fd9d9b3dfc3f6f6f2a3db6}{gauss2\+D\+Filter} (double sigma, int dim)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a 2-\/dimensional Gauss filter with {\itshape dim} columns and {\itshape dim} rows. \end{DoxyCompactList}\item 
 \hyperlink{struct_filter}{Filter} $\ast$ \hyperlink{image_filters_8h_a1675cb31fa3a6b5a3b199c215c47430f}{Do\+G\+Filter} (double sigma, int dim)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a Do\+G filter with {\itshape dim} columns and {\itshape dim} rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interfaces for functions to create and free filters. 
+
+\begin{DoxyAuthor}{Author}
+Eleonora Maria Aiello 
+
+Gianluca Gerard 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+24/10/15 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Apache License Version 2.\+0, January 2004 
+\end{DoxyCopyright}
 
 
 \subsection{Macro Definition Documentation}
@@ -57,7 +76,7 @@ void \hyperlink{image_filters_8h_af159acaa8544846f98d8bc61831bb3ee}{print\+Filte
 )~x\%2 == 1? x\+: x-\/1}\label{image_filters_8h_a1a890d6fb0600cac58e2d2e9d9006a3d}
 
 
-Find the smallest\+Odd next to {\itshape x}. 
+Find the smallest\+Odd next to {\itshape x} . 
 
 It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even. 
 
@@ -70,6 +89,22 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{int}]{height}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_a82d97235f47d0deacedf0c5285876482}
+
+
+It creates a box \hyperlink{struct_filter}{Filter}. 
+
+The box filter has all values set to the inverse of ({\itshape width} $\ast$ {\itshape height}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & \hyperlink{struct_filter}{Filter}\textquotesingle{}s width. \\
+\hline
+{\em height} & \hyperlink{struct_filter}{Filter}\textquotesingle{}s height. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \hyperlink{struct_filter}{Filter} structure or N\+U\+L\+L if the \hyperlink{struct_filter}{Filter} could not be created. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_a1675cb31fa3a6b5a3b199c215c47430f}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!Do\+G\+Filter@{Do\+G\+Filter}}
 \index{Do\+G\+Filter@{Do\+G\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{Do\+G\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ Do\+G\+Filter (
@@ -78,6 +113,22 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{int}]{dim}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_a1675cb31fa3a6b5a3b199c215c47430f}
+
+
+Creates a Do\+G filter with {\itshape dim} columns and {\itshape dim} rows. 
+
+This filter is the result of the difference of two equal Gaussian filters with equal size and different sigmas. The external gaussian has sigma set by {\itshape sigma}. The internal gaussian has a smaller sigma equal to {\itshape sigma} / 1.\+66 .
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma} & The sigma of the external Gaussian. \\
+\hline
+{\em dim} & The number of rows and columns of the filter. If it is set to 0 then the dimension is the smallest odd number next to 6 {\itshape sigma}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the Do\+G filter. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_aa0676b1dca03b04c8645b8cf4880a666}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!free\+Filter@{free\+Filter}}
 \index{free\+Filter@{free\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{free\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Filter (
@@ -85,6 +136,15 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{{\bf Filter} $\ast$$\ast$}]{filter}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_aa0676b1dca03b04c8645b8cf4880a666}
+
+
+Free a \hyperlink{struct_filter}{Filter} structure whose pointer is stored in {\itshape filter}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The pointer to a filter\textquotesingle{}s pointer. \\
+\hline
+\end{DoxyParams}
 \hypertarget{image_filters_8h_a9c3b3a8c374aca54f6a1462f51fb693f}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!gauss1\+D\+X\+Filter@{gauss1\+D\+X\+Filter}}
 \index{gauss1\+D\+X\+Filter@{gauss1\+D\+X\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{gauss1\+D\+X\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ gauss1\+D\+X\+Filter (
@@ -93,6 +153,20 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{int}]{width}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_a9c3b3a8c374aca54f6a1462f51fb693f}
+
+
+Creates a 1 dimensional Gauss filter with 1 row and {\itshape width} columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma} & The sigma of the Gaussian. \\
+\hline
+{\em width} & The columns of the filter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the Gauss filter. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_aa0329a40434d011ff4fe725287c953bd}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!gauss1\+D\+Y\+Filter@{gauss1\+D\+Y\+Filter}}
 \index{gauss1\+D\+Y\+Filter@{gauss1\+D\+Y\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{gauss1\+D\+Y\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ gauss1\+D\+Y\+Filter (
@@ -101,6 +175,20 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{int}]{height}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_aa0329a40434d011ff4fe725287c953bd}
+
+
+Creates a 1 dimensional Gauss filter with 1 column and {\itshape height} rows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma} & The sigma of the Gaussian. \\
+\hline
+{\em height} & The rows of the filter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the Gauss filter. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_a8aace556e9fd9d9b3dfc3f6f6f2a3db6}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!gauss2\+D\+Filter@{gauss2\+D\+Filter}}
 \index{gauss2\+D\+Filter@{gauss2\+D\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{gauss2\+D\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ gauss2\+D\+Filter (
@@ -109,6 +197,20 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{int}]{dim}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_a8aace556e9fd9d9b3dfc3f6f6f2a3db6}
+
+
+Creates a 2-\/dimensional Gauss filter with {\itshape dim} columns and {\itshape dim} rows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma} & The sigma of the Gaussian. \\
+\hline
+{\em dim} & The number of rows and columns of the filter. If it is set to 0 then the dimension is the smallest odd number next to 6 {\itshape sigma}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the Gauss filter. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_ab272379cd5830de4648361734bff0dde}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!identity\+Filter@{identity\+Filter}}
 \index{identity\+Filter@{identity\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{identity\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ identity\+Filter (
@@ -117,16 +219,23 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{int}]{height}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_ab272379cd5830de4648361734bff0dde}
-\hypertarget{image_filters_8h_a6a8f731e6c621a784f1921e2f965e351}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!linear\+Add\+Filter@{linear\+Add\+Filter}}
-\index{linear\+Add\+Filter@{linear\+Add\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
-\subsubsection[{linear\+Add\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ linear\+Add\+Filter (
-\begin{DoxyParamCaption}
-\item[{{\bf Filter} $\ast$}]{filter\+Op1, }
-\item[{{\bf Filter} $\ast$}]{filter\+Op2, }
-\item[{double}]{w1, }
-\item[{double}]{w2}
-\end{DoxyParamCaption}
-)}\label{image_filters_8h_a6a8f731e6c621a784f1921e2f965e351}
+
+
+It creates an identity \hyperlink{struct_filter}{Filter}. 
+
+The identify filter has all values at 0 except for the one at the center of the \hyperlink{struct_filter}{Filter}\textquotesingle{}s array which is set to 1. 
+\begin{DoxyParams}{Parameters}
+{\em width} & \hyperlink{struct_filter}{Filter}\textquotesingle{}s width. \\
+\hline
+{\em height} & \hyperlink{struct_filter}{Filter}\textquotesingle{}s height. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \hyperlink{struct_filter}{Filter} structure or N\+U\+L\+L if the \hyperlink{struct_filter}{Filter} could not be created. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+{\itshape width} and {\itshape height} must both be odd values. 
+\end{DoxyWarning}
 \hypertarget{image_filters_8h_aaca2859d4589d90400d71c29e07429e5}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!new\+Filter@{new\+Filter}}
 \index{new\+Filter@{new\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{new\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ new\+Filter (
@@ -135,6 +244,20 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{int}]{height}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_aaca2859d4589d90400d71c29e07429e5}
+
+
+Create a new image filter of size {\itshape width} x {\itshape height}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & \hyperlink{struct_filter}{Filter}\textquotesingle{}s width. \\
+\hline
+{\em height} & \hyperlink{struct_filter}{Filter}\textquotesingle{}s height. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \hyperlink{struct_filter}{Filter} structure or N\+U\+L\+L if either one of the two dimensions is less than 1. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_a14a509158bba4112bc4bd453d772fd4e}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!prewitt\+X\+Filter@{prewitt\+X\+Filter}}
 \index{prewitt\+X\+Filter@{prewitt\+X\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{prewitt\+X\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ prewitt\+X\+Filter (
@@ -142,6 +265,13 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 {}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_a14a509158bba4112bc4bd453d772fd4e}
+
+
+Creates the vertical Prewitt filter. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the vertical Prewitt filter. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_a8c7d93bbbf1d606e3519129e00e66118}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!prewitt\+Y\+Filter@{prewitt\+Y\+Filter}}
 \index{prewitt\+Y\+Filter@{prewitt\+Y\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{prewitt\+Y\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ prewitt\+Y\+Filter (
@@ -149,6 +279,13 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 {}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_a8c7d93bbbf1d606e3519129e00e66118}
+
+
+Creates the horizontal Prewitt filter. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the horizontal Prewitt filter. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_af159acaa8544846f98d8bc61831bb3ee}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!print\+Filter@{print\+Filter}}
 \index{print\+Filter@{print\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{print\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Filter (
@@ -156,6 +293,15 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 \item[{{\bf Filter} $\ast$}]{filter}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_af159acaa8544846f98d8bc61831bb3ee}
+
+
+Print the values of the \hyperlink{struct_filter}{Filter} pointed by {\itshape filter}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The pointer to the \hyperlink{struct_filter}{Filter}. \\
+\hline
+\end{DoxyParams}
 \hypertarget{image_filters_8h_a92093addd766273980f634c5388205f1}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!sobel\+X\+Filter@{sobel\+X\+Filter}}
 \index{sobel\+X\+Filter@{sobel\+X\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{sobel\+X\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ sobel\+X\+Filter (
@@ -163,6 +309,13 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 {}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_a92093addd766273980f634c5388205f1}
+
+
+Creates the vertical Sobel filter. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the vertical Sobel filter. 
+\end{DoxyReturn}
 \hypertarget{image_filters_8h_aeaddbeb29c7e6f9c61fc9ff25abaa081}{}\index{image\+Filters.\+h@{image\+Filters.\+h}!sobel\+Y\+Filter@{sobel\+Y\+Filter}}
 \index{sobel\+Y\+Filter@{sobel\+Y\+Filter}!image\+Filters.\+h@{image\+Filters.\+h}}
 \subsubsection[{sobel\+Y\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter}$\ast$ sobel\+Y\+Filter (
@@ -170,3 +323,10 @@ It returns {\itshape x} if it is odd, {\itshape x} -\/ 1 if it is even.
 {}
 \end{DoxyParamCaption}
 )}\label{image_filters_8h_aeaddbeb29c7e6f9c61fc9ff25abaa081}
+
+
+Creates the horizontal Sobel filter. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the horizontal Sobel filter. 
+\end{DoxyReturn}
