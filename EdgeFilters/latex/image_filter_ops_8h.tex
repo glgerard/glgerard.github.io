@@ -48,7 +48,7 @@ int \hyperlink{image_filter_ops_8h_ab11618c6224661e24d7774fdd864da6f}{sobel\+P\+
 int \hyperlink{image_filter_ops_8h_afd53c98614ea0c6139b30f42e4e008f4}{prewitt\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, uint8\+\_\+t phase)
 \begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8h_a7e66fc57eb98725c87a6022b4fa3e362}{dog\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, \hyperlink{struct_pgm}{Pgm} $\ast$img\+Out, double sigma, int dim)
-\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with a Do\+G filter. Store the result in {\itshape pgm\+Out}. \end{DoxyCompactList}\item 
 int \hyperlink{image_filter_ops_8h_ad0fbb97555f4482b3a93c81e3e7d5e6c}{ced\+P\+G\+M} (\hyperlink{struct_pgm}{Pgm} $\ast$img\+In, \hyperlink{struct_pgm}{Pgm} $\ast$img\+Out, double sigma, int dim, int threshold, int threshold\+Ratio)
 \begin{DoxyCompactList}\small\item\em \hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. \end{DoxyCompactList}\item 
 void \hyperlink{image_filter_ops_8h_a9b7b4a2b448380073796985501658d8b}{exec\+Image\+Ops} (\hyperlink{struct_pgm}{Pgm} $\ast$pgm\+In, \hyperlink{struct_pgm}{Pgm} $\ast$pgm\+Out, F\+I\+L\+E $\ast$fp)
@@ -190,17 +190,17 @@ Apply the vertical and horizontal Prewitt filters and returns the magnitute if {
 )}\label{image_filter_ops_8h_a7e66fc57eb98725c87a6022b4fa3e362}
 
 
-\hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on {\itshape phase}. 
+\hyperlink{struct_filter}{Filter} the image {\itshape pgm\+In} with a Do\+G filter. Store the result in {\itshape pgm\+Out}. 
 
-Apply the vertical and horizontal Prewitt filters and returns the magnitute if {\itshape phase} is 0 or the phase if {\itshape phase} is 1. 
+Apply a Do\+G filter to {\itshape pgm\+In}. Refer to \hyperlink{image_filters_8c_af7cf8d2130b77ccc70bb90a916a9e0f8}{Do\+G\+Filter() function } for further information. 
 \begin{DoxyParams}{Parameters}
 {\em pgm\+In} & Pointer to the input P\+G\+M image structure. \\
 \hline
 {\em pgm\+Out} & Pointer to the output P\+G\+M image structure. \\
 \hline
-{\em sigma} & The external sigma of the Do\+G filter. The internal sigma is set to {\itshape sigma} / 1.\+66 . \\
+{\em sigma} & The sigma of the external Gaussian. \\
 \hline
-{\em dim} & The rows and columns of the Do\+G filter. If set to 0 then it will be the smallest odd next to 6 {\itshape sigma}. \\
+{\em dim} & The number of rows and columns of the filter. If it is set to 0 then the dimension is the smallest odd number next to 6 {\itshape sigma}. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

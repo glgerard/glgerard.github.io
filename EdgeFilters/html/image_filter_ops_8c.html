@@ -146,7 +146,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:afd53c98614ea0c6139b30f42e4e008f4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#afd53c98614ea0c6139b30f42e4e008f4">More...</a><br /></td></tr>
 <tr class="separator:afd53c98614ea0c6139b30f42e4e008f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90605fbb99e0582c47693ab2aeb38a2e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8c.html#a90605fbb99e0582c47693ab2aeb38a2e">dogPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, double sigma, int dim)</td></tr>
-<tr class="memdesc:a90605fbb99e0582c47693ab2aeb38a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#a90605fbb99e0582c47693ab2aeb38a2e">More...</a><br /></td></tr>
+<tr class="memdesc:a90605fbb99e0582c47693ab2aeb38a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with a DoG filter. Store the result in <em>pgmOut</em>.  <a href="#a90605fbb99e0582c47693ab2aeb38a2e">More...</a><br /></td></tr>
 <tr class="separator:a90605fbb99e0582c47693ab2aeb38a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9325f854f9cbe2897e1b5855f9594cd8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_filter_ops_8c.html#a9325f854f9cbe2897e1b5855f9594cd8">cedPGM</a> (<a class="el" href="struct_pgm.html">Pgm</a> *pgmIn, <a class="el" href="struct_pgm.html">Pgm</a> *pgmOut, double sigma, int dim, int threshold_low, int threshold_high)</td></tr>
 <tr class="memdesc:a9325f854f9cbe2897e1b5855f9594cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>.  <a href="#a9325f854f9cbe2897e1b5855f9594cd8">More...</a><br /></td></tr>
@@ -385,13 +385,13 @@ Gianluca Gerard </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with two Prewitt filters alogn the vertical and horizontal direction. Returns either the magnitute or the phase based on <em>phase</em>. </p>
-<p>Apply the vertical and horizontal Prewitt filters and returns the magnitute if <em>phase</em> is 0 or the phase if <em>phase</em> is 1. </p><dl class="params"><dt>Parameters</dt><dd>
+<p><a class="el" href="struct_filter.html" title="The structure used for image filters. ">Filter</a> the image <em>pgmIn</em> with a DoG filter. Store the result in <em>pgmOut</em>. </p>
+<p>Apply a DoG filter to <em>pgmIn</em>. Refer to <a class="el" href="image_filters_8c.html#af7cf8d2130b77ccc70bb90a916a9e0f8">DoGFilter() function </a> for further information. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pgmIn</td><td>Pointer to the input PGM image structure. </td></tr>
     <tr><td class="paramname">pgmOut</td><td>Pointer to the output PGM image structure. </td></tr>
-    <tr><td class="paramname">sigma</td><td>The external sigma of the DoG filter. The internal sigma is set to <em>sigma</em> / 1.66 . </td></tr>
-    <tr><td class="paramname">dim</td><td>The rows and columns of the DoG filter. If set to 0 then it will be the smallest odd next to 6 <em>sigma</em>. </td></tr>
+    <tr><td class="paramname">sigma</td><td>The sigma of the external Gaussian. </td></tr>
+    <tr><td class="paramname">dim</td><td>The number of rows and columns of the filter. If it is set to 0 then the dimension is the smallest odd number next to 6 <em>sigma</em>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1093,7 +1093,7 @@ Gianluca Gerard </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 15 2015 20:51:47 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 16 2015 19:02:58 for Edge Detection Filters by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
